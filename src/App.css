@@ -832,6 +832,7 @@ background: #4243554D;
   /* transform: translateY(-0.1687289088863892rem); */
   transform: translateY(-1.1rem);
   margin: 0 0.562429696287964rem !important;
+  border-radius: 100%;
 }
 
 .swiper-pagination-bullet-active {
@@ -841,6 +842,7 @@ background: #4243554D;
   height: 0.7874015748031496rem !important;
   transform: translateY(-0.9312710911136108rem);
   margin: 0 0.4780652418447694rem !important;
+  border-radius: 100%;
 }
 
 .flow2-deco1 {
