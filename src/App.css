@@ -62,6 +62,11 @@
   display: none;
 }
 
+input,
+html [type="input"] {
+  -webkit-appearance: none;
+}
+
 :root {
   --main-bg-color: #fff;
   --poppy-purple: #a38aee;
@@ -477,7 +482,7 @@
   width: 14.942rem;
   height: 23.65rem;
   left: 5.236rem;
-  top: 14.236rem;
+  top: 11.42rem;
 }
 
 @keyframes fingeranimation {
@@ -497,7 +502,7 @@
   width: 7.05rem;
   height: 7.351rem;
   left: 2.7rem;
-  top: 15.24rem;
+  top: 12.24rem;
   animation-duration: 0.5s;
   animation-name: fingeranimation;
   animation-iteration-count: infinite;
@@ -968,7 +973,7 @@ background: #4243554D;
   position: absolute;
   width: 15rem;
   left: calc(50% - 7.5rem);
-  top: 12.9rem;
+  top: 8.824rem;
 
   font-size: 1rem;
   line-height: 1.5rem;
@@ -982,7 +987,7 @@ background: #4243554D;
   height: 1.12rem;
 
   left: 4.7rem;
-  top: 13.2rem;
+  top: 9.18rem;
 
   background-color: #fff8dd;
   z-index: 1;
