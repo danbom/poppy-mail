@@ -106,12 +106,6 @@ html [type="input"] {
   top: 0;
 }
 
-.Flow5Img img {
-  position: absolute;
-  width: 100%;
-  top: 3.12rem;
-}
-
 .swiper-container {
   margin: 0 !important;
   overflow: visible;
@@ -182,10 +176,10 @@ html [type="input"] {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  width: 1.45rem;
-  height: 1.35rem;
-  right: 2rem;
-  top: 3.36rem;
+  width: 3.06rem;
+  height: 2.83rem;
+  left: 20.65rem;
+  top: 1.471rem;
   cursor: pointer;
 
   z-index: 1;
@@ -582,7 +576,7 @@ font-weight: normal; */
   width: 21rem;
   height: 3.7rem;
   left: calc(50% - 10.5rem);
-  top: 44.5rem;
+  top: 38.471rem;
 
   /* indego */
 
@@ -783,15 +777,15 @@ background: #4243554D;
   width: 25rem;
   height: 31rem;
   left: 0;
-  top: 8.5rem;
+  top: 5.942rem;
 }
 
 .flow1-txt {
   position: absolute;
   width: 8.773903262092238rem;
   height: 3.149606299212598rem;
-  left: 4.049493813273341rem;
-  top: 10.8rem;
+  left: 4.24rem;
+  top: 13.471rem;
   line-height: 140.5%;
 
   font-size: 1.124859392575928rem;
@@ -802,11 +796,11 @@ background: #4243554D;
   position: absolute;
   width: 16rem;
   height: 6.299212598425197rem;
-  left: 2.19347581552306rem;
-  top: 1rem;
+  left: 2.24rem;
+  top: 1.71rem;
   line-height: 158%;
 
-  font-size: 1.012373453318335rem;
+  font-size: 1.1rem;
   color: var(--main-txt-color);
 }
 
@@ -814,8 +808,8 @@ background: #4243554D;
   position: absolute;
   width: 18.5rem;
   height: 9.448818897637795rem;
-  left: 2.137232845894263rem;
-  top: 21rem;
+  left: 2.24rem;
+  top: 16.765rem;
   line-height: 158%;
 
   font-size: 1.012373453318335rem;
@@ -826,8 +820,8 @@ background: #4243554D;
   position: absolute;
   width: 15rem;
   height: 3.149606299212598rem;
-  left: 2.137232845894263rem;
-  top: 27.4rem;
+  left: 2.24rem;
+  top: 19.412rem;
   line-height: 158%;
 
   font-size: 1.012373453318335rem;
@@ -838,8 +832,8 @@ background: #4243554D;
   position: absolute;
   width: 19rem;
   height: 6.299212598425197rem;
-  left: 2.137232845894263rem;
-  top: 0.6rem;
+  left: 2.24rem;
+  top: 1.12rem;
   line-height: 158%;
 
   font-size: 1.012373453318335rem;
@@ -873,7 +867,7 @@ background: #4243554D;
 
 .flow2-deco1 {
   position: absolute;
-  top: 1.4rem;
+  top: 2.1rem;
   left: 9.7rem;
   width: 4.9rem;
   height: 1.15rem;
@@ -883,7 +877,7 @@ background: #4243554D;
 
 .flow2-deco2 {
   position: absolute;
-  top: 4.6rem;
+  top: 5.49rem;
   left: 5.15rem;
   width: 12.9rem;
   height: 1.15rem;
