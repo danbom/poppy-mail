@@ -66,7 +66,7 @@ function JoinInfoPage() {
         <JoinInput></JoinInput>
 
         {/* <CompleteBtn onClick={test}></CompleteBtn> */}
-        <div className="create-post-box-btn" onClick={JoinRequest}>
+        <div className="join-input-complete-btn" onClick={JoinRequest}>
           완료
         </div>
       </S.JoinInfoScene>

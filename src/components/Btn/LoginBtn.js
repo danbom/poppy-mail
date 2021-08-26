@@ -1,14 +1,10 @@
-import React from 'react';
+import React from "react";
 // import * as S from './styles';
 
 function LoginBtn() {
-
   return (
     <>
-      <div className="login-btn">
-        로그인
-      </div>
-
+      <div className="login-btn">파피의 이야기 듣기</div>
     </>
   );
 }
