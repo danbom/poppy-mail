@@ -832,7 +832,7 @@ background: #4243554D;
   /* transform: translateY(-0.1687289088863892rem); */
   transform: translateY(-1.1rem);
   margin: 0 0.562429696287964rem !important;
-  border-radius: 100%;
+  border-radius: 0.4499437570303712rem;
 }
 
 .swiper-pagination-bullet-active {

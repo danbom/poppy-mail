@@ -25,7 +25,6 @@ function JoinPage() {
         // console.log(authObj.access_token);
         fetch("http://158.247.195.25/account/login/kakao/", {
           method: "POST",
-          mode: "no-cors",
           headers: {
             // 'Authorization' : 'SkNi7ptE9aIrTY-MxBudk1PRPPshudyD-2Lbugopb1UAAAF7d0-yHQ',
             Authorization: authObj.access_token,
