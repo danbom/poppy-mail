@@ -166,7 +166,7 @@ html [type="input"] {
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: -2.5rem;
+  top: 29.353rem;
 }
 
 /* sidebar */
@@ -794,25 +794,25 @@ background: #4243554D;
 
 .flow2-txt {
   position: absolute;
-  width: 16rem;
+  width: 18rem;
   height: 6.299212598425197rem;
   left: 2.24rem;
   top: 1.71rem;
   line-height: 158%;
 
-  font-size: 1.1rem;
+  font-size: 1.051rem;
   color: var(--main-txt-color);
 }
 
 .flow3-txt {
   position: absolute;
-  width: 18.5rem;
+  width: 19rem;
   height: 9.448818897637795rem;
   left: 2.24rem;
   top: 16.765rem;
   line-height: 158%;
 
-  font-size: 1.012373453318335rem;
+  font-size: 1.02rem;
   color: var(--main-txt-color);
 }
 
@@ -852,7 +852,7 @@ background: #4243554D;
   /* transform: translateY(-0.1687289088863892rem); */
   transform: translateY(-1.1rem);
   margin: 0 0.562429696287964rem !important;
-  border-radius: 0.4499437570303712rem;
+  border-radius: 50%;
 }
 
 .swiper-pagination-bullet-active {
@@ -862,32 +862,32 @@ background: #4243554D;
   height: 0.7874015748031496rem !important;
   transform: translateY(-0.9312710911136108rem);
   margin: 0 0.4780652418447694rem !important;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .flow2-deco1 {
   position: absolute;
-  top: 2.1rem;
-  left: 9.7rem;
-  width: 4.9rem;
-  height: 1.15rem;
+  top: 2.24rem;
+  left: 9.9rem;
+  width: 5.12rem;
+  height: 1.12rem;
   background-color: #fff8dd;
   z-index: -1;
 }
 
 .flow2-deco2 {
   position: absolute;
-  top: 5.49rem;
-  left: 5.15rem;
-  width: 12.9rem;
-  height: 1.15rem;
+  top: 5.53rem;
+  left: 5.3rem;
+  width: 13.353rem;
+  height: 1.12rem;
   background-color: #fff8dd;
   z-index: -1;
 }
 
 .flow3-deco1 {
   position: absolute;
-  top: 22.9rem;
+  top: 23.7rem;
   left: 2.1rem;
   width: 18rem;
   height: 1.15rem;
@@ -897,7 +897,7 @@ background: #4243554D;
 
 .flow3-deco2 {
   position: absolute;
-  top: 24.5rem;
+  top: 25.3rem;
   left: 2.1rem;
   width: 7.7rem;
   height: 1.15rem;
@@ -907,9 +907,9 @@ background: #4243554D;
 
 .flow4-deco1 {
   position: absolute;
-  top: 27.8rem;
+  top: 19.9rem;
   left: 2.5rem;
-  width: 11.8rem;
+  width: 12rem;
   height: 1.15rem;
   background-color: #fff8dd;
   z-index: -1;
@@ -917,7 +917,7 @@ background: #4243554D;
 
 .flow5-deco1 {
   position: absolute;
-  top: 2.6rem;
+  top: 3.1rem;
   left: 2.1rem;
   width: 12.9rem;
   height: 1.15rem;
@@ -927,9 +927,9 @@ background: #4243554D;
 
 .flow6-deco1 {
   position: absolute;
-  top: 5.7rem;
+  top: 6.3rem;
   left: 2.1rem;
-  width: 13.3rem;
+  width: 14rem;
   height: 1.15rem;
   background-color: #fff8dd;
   z-index: -1;
