@@ -112,7 +112,7 @@ html [type="input"] {
 }
 
 .swiper-container#mypostboxswiper .swiper-pagination-bullets {
-  transform: translateY(7.06rem);
+  transform: translateY(4.71rem);
 }
 
 .swiper-container#mypostboxswiper .swiper-pagination-bullet {
@@ -138,7 +138,7 @@ html [type="input"] {
   text-align: left;
   width: max-content;
   left: 1.412rem;
-  top: 1.5em;
+  top: 1.4em;
 }
 
 .swiper-container#checkarrivedmailswiper .swiper-pagination-bullet {
@@ -1080,7 +1080,7 @@ background: #4243554D;
   width: 21.1rem;
   height: 3.83rem;
   left: calc(50% - 10.55rem);
-  top: 7.9rem;
+  top: 5.3rem;
   border-radius: 32.5px;
   background-color: #fff;
 
@@ -1089,8 +1089,8 @@ background: #4243554D;
   line-height: 3.9rem;
   text-align: center;
 
-  color: var(--poppy-purple);
-  z-index: 3;
+  color: #4B4362;
+  z-index: 2;
 }
 
 .alert-nick-name {
@@ -1682,7 +1682,7 @@ button#dropdown-basic-button {
   width: 21.6rem;
   height: 29.48rem;
   left: calc(50% - 10.8rem);
-  top: 6.06rem;
+  top: 5.471rem;
 
   background: #d66e56;
   border-radius: 8px;
@@ -1880,14 +1880,15 @@ button#dropdown-basic-button {
   width: 8.824rem;
   height: 15.471rem;
   left: calc(50% - 4.412rem);
-  top: 4.59rem;
+  top: 3.3rem;
+  
 }
 
 .my-post-box-item-ment1 {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 23.295rem;
+  top: 19.59rem;
 
   /* popup_title */
 
@@ -1905,7 +1906,7 @@ button#dropdown-basic-button {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 25.471rem;
+  top: 21.77rem;
 
   /* title2 */
 
@@ -1922,7 +1923,7 @@ button#dropdown-basic-button {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 27.89rem;
+  top: 24.177rem;
 
   /* text */
 
@@ -1936,13 +1937,13 @@ button#dropdown-basic-button {
 
 .copy-my-post-box-link-ment {
   position: absolute;
-  left: 12.5rem;
-  top: -1rem;
+  left: 12.3rem;
+  top: 0rem;
 
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
-  font-size: 0.93rem;
+  font-size: 1rem;
   line-height: 1.24rem;
   /* identical to box height */
 
@@ -1953,7 +1954,7 @@ button#dropdown-basic-button {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 5.706rem;
+  top: 5.12rem;
 
   /* text */
 
@@ -1970,7 +1971,7 @@ button#dropdown-basic-button {
   width: 1.83rem;
   height: 1.236rem;
   left: 20.824rem;
-  top: 5.824rem;
+  top: 4.942rem;
 }
 
 .open-post-box-btn {
@@ -1982,7 +1983,7 @@ button#dropdown-basic-button {
   width: 21rem;
   height: 3.7rem;
   left: calc(50% - 10.5rem);
-  top: 31.59rem;
+  top: 27.3rem;
 
   /* indego */
 

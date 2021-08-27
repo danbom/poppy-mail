@@ -6,7 +6,7 @@ import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 function MyPostboxItem() {
   return (
     <>
-      <div className="copy-my-post-box-link-ment">내 우체통 링크 복사하기</div>
+      <div className="copy-my-post-box-link-ment">이 우체통 링크 복사하기</div>
 
       <img src={MyPostboxImg} className="MyPostboxImg"></img>
 
