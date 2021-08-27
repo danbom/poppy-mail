@@ -20,7 +20,7 @@ function CheckWriteMail() {
 
           <CheckLetter></CheckLetter>
           <Link to="completewritemail">
-            <div className="create-post-box-btn">우편함에 편지 넣기</div>
+            <div className="give-letter-btn">우편함에 편지 넣기</div>
           </Link>
         </div>
       </S.WriteMailScene>

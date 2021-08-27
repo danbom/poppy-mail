@@ -588,6 +588,27 @@ font-weight: normal; */
   cursor: pointer;
 }
 
+.give-letter-btn {
+  font-family: "Roboto bold";
+  font-weight: bold;
+  font-size: 1.012373453318335rem;
+
+  position: absolute;
+  width: 21rem;
+  height: 3.7rem;
+  left: calc(50% - 10.5rem);
+  top: 41.353rem;
+
+  /* indego */
+
+  background: var(--poppy-purple);
+  border-radius: 30px;
+  color: var(--main-bg-color);
+  text-align: center;
+  line-height: 3.7rem;
+  cursor: pointer;
+}
+
 .join-input-complete-btn {
   font-family: "Roboto bold";
   font-weight: bold;
@@ -1472,7 +1493,7 @@ button#dropdown-basic-button {
   width: 21.53rem;
   height: 6.12rem;
   left: calc(50% - 10.765rem);
-  top: 6.53rem;
+  top: 5.3rem;
 
   background: #4b4362;
   border-radius: 10px;
@@ -1500,16 +1521,16 @@ button#dropdown-basic-button {
 .lets-write-mail-ment-big {
   position: absolute;
   width: 100%;
-  top: 14.53rem;
+  top: 13.353rem;
   text-align: center;
-  line-height: 28px;
+  line-height: 1.65rem;
   color: #000;
 }
 
 .lets-write-mail-ment-small {
   position: absolute;
   width: 100%;
-  top: 42.53rem;
+  top: 36.53rem;
   font-size: 0.9rem;
   text-align: center;
   line-height: 1.5rem;
@@ -1519,10 +1540,10 @@ button#dropdown-basic-button {
 
 .lets-write-mail-img img {
   position: absolute;
-  width: 17.53rem;
-  height: 18rem;
-  left: calc(50% - 8.765rem);
-  top: 21.89rem;
+  width: 12.942rem;
+  height: 13.265rem;
+  left: calc(50% - 6.471rem);
+  top: 20.6471rem;
 }
 
 .whatispoppymail-box {
@@ -1530,7 +1551,7 @@ button#dropdown-basic-button {
   width: 19rem;
   height: 29.353rem;
   left: calc(50% - 9.5rem);
-  top: 9.471rem;
+  top: 6.59rem;
 
   background: #ffffff;
   border-radius: 10px;
@@ -1590,7 +1611,7 @@ button#dropdown-basic-button {
   width: 3.59rem;
   height: 3.59rem;
   left: calc(50% - 1.795rem);
-  top: 39.89rem;
+  top: 37rem;
   cursor: pointer;
   z-index: 3;
 }
@@ -1600,7 +1621,7 @@ button#dropdown-basic-button {
   width: 100%;
   display: flex;
   justify-content: center;
-  top: 7.118rem;
+  top: 6.177rem;
 }
 
 .colorbar-element {
@@ -1610,28 +1631,28 @@ button#dropdown-basic-button {
   margin: 0 0.736rem;
 }
 
-.colorbar-element#red {
-  background: #d66e56;
-}
-
-.colorbar-element#yellow {
+.colorbar-element#color1 {
   background: #f2dba1;
 }
 
-.colorbar-element#green {
-  background: #87afba;
-}
-
-.colorbar-element#navy {
+.colorbar-element#color2 {
   background: #4b4362;
 }
 
-.colorbar-element#gray {
-  background: #a8a8a8;
+.colorbar-element#color3 {
+  background: #6b8f99;
 }
 
-.colorbar-element#lightgray {
-  background: #dadada;
+.colorbar-element#color4 {
+  background: #b88dcd;
+}
+
+.colorbar-element#color5 {
+  background: #db7667;
+}
+
+.colorbar-element#color6 {
+  background: #bdbe82;
 }
 
 .letter-box {
@@ -1639,7 +1660,7 @@ button#dropdown-basic-button {
   width: 21.6rem;
   height: 29.48rem;
   left: calc(50% - 10.8rem);
-  top: 10.95rem;
+  top: 9.412rem;
 
   background: #d66e56;
   border-radius: 8px;
@@ -1650,7 +1671,7 @@ button#dropdown-basic-button {
   width: 21.6rem;
   height: 29.48rem;
   left: calc(50% - 10.8rem);
-  top: 11.9412rem;
+  top: 9.412rem;
 
   background: #d66e56;
   border-radius: 8px;
@@ -1780,7 +1801,7 @@ button#dropdown-basic-button {
   /* width: 34px;
   height: 21px; */
   left: 20.71rem;
-  top: 3.53rem;
+  top: 2.353rem;
 
   font-family: Roboto;
   font-style: normal;
@@ -1801,7 +1822,7 @@ button#dropdown-basic-button {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 8.353rem;
+  top: 6.06rem;
 
   /* text */
 
@@ -1822,7 +1843,7 @@ button#dropdown-basic-button {
   width: 18.06rem;
   height: 1.12rem;
   left: calc(50% - 9.03rem);
-  top: 8.71rem;
+  top: 6.5rem;
 
   background: #fff8dd;
 }
@@ -1830,7 +1851,7 @@ button#dropdown-basic-button {
 .complete-write-mail-ment {
   position: absolute;
   width: 100%;
-  top: 10.824rem;
+  top: 7.3rem;
 
   /* title */
 
@@ -1848,10 +1869,10 @@ button#dropdown-basic-button {
 
 .completewritemail-poppy-img {
   position: absolute;
-  width: 15.95rem;
-  height: 18.765rem;
-  left: calc(50% - 7.975rem);
-  top: 17.942rem;
+  width: 14.9rem;
+  height: 17.471rem;
+  left: calc(50% - 7.45rem);
+  top: 13.177rem;
 }
 
 .MyPostboxImg {
