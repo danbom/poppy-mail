@@ -473,10 +473,10 @@ html [type="input"] {
 
 .postboxbefore img {
   position: absolute;
-  width: 14.942rem;
-  height: 23.65rem;
-  left: 5.236rem;
-  top: 11.42rem;
+  width: 12.68rem;
+  height: 19.91rem;
+  left: 6.65rem;
+  top: 10.24rem;
 }
 
 @keyframes fingeranimation {
@@ -493,10 +493,10 @@ html [type="input"] {
 
 .finger img {
   position: absolute;
-  width: 7.05rem;
-  height: 7.351rem;
-  left: 2.7rem;
-  top: 12.24rem;
+  width: 6.35rem;
+  height: 6.651rem;
+  left: 3.8rem;
+  top: 11.24rem;
   animation-duration: 0.5s;
   animation-name: fingeranimation;
   animation-iteration-count: infinite;
@@ -505,16 +505,16 @@ html [type="input"] {
 
 .postboxafter img {
   position: absolute;
-  width: 15.53rem;
-  height: 23.471rem;
-  left: 5.53rem;
-  top: 14.59rem;
+  width: 13.173rem;
+  height: 20.06rem;
+  left: 5.79rem;
+  top: 10.12rem;
 }
 
 .bird-txt {
   position: absolute;
-  left: 4.53rem;
-  top: 28.24rem;
+  left: 5rem;
+  top: 22.3rem;
   font-size: 0.9rem;
   line-height: 140.5%;
 
@@ -523,10 +523,10 @@ html [type="input"] {
 
 .bird img {
   position: absolute;
-  width: 5rem;
-  height: 6.6471rem;
-  left: 4.24rem;
-  top: 29.06rem;
+  width: 4.22rem;
+  height: 5.64rem;
+  left: 4.92rem;
+  top: 22.7rem;
 }
 
 .welcome-ment {
@@ -955,7 +955,7 @@ background: #4243554D;
   font-size: 0.94rem;
 
   position: absolute;
-  top: 8.8rem;
+  top: 9.12rem;
   left: 1.5rem;
   color: #000;
 }
@@ -986,9 +986,9 @@ background: #4243554D;
 
 .create-post-box-ment {
   position: absolute;
-  width: 15rem;
-  left: calc(50% - 7.5rem);
-  top: 8.824rem;
+  width: 100%;
+  text-align: center;
+  top: 7.65rem;
 
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1001,8 +1001,8 @@ background: #4243554D;
   width: 12rem;
   height: 1.12rem;
 
-  left: 4.7rem;
-  top: 9.18rem;
+  left: 5.1rem;
+  top: 8rem;
 
   background-color: #fff8dd;
   z-index: 1;
@@ -1013,7 +1013,7 @@ background: #4243554D;
   width: 4rem;
   height: 1.2rem;
   left: 2rem;
-  top: 39.6rem;
+  top: 31.95rem;
 
   font-family: "Roboto";
   font-size: 0.9rem;
@@ -1027,7 +1027,7 @@ background: #4243554D;
   width: 8rem;
   height: 1.3rem;
   left: 1.65rem;
-  top: 41.3rem;
+  top: 33.65rem;
 
   font-family: "Cafe24 Ssurround";
   font-size: 1rem;
@@ -1041,10 +1041,9 @@ background: #4243554D;
   width: 21.1rem;
   height: 3.83rem;
   left: calc(50% - 10.55rem);
-  top: 7.9rem;
+  top: 6.4rem;
   border-radius: 32.5px;
   background-color: #4b4362;
-  opacity: 0.95;
 
   font-family: "Cafe24 Ssurround air";
   font-size: 0.9rem;
@@ -1052,6 +1051,7 @@ background: #4243554D;
   text-align: center;
 
   color: #fff;
+  z-index: 3;
 }
 
 .alert-create-post-box-white {
@@ -1062,7 +1062,6 @@ background: #4243554D;
   top: 7.9rem;
   border-radius: 32.5px;
   background-color: #fff;
-  opacity: 0.95;
 
   font-family: "Cafe24 Ssurround air";
   font-size: 0.9rem;
@@ -1070,7 +1069,7 @@ background: #4243554D;
   text-align: center;
 
   color: var(--poppy-purple);
-  z-index: 2;
+  z-index: 3;
 }
 
 .alert-nick-name {
@@ -1078,7 +1077,7 @@ background: #4243554D;
   width: 21.1rem;
   height: 5.6rem;
   left: calc(50% - 10.55rem);
-  top: 36.83rem;
+  top: 30.83rem;
   border-radius: 32.5px;
   background-color: #4b4362;
   opacity: 0.95;
@@ -1108,11 +1107,10 @@ background: #4243554D;
 
 .kakao-plus-ment-up {
   position: absolute;
-  width: 18rem;
+  width: 100%;
   height: 2.95rem;
-  left: calc(50% - 9rem);
-  top: 13.24rem;
   text-align: center;
+  top: 9.9rem;
 
   font-family: "Cafe24 Ssurround air";
   font-size: 1rem;
@@ -1127,8 +1125,8 @@ background: #4243554D;
   position: absolute;
   width: 6.7rem;
   height: 1rem;
-  left: 5.1rem;
-  top: 13.6rem;
+  left: 5.4rem;
+  top: 10.3rem;
 
   background-color: #ffea9f;
   z-index: 1;
@@ -1139,7 +1137,7 @@ background: #4243554D;
   width: 13.5rem;
   height: 1rem;
   left: 3.7rem;
-  top: 15.1rem;
+  top: 11.75rem;
 
   background-color: #ffea9f;
   z-index: 1;
@@ -1149,21 +1147,21 @@ background: #4243554D;
   position: absolute;
   width: 11.18rem;
   height: 1rem;
-  top: 15.9rem;
+  top: 12.2rem;
   left: 3.8rem;
   /* transform: rotate(1deg); */
 
   background-image: url(./image/underline.png);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 
 .kakao-plus-ment-down {
   position: absolute;
-  width: 15.65rem;
+  width: 100%;
   height: 2.95rem;
-  left: calc(50% - 7.825rem);
-  top: 32.77rem;
+  top: 26.471rem;
   text-align: center;
 
   font-family: "Cafe24 Ssurround air";
@@ -1178,7 +1176,7 @@ background: #4243554D;
   width: 12.83rem;
   height: 3.59rem;
   left: calc(50% - 6.415rem);
-  top: 24rem;
+  top: 20.65rem;
   cursor: pointer;
 }
 
@@ -1187,7 +1185,7 @@ background: #4243554D;
   width: 1.212rem;
   height: 3.53rem;
   left: 18.3rem;
-  top: 18.24rem;
+  top: 14.9rem;
 }
 
 .alert-create-post-box img {
