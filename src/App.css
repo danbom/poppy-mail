@@ -196,10 +196,10 @@ html [type="input"] {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  width: 1.45rem;
-  height: 1.35rem;
-  right: 2rem;
-  top: 3.36rem;
+  width: 3.06rem;
+  height: 2.83rem;
+  left: 20.65rem;
+  top: 1.471rem;
   cursor: pointer;
 
   z-index: 1;
@@ -1235,7 +1235,7 @@ background: #4243554D;
 .received-letter-ment1 {
   position: absolute;
   left: 2.2353rem;
-  top: 9.353rem;
+  top: 7.06rem;
   font-size: 1rem;
   line-height: 158%;
 
@@ -1244,9 +1244,8 @@ background: #4243554D;
 
 .received-letter-ment2 {
   position: absolute;
-  width: 11rem;
-  left: calc(50% - 5.5rem);
-  top: 35.59rem;
+  width: 100%;
+  top: 27.9rem;
 
   text-align: center;
 
@@ -1259,9 +1258,8 @@ background: #4243554D;
 
 .received-letter-ment3 {
   position: absolute;
-  width: 19rem;
-  left: calc(50% - 9.5rem);
-  top: 38rem;
+  width: 100%;
+  top: 30.353rem;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: center;
@@ -1271,17 +1269,16 @@ background: #4243554D;
 
 .ReceivedLetterPoppy img {
   position: absolute;
-  width: 11.295rem;
-  height: 16.765rem;
-  left: calc(50% - 5.6475rem);
-  top: 16.412rem;
+  width: 8.471rem;
+  height: 12.6471rem;
+  left: 7.53rem;
+  top: 13.353rem;
 }
 
 .kakaoplus-desc {
   position: absolute;
-  width: 11.5rem;
-  top: 44.12rem;
-  left: calc(50% - 5.75rem);
+  width: 100%;
+  top: 35.9rem;
 
   font-size: 1rem;
   text-align: center;
@@ -1294,7 +1291,7 @@ background: #4243554D;
   position: absolute;
   width: 9.412rem;
   height: 2.65rem;
-  top: 46.53rem;
+  top: 38.3rem;
   left: calc(50% - 4.706rem);
   cursor: pointer;
 }
