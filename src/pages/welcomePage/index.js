@@ -19,7 +19,7 @@ function WelcomePage() {
                     <Poppy></Poppy>
                     <WelcomeMent></WelcomeMent>
 
-                    <Link to="/login">
+                    <Link to="/howto">
                         <LoginBtn></LoginBtn>
                     </Link>
 
