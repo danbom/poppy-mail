@@ -29,19 +29,19 @@ export const SidebarData = [
   },
   {
     title: "About 파피메일",
-    path: "/",
+    path: "https://www.notion.so/about-rough-03f3264b6260471d97df2da4fcfa347b",
     icon: <AboutImg />,
     cName: "nav-text",
   },
   {
     title: "자주 묻는 질문",
-    path: "/join",
+    path: "https://www.notion.so/FAQ-c5c39e0bcf93420289a6f7b7913035d8",
     icon: <FaqImg />,
     cName: "nav-text",
   },
   {
     title: "로그아웃",
-    path: "/login",
+    path: "/logout",
     icon: <LogoutImg />,
     cName: "nav-text",
   },
