@@ -24,11 +24,11 @@ function JoinPage() {
         console.log(authObj);
         // console.log(authObj.access_token);
         // fetch("http://158.247.195.25/account/login/kakao/", {
-          fetch("https://www.poppymail.shop/account/login/kakao/", {
+          fetch("https://poppymail.shop/account/login/kakao/", {
           method: "POST",
           headers: {
-            'Authorization' : '7dTk9-OoODnnr5g71IBC0NLqJTlQYkiNlgTupgo9dVwAAAF7jFnnrg',
-            // Authorization: authObj.access_token,
+            // 'Authorization' : '7dTk9-OoODnnr5g71IBC0NLqJTlQYkiNlgTupgo9dVwAAAF7jFnnrg',
+            Authorization: authObj.access_token,
           },
           body: JSON.stringify({
             access_token: authObj.access_token,
