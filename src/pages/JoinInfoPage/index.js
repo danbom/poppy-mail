@@ -25,13 +25,12 @@ function JoinInfoPage() {
     () => ({ setName, setBirthdate, setGender, setPhone }),
     [setName, setBirthdate, setGender, setPhone]
   );
-  const Kakao_token = localStorage.getItem("Kakao_token");
+  const access = localStorage.getItem("access");
 
   const JoinRequest = () => {
     if (name === "" || birthdate === "" || gender === "" || phone === "") {
       alert(
-        "필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐" +
-          Kakao_token
+        "필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐" + access
       );
     } else {
       alert(
@@ -47,12 +46,12 @@ function JoinInfoPage() {
       history.push("/joincomplete");
     }
 
-    const Kakao_token = localStorage.getItem("Kakao_token");
+    const access = localStorage.getItem("access");
     const User_id = localStorage.getItem("User_id");
     fetch("https://poppymail.shop/account/" + User_id + "/userInfo", {
       method: "PATCH",
       headers: {
-        Authorization: "Bearer " + Kakao_token,
+        Authorization: "Bearer " + access,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -67,7 +66,7 @@ function JoinInfoPage() {
         // localStorage.setItem("Kakao_token", res.access_token);
         // const kakao_token = localStorage.getItem("Kakao_token");
         if (res) {
-          console.log(Kakao_token);
+          console.log(access);
           console.log(res);
           // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
           // history.push("/joininfo");

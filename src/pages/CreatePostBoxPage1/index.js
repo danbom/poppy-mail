@@ -18,17 +18,14 @@ function CreatePostBoxPage1() {
   const [_alert, setAlert] = useState(null);
 
   const [nickname, setNickname] = useState("");
+  const [navbar, setNavbar] = useState(null);
   const value = useMemo(() => ({ setNickname }), [setNickname]);
-
-  // const AlertNicknameComplete = () => {
-
-  // }
 
   const CreatepostboxRequest2 = () => {
     history.push("/createpostboxsteptwo");
   };
 
-  const Kakao_token = localStorage.getItem("Kakao_token");
+  const access = localStorage.getItem("access");
 
   const CreatepostboxRequest = () => {
     if (nickname === "") {
@@ -48,7 +45,7 @@ function CreatePostBoxPage1() {
     fetch("https://poppymail.shop/mailbox/", {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + Kakao_token,
+        Authorization: "Bearer " + access,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -72,6 +69,7 @@ function CreatePostBoxPage1() {
       <S.CreatePostBoxScene>
         <div className="fullbox">
           <BackBtn></BackBtn>
+
           <Navbar></Navbar>
 
           <LogoNameCreatePostBox></LogoNameCreatePostBox>

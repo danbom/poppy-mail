@@ -36,9 +36,9 @@ function JoinPage() {
         })
           .then(res => res.json())
           .then(res => {
-            localStorage.setItem("Kakao_token", res.access);
+            localStorage.setItem("access", res.access);
             localStorage.setItem("User_id", res.user_id);
-            const kakao_token = localStorage.getItem("Kakao_token");
+            const access = localStorage.getItem("access");
             if (res.access) {
               console.log(res);
               if (res.is_new === "true") {

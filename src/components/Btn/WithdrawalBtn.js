@@ -5,11 +5,11 @@ function WithdrawalBtn() {
   const history = useHistory();
 
   const WithdrawalRequest = () => {
-    const Kakao_token = localStorage.getItem("Kakao_token");
+    const access = localStorage.getItem("access");
     fetch("https://poppymail.shop/account/signout", {
       method: "DELETE",
       headers: {
-        Authorization: "Bearer " + Kakao_token,
+        Authorization: "Bearer " + access,
       },
       body: JSON.stringify({}),
     })

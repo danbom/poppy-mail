@@ -34,7 +34,7 @@ function LogInPage() {
         })
           .then(res => res.json())
           .then(res => {
-            localStorage.setItem("Kakao_token", res.user_id);
+            localStorage.setItem("access", res.user_id);
             if (res.access) {
               console.log(res);
               alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
