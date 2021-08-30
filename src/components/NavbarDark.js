@@ -1,39 +1,103 @@
-import React, { useState } from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
+import React, { useState } from "react";
+import * as FaIcons from "react-icons/fa";
+import { Link, useHistory } from "react-router-dom";
+import { SidebarData } from "./SidebarData";
 /* 아이콘 컬러 전체 변경 기능 */
-import { IconContext } from 'react-icons';
+import { IconContext } from "react-icons";
+
+import MyPageImg from "./Img/MyPageImg";
+import AboutImg from "./Img/AboutImg";
+import FaqImg from "./Img/FaqImg";
+import LogoutImg from "./Img/LogoutImg";
+import KakaoplusiconImg from "./Img/KakaoplusiconImg";
+
 function Navbar() {
+  const history = useHistory();
+
+  const LogoutRequest = () => {
+    const access = localStorage.getItem("access");
+    fetch("https://poppymail.shop/account/logout", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({}),
+    })
+      // .then(res => res.json())
+      .then(res => {
+        if (res) {
+          console.log(res);
+          localStorage.setItem("access", null);
+          alert("로그아웃!");
+          history.push("/");
+        }
+      });
+  };
+
   const [sidebar, setSidebar] = useState(false);
+
   const showSidebar = () => setSidebar(!sidebar);
   return (
     <>
       {/* 아이콘 컬러 전체 변경 기능 */}
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: "#fff" }}>
         {/* 네비게이션 토글 코드*/}
         <div className="navbar">
           <Link to="#" className="menu-bars-dark">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
-            <div className="navbar-toggle">
-            </div>
+            <div className="navbar-toggle"></div>
             {/* SidebarData를 순서대로 담기*/}
             <div className="nav-item-zone">
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <a href={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </a>
-                </li>
-              );
-            })}
+              <li className="nav-text1">
+                <a>
+                  <MyPageImg />
+                  <span>마이 페이지</span>
+                </a>
+              </li>
+              <li className="nav-text-small1">
+                <a href="/withdrawal">
+                  <span>탈퇴하기</span>
+                </a>
+              </li>
+              <li className="nav-text-small">
+                <a href="/receivedletter">
+                  <span>받은 편지 보기</span>
+                </a>
+              </li>
+              <li className="nav-text-small3">
+                <a href="/mypostbox">
+                  <span>나의 우체통 링크</span>
+                </a>
+              </li>
+              <li className="nav-text">
+                <a href="https://www.notion.so/about-rough-03f3264b6260471d97df2da4fcfa347b">
+                  <AboutImg />
+                  <span>About 파피메일</span>
+                </a>
+              </li>
+              <li className="nav-text">
+                <a href="https://www.notion.so/FAQ-c5c39e0bcf93420289a6f7b7913035d8">
+                  <FaqImg />
+                  <span>자주 묻는 질문</span>
+                </a>
+              </li>
+              <li className="nav-text1" id="logout">
+                <a onClick={LogoutRequest}>
+                  <LogoutImg />
+                  <span>로그아웃</span>
+                </a>
+              </li>
+              <li className="nav-text">
+                <a href="/kakaoplus">
+                  <KakaoplusiconImg />
+                  <span>카카오친구 추가하기</span>
+                </a>
+              </li>
             </div>
           </ul>
         </nav>

@@ -251,6 +251,14 @@ html [type="input"] {
   color: #fff;
 }
 
+.nav-text1#logout span {
+  cursor: pointer;
+}
+
+.nav-text1#logout a {
+  cursor: pointer;
+}
+
 .nav-text1 span {
   cursor: default;
 }
