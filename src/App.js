@@ -3,6 +3,7 @@ import { React, useState } from "react";
 import WelcomePage from "./pages/welcomePage";
 import JoinPage from "./pages/JoinPage";
 import HowToPage from "./pages/HowToPage";
+import HowToUnlogPage from "./pages/HowToUnlogPage";
 import JoinCompletePage from "./pages/JoinCompletePage";
 import CreatePostBoxPage1 from "./pages/CreatePostBoxPage1";
 import CreatePostBoxPage2 from "./pages/CreatePostBoxPage2";
@@ -91,7 +92,8 @@ function App() {
               path="/joincomplete"
               exact
             />
-            <PublicRoute component={HowToPage} path="/howto" exact />
+            <PublicRoute component={HowToUnlogPage} path="/howtounlog" exact />
+            <PrivateRoute component={HowToPage} path="/howto" exact />
             <PrivateRoute
               component={CreatePostBoxPage1}
               path="/createpostboxstepone"
