@@ -25,36 +25,54 @@ function JoinInfoPage() {
     () => ({ setName, setBirthdate, setGender, setPhone }),
     [setName, setBirthdate, setGender, setPhone]
   );
+  const Kakao_token = localStorage.getItem("Kakao_token");
 
   const JoinRequest = () => {
     if (name === "" || birthdate === "" || gender === "" || phone === "") {
-      alert("필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐");
+      alert(
+        "필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐" +
+          Kakao_token
+      );
     } else {
-      alert(name + birthdate + gender + phone);
+      alert(
+        "name: " +
+          name +
+          "phone: " +
+          phone +
+          "gender: " +
+          gender +
+          "birthdate: " +
+          birthdate
+      );
       history.push("/joincomplete");
     }
-    // fetch('http://158.247.195.25/sign_in/', {
-    //     method: "POST",
-    //     headers: {
 
-    //     },
-    //     body: JSON.stringify({
-    //         'name': nickname,
-    //         'birthdate': birthdate,
-    //         'gender': gender,
-    //         'phone': phone,
-    //     }),
-    // })
-    //     .then(res => res.json())
-    //     .then(res => {
-    //         // localStorage.setItem("Kakao_token", res.access_token);
-    //         // const kakao_token = localStorage.getItem("Kakao_token");
-    //         if (res) {
-    //             console.log(res);
-    //             // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
-    //             // history.push("/joininfo");
-    //         }
-    //     })
+    const Kakao_token = localStorage.getItem("Kakao_token");
+    const User_id = localStorage.getItem("User_id");
+    fetch("https://poppymail.shop/account/" + User_id + "/userInfo", {
+      method: "PATCH",
+      headers: {
+        Authorization: "Bearer " + Kakao_token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        gender: gender,
+        birthdate: birthdate,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => {
+        // localStorage.setItem("Kakao_token", res.access_token);
+        // const kakao_token = localStorage.getItem("Kakao_token");
+        if (res) {
+          console.log(Kakao_token);
+          console.log(res);
+          // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
+          // history.push("/joininfo");
+        }
+      });
   };
 
   return (

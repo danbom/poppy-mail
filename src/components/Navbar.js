@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import * as FaIcons from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 /* 아이콘 컬러 전체 변경 기능 */
 import { IconContext } from "react-icons";
 function Navbar() {
+  // const el = useRef();
+  // const [isOpen, setOpen] = useState(false);
+  // const handleCloseModal = e => {
+  //   if (isOpen && (!el.current || !el.current.contains(e.target)))
+  //     setOpen(false);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("click", handleCloseModal);
+  //   return () => {
+  //     window.removeEventListener("click", handleCloseModal);
+  //   };
+  // }, []);
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   return (
@@ -35,6 +48,7 @@ function Navbar() {
             </div>
           </ul>
         </nav>
+        )
       </IconContext.Provider>
     </>
   );

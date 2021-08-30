@@ -22,7 +22,7 @@ function LogInPage() {
         //         access_token: authObj.access_token,
         //     }),
         // })
-        fetch("https://poppymail.shop/account/login/kakao/", {
+        fetch("https://poppymail.shop/account/login", {
           method: "POST",
           headers: {
             // 'Authorization' : '7dTk9-OoODnnr5g71IBC0NLqJTlQYkiNlgTupgo9dVwAAAF7jFnnrg',
@@ -34,8 +34,8 @@ function LogInPage() {
         })
           .then(res => res.json())
           .then(res => {
-            localStorage.setItem("Kakao_token", res.access_token);
-            if (res.access_token) {
+            localStorage.setItem("Kakao_token", res.user_id);
+            if (res.access) {
               console.log(res);
               alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
               history.push("/howto");

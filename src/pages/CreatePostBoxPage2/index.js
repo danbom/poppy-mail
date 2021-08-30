@@ -16,8 +16,12 @@ function CreatePostBoxPage2() {
     setAlert(null);
   }, 2000);
 
+  const mailbox_link = localStorage.getItem("mailbox_link");
+
   const Copy = () => {
-    copyToClipboard("dndsidsidisdi");
+    console.log(mailbox_link);
+    copyToClipboard(mailbox_link);
+
     console.log("Copied!");
   };
 
@@ -25,7 +29,7 @@ function CreatePostBoxPage2() {
     const t = document.createElement("textarea");
     document.body.appendChild(t);
     t.value = val;
-    t.select();
+    // t.select();
     document.execCommand("copy");
     document.body.removeChild(t);
   };

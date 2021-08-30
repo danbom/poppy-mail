@@ -28,6 +28,8 @@ function CreatePostBoxPage1() {
     history.push("/createpostboxsteptwo");
   };
 
+  const Kakao_token = localStorage.getItem("Kakao_token");
+
   const CreatepostboxRequest = () => {
     if (nickname === "") {
       alert("필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐");
@@ -43,28 +45,24 @@ function CreatePostBoxPage1() {
       );
       //   history.push("/createpostboxsteptwo");
     }
-    // fetch('http://158.247.195.25/sign_in/', {
-    //     method: "POST",
-    //     headers: {
-
-    //     },
-    //     body: JSON.stringify({
-    //         'name': name,
-    //         'birthdate': birthdate,
-    //         'gender': gender,
-    //         'phone': phone,
-    //     }),
-    // })
-    //     .then(res => res.json())
-    //     .then(res => {
-    //         // localStorage.setItem("Kakao_token", res.access_token);
-    //         // const kakao_token = localStorage.getItem("Kakao_token");
-    //         if (res) {
-    //             console.log(res);
-    //             // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
-    //             // history.push("/joininfo");
-    //         }
-    //     })
+    fetch("https://poppymail.shop/mailbox/", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + Kakao_token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nickname: nickname,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res) {
+          console.log(res);
+          localStorage.setItem("mailbox_link", res.mailbox_link);
+          console.log(res.mailbox_link);
+        }
+      });
   };
 
   //   if (loading) return <LoadingScreen />;

@@ -24,7 +24,7 @@ function JoinPage() {
         console.log(authObj);
         // console.log(authObj.access_token);
         // fetch("http://158.247.195.25/account/login/kakao/", {
-          fetch("https://poppymail.shop/account/login/kakao/", {
+        fetch("https://poppymail.shop/account/login", {
           method: "POST",
           headers: {
             // 'Authorization' : '7dTk9-OoODnnr5g71IBC0NLqJTlQYkiNlgTupgo9dVwAAAF7jFnnrg',
@@ -36,9 +36,10 @@ function JoinPage() {
         })
           .then(res => res.json())
           .then(res => {
-            localStorage.setItem("Kakao_token", res.access_token);
+            localStorage.setItem("Kakao_token", res.access);
+            localStorage.setItem("User_id", res.user_id);
             const kakao_token = localStorage.getItem("Kakao_token");
-            if (res.access_token) {
+            if (res.access) {
               console.log(res);
               alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
               history.push("/joininfo");
