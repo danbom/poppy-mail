@@ -13,7 +13,7 @@ import AlertCretePostbox from "../../components/Alert/AlertCreatePostbox";
 function CreatePostBoxPage2() {
   const [_alert, setAlert] = useState(<AlertCretePostbox></AlertCretePostbox>);
   setTimeout(() => {
-    setAlert(null);
+    setAlert(false);
   }, 2000);
 
   const mailbox_link = localStorage.getItem("mailbox_link");
@@ -29,7 +29,7 @@ function CreatePostBoxPage2() {
     const t = document.createElement("textarea");
     document.body.appendChild(t);
     t.value = val;
-    // t.select();
+    t.select();
     document.execCommand("copy");
     document.body.removeChild(t);
   };

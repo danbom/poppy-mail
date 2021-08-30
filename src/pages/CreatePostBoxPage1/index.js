@@ -22,7 +22,25 @@ function CreatePostBoxPage1() {
   const value = useMemo(() => ({ setNickname }), [setNickname]);
 
   const CreatepostboxRequest2 = () => {
-    history.push("/createpostboxsteptwo");
+    fetch("https://poppymail.shop/mailbox/", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nickname: nickname,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res) {
+          console.log(res);
+          localStorage.setItem("mailbox_link", res.mailbox_link);
+          console.log(res.mailbox_link);
+          history.push("/createpostboxsteptwo");
+        }
+      });
   };
 
   const access = localStorage.getItem("access");
@@ -42,24 +60,6 @@ function CreatePostBoxPage1() {
       );
       //   history.push("/createpostboxsteptwo");
     }
-    fetch("https://poppymail.shop/mailbox/", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + access,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        nickname: nickname,
-      }),
-    })
-      .then(res => res.json())
-      .then(res => {
-        if (res) {
-          console.log(res);
-          localStorage.setItem("mailbox_link", res.mailbox_link);
-          console.log(res.mailbox_link);
-        }
-      });
   };
 
   //   if (loading) return <LoadingScreen />;

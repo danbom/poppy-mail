@@ -22,7 +22,7 @@ function WelcomePage() {
             <LoginBtn></LoginBtn>
           </Link>
 
-          <Link to="/join">
+          <Link to="/howto">
             <JoinBtn></JoinBtn>
           </Link>
         </div>
