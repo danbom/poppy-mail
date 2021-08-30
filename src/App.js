@@ -86,8 +86,7 @@ function App() {
               path="/joininfo"
               exact
             />
-            <PublicRoute
-              restricted
+            <PrivateRoute
               component={JoinCompletePage}
               path="/joincomplete"
               exact

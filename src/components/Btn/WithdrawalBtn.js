@@ -21,7 +21,7 @@ function WithdrawalBtn() {
         if (res) {
           console.log(res);
           alert("탈퇴완료!");
-          localStorage.removeItem("access");
+          localStorage.clear();
           history.push("/");
         }
       });

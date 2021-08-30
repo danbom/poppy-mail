@@ -29,9 +29,11 @@ function ReceivedLetterPage() {
 
           <div className="kakaoplus-desc">아직 추가하지 않았다면,</div>
 
-          <div className="kakaoplus-received-letter-page">
-            <img src={KakaoPlusImg} />
-          </div>
+          <a href="https://pf.kakao.com/_hxaxjUs">
+            <div className="kakaoplus-received-letter-page">
+              <img src={KakaoPlusImg} />
+            </div>
+          </a>
         </div>
       </S.ReceivedLetterScene>
     </>

@@ -28,7 +28,7 @@ function Navbar() {
       .then(res => {
         if (res) {
           console.log(res);
-          localStorage.removeItem("access");
+          localStorage.clear();
           alert("로그아웃!");
           history.push("/");
         }
@@ -75,13 +75,13 @@ function Navbar() {
                 </a>
               </li>
               <li className="nav-text">
-                <a href="https://www.notion.so/about-rough-03f3264b6260471d97df2da4fcfa347b">
+                <a href="https://thorn-laundry-3ff.notion.site/ABOUT-050b49e111444864ab692b1bd349e9d4">
                   <AboutImg />
                   <span>About 파피메일</span>
                 </a>
               </li>
               <li className="nav-text">
-                <a href="https://www.notion.so/FAQ-c5c39e0bcf93420289a6f7b7913035d8">
+                <a href="https://thorn-laundry-3ff.notion.site/FAQ-c5c39e0bcf93420289a6f7b7913035d8">
                   <FaqImg />
                   <span>자주 묻는 질문</span>
                 </a>

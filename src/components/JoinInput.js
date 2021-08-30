@@ -15,6 +15,7 @@ function JoinInput() {
 
   const processName = e => {
     setName(e.target.value);
+    localStorage.setItem("name", e.target.value);
   };
 
   const processBirthdate = e => {
