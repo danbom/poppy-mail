@@ -41,8 +41,11 @@ function JoinPage() {
             const kakao_token = localStorage.getItem("Kakao_token");
             if (res.access) {
               console.log(res);
-              alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
-              history.push("/joininfo");
+              if (res.is_new === "true") {
+                history.push("/joininfo");
+              } else {
+                history.push("/howto");
+              }
             }
           });
       },
