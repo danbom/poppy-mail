@@ -1090,7 +1090,7 @@ background: #4243554D;
   line-height: 3.9rem;
   text-align: center;
 
-  color: #4B4362;
+  color: #4b4362;
   z-index: 2;
 }
 
@@ -1882,7 +1882,6 @@ button#dropdown-basic-button {
   height: 15.471rem;
   left: calc(50% - 4.412rem);
   top: 3.3rem;
-  
 }
 
 .my-post-box-item-ment1 {
@@ -1995,4 +1994,27 @@ button#dropdown-basic-button {
   text-align: center;
   line-height: 3.7rem;
   cursor: pointer;
+}
+
+.withdrawal-img {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  top: 14.65rem;
+  left: calc(50% - 2rem);
+}
+
+.withdrawal-ment {
+  position: absolute;
+  width: 100%;
+  top: 20rem;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.42rem;
+  text-align: center;
+
+  color: #000000;
 }

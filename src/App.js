@@ -17,6 +17,7 @@ import CheckWriteMailPage from "./pages/CheckWriteMailPage";
 import CompleteWriteMailPage from "./pages/CompleteWriteMailPage";
 import MyPostboxPage from "./pages/MyPostboxPage";
 import CheckArrivedMailPage from "./pages/CheckArrivedMailPage";
+import WithdrawalPage from "./pages/WithdrawalPage";
 
 import "./App.css";
 
@@ -74,6 +75,7 @@ function App() {
               path="/checkarrivedmail"
               component={CheckArrivedMailPage}
             />
+            <Route exact path="/withdrawal" component={WithdrawalPage} />
           </Switch>
         </div>
       </div>

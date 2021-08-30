@@ -14,7 +14,7 @@ export const SidebarData = [
   },
   {
     title: "탈퇴하기",
-    path: "/",
+    path: "/withdrawal",
     cName: "nav-text-small1",
   },
   {
