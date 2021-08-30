@@ -33,45 +33,34 @@ function JoinInfoPage() {
         "필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐" + access
       );
     } else {
-      alert(
-        "name: " +
-          name +
-          "phone: " +
-          phone +
-          "gender: " +
-          gender +
-          "birthdate: " +
-          birthdate
-      );
-      history.push("/joincomplete");
+      const access = localStorage.getItem("access");
+      const User_id = localStorage.getItem("User_id");
+      fetch("https://poppymail.shop/account/" + User_id + "/userInfo", {
+        method: "PATCH",
+        headers: {
+          Authorization: "Bearer " + access,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          phone: phone,
+          gender: gender,
+          birthdate: birthdate,
+        }),
+      })
+        .then(res => res.json())
+        .then(res => {
+          // localStorage.setItem("Kakao_token", res.access_token);
+          // const kakao_token = localStorage.getItem("Kakao_token");
+          if (res) {
+            console.log(access);
+            console.log(res);
+            history.push("/joincomplete");
+            // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
+            // history.push("/joininfo");
+          }
+        });
     }
-
-    const access = localStorage.getItem("access");
-    const User_id = localStorage.getItem("User_id");
-    fetch("https://poppymail.shop/account/" + User_id + "/userInfo", {
-      method: "PATCH",
-      headers: {
-        Authorization: "Bearer " + access,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        gender: gender,
-        birthdate: birthdate,
-      }),
-    })
-      .then(res => res.json())
-      .then(res => {
-        // localStorage.setItem("Kakao_token", res.access_token);
-        // const kakao_token = localStorage.getItem("Kakao_token");
-        if (res) {
-          console.log(access);
-          console.log(res);
-          // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
-          // history.push("/joininfo");
-        }
-      });
   };
 
   return (
