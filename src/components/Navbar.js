@@ -48,7 +48,6 @@ function Navbar() {
             </div>
           </ul>
         </nav>
-        )
       </IconContext.Provider>
     </>
   );

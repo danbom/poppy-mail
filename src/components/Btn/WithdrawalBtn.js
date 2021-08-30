@@ -10,17 +10,15 @@ function WithdrawalBtn() {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + Kakao_token,
-        // "Content-Type": "application/json",
-        // "Access-Control-Allow-Origin": "*",
-        // "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify({}),
     })
-      .then(res => res.json())
+      //   .then(res => res.json())
       .then(res => {
         // localStorage.setItem("Kakao_token", res.access_token);
         // const kakao_token = localStorage.getItem("Kakao_token");
         if (res) {
+          console.log(res);
           alert("탈퇴완료!");
           history.push("/");
         }
