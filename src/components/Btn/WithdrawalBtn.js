@@ -10,6 +10,7 @@ function WithdrawalBtn() {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({}),
     })
@@ -20,6 +21,7 @@ function WithdrawalBtn() {
         if (res) {
           console.log(res);
           alert("탈퇴완료!");
+          localStorage.removeItem("access");
           history.push("/");
         }
       });

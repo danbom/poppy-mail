@@ -28,7 +28,7 @@ function Navbar() {
       .then(res => {
         if (res) {
           console.log(res);
-          localStorage.setItem("access", null);
+          localStorage.removeItem("access");
           alert("로그아웃!");
           history.push("/");
         }
