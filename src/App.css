@@ -1638,6 +1638,7 @@ button#dropdown-basic-button {
   height: 2rem;
   border-radius: 2rem;
   margin: 0 0.736rem;
+  cursor: pointer;
 }
 
 .colorbar-element#color1 {
