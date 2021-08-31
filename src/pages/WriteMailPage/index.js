@@ -1,4 +1,4 @@
-import React from "react";
+import { React, createContext, useState, useContext, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 import * as S from "./styles";
@@ -11,17 +11,15 @@ import SmallCompleteBtn from "../../components/Btn/SmallCompleteBtn";
 function WriteMail() {
   return (
     <>
-      <S.WriteMailScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          <Link to="/checkwritemail">
-            <SmallCompleteBtn></SmallCompleteBtn>
-          </Link>
-          <LogoNamePoppyMail></LogoNamePoppyMail>
-          <Colorbar></Colorbar>
-          <Letter></Letter>
-        </div>
-      </S.WriteMailScene>
+      <div className="fullbox">
+        <BackBtn></BackBtn>
+        <Link to="/checkwritemail">
+          <SmallCompleteBtn></SmallCompleteBtn>
+        </Link>
+        <LogoNamePoppyMail></LogoNamePoppyMail>
+        <Colorbar></Colorbar>
+        <Letter></Letter>
+      </div>
     </>
   );
 }

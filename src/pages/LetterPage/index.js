@@ -8,9 +8,18 @@ import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 import PostLinkTitle from "../../components/PostLinkTitle";
 import WriteMailBtn from "../../components/Btn/WriteMailBtn";
 
-function LetsWriteMail() {
-  //   if (loading) return <LoadingScreen />;
-  //   if (error) return <div>에러가 발생했습니다.</div>;
+function LetterPage() {
+  fetch("https://poppymail.com/letter/33/?key=wG6WmeOz", {
+    method: "GET",
+    headers: {},
+  })
+    .then(res => res.json())
+    .then(res => {
+      if (res) {
+        console.log(res);
+      }
+    });
+
   return (
     <>
       <S.LetsWriteMailScene>
@@ -32,4 +41,4 @@ function LetsWriteMail() {
   );
 }
 
-export default LetsWriteMail;
+export default LetterPage;

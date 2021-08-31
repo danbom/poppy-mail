@@ -11,7 +11,7 @@ import CreatePostBoxPage3 from "./pages/CreatePostBoxPage3";
 import KakaoPlusPage from "./pages/KakaoPlusPage";
 import ReceivedLetterPage from "./pages/ReceivedLetterPage";
 import JoinInfoPage from "./pages/JoinInfoPage";
-import LetsWriteMailPage from "./pages/LetsWriteMailPage";
+import LetterPage from "./pages/LetterPage";
 import WriteMailPage from "./pages/WriteMailPage";
 import CheckWriteMailPage from "./pages/CheckWriteMailPage";
 import CompleteWriteMailPage from "./pages/CompleteWriteMailPage";
@@ -111,8 +111,8 @@ function App() {
             />
 
             <PublicRoute
-              component={LetsWriteMailPage}
-              path="/letswritemail"
+              component={LetterPage}
+              path="/letter/:mailbox_pk"
               exact
             />
             <PublicRoute component={WriteMailPage} path="/writemail" exact />
