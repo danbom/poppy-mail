@@ -11,6 +11,21 @@ function MyPostboxItem1() {
   const [item1_mailbox_link, setItemLink1] = useState(null);
   const [item1_number_letter, setItemLetter1] = useState(null);
 
+  const Copy = () => {
+    copyToClipboard(item1_mailbox_link);
+
+    console.log("Copied!");
+  };
+
+  const copyToClipboard = val => {
+    const t = document.createElement("textarea");
+    document.body.appendChild(t);
+    t.value = val;
+    t.select();
+    document.execCommand("copy");
+    document.body.removeChild(t);
+  };
+
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
     headers: {
@@ -78,7 +93,9 @@ function MyPostboxItem1() {
 
   return (
     <>
-      <div className="copy-my-post-box-link-ment">이 우체통 링크 복사하기</div>
+      <div className="copy-my-post-box-link-ment" onClick={Copy}>
+        이 우체통 링크 복사하기
+      </div>
 
       <img src={MyPostboxImg} className="MyPostboxImg"></img>
 

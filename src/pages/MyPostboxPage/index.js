@@ -32,7 +32,7 @@ function MyPostbox() {
 
           <LogoNameMyPostbox></LogoNameMyPostbox>
 
-          <AlertCopyWhite></AlertCopyWhite>
+          {/* <AlertCopyWhite></AlertCopyWhite> */}
 
           <div>
             <Swiper

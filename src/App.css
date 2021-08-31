@@ -1956,6 +1956,7 @@ button#dropdown-basic-button {
   /* identical to box height */
 
   color: #ffffff;
+  cursor: pointer;
 }
 
 .check-arrived-letter-ment {

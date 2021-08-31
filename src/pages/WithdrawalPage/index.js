@@ -8,8 +8,40 @@ import withdrawalimg from "../../image/withdrawal.png";
 import WithdrawalBtn from "../../components/Btn/WithdrawalBtn";
 
 function Withdrawal() {
-  //   if (loading) return <LoadingScreen />;
-  //   if (error) return <div>에러가 발생했습니다.</div>;
+  const access = localStorage.getItem("access");
+  const refresh = localStorage.getItem("refresh");
+
+  fetch("https://poppymail.shop/mailbox/", {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + access,
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res);
+      if (res.detail === "Given token not valid for any token type") {
+        fetch("https://poppymail.shop/api/token/refresh/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            refresh: refresh,
+          }),
+        })
+          .then(res => res.json())
+          .then(res => {
+            if (res) {
+              console.log(res);
+              localStorage.setItem("access", res.access);
+            }
+          });
+      }
+    });
+
   return (
     <>
       <S.WithdrawalScene>
