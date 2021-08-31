@@ -14,7 +14,7 @@ function MyPostboxItem1() {
   const Copy = () => {
     copyToClipboard(item1_mailbox_link);
 
-    console.log("Copied!");
+    alert("복사되었습니다!");
   };
 
   const copyToClipboard = val => {
