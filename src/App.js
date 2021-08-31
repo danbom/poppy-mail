@@ -80,12 +80,7 @@ function App() {
             <Route exact path="/withdrawal" component={WithdrawalPage} /> */}
             <PublicRoute component={WelcomePage} path="/" exact />
             <PublicRoute restricted component={JoinPage} path="/join" exact />
-            <PublicRoute
-              restricted
-              component={JoinInfoPage}
-              path="/joininfo"
-              exact
-            />
+            <PublicRoute component={JoinInfoPage} path="/joininfo" exact />
             <PrivateRoute
               component={JoinCompletePage}
               path="/joincomplete"

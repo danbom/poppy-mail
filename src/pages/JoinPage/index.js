@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { React, useState } from "react";
+import { Link, useHistory, Redirect, Route } from "react-router-dom";
 
 import * as S from "./styles";
 import LogoNameJoin from "../../components/Txt/LogoNameJoin";
@@ -11,21 +11,16 @@ import JoinWithKakao from "../../components/Txt/JoinWithKakao";
 const { Kakao } = window;
 
 function JoinPage() {
+  const [btn, setBtn] = useState("");
+
   const history = useHistory();
 
-  const is_new = localStorage.getItem("is_new");
+  const access = !!localStorage.getItem("access");
+
   const KakaoLoginClickHandler = () => {
     Kakao.Auth.login({
       success: function (authObj) {
-        // fetch(`${'http://158.247.195.25/account/login/kakao/'}`, {
-        //     method: "POST",
-        //     body: JSON.stringify({
-        //         access_token: authObj.access_token,
-        //     }),
-        // })
-        console.log(authObj);
-        // console.log(authObj.access_token);
-        // fetch("http://158.247.195.25/account/login/kakao/", {
+        // console.log(authObj);
         fetch("https://poppymail.shop/account/login", {
           method: "POST",
           headers: {
@@ -38,26 +33,17 @@ function JoinPage() {
         })
           .then(res => res.json())
           .then(res => {
-            if (is_new) {
-              history.push("/joininfo");
-            } else {
-              history.push("/howto");
-            }
             localStorage.setItem("access", res.access);
             localStorage.setItem("User_id", res.user_id);
             localStorage.setItem("refresh", res.refresh);
             localStorage.setItem("is_new", res.is_new);
 
-            const access = localStorage.getItem("access");
-
             if (res.access) {
               console.log(res);
-              // history.push("/joininfo");
-              // if (name === null) {
-              //   history.push("/joininfo");
-              // } else {
-              //   history.push("/howto");
-              // }
+              const is_new = localStorage.getItem("is_new");
+              is_new === "true"
+                ? history.push("/joininfo")
+                : history.push("/howto");
             }
           });
       },
@@ -75,12 +61,13 @@ function JoinPage() {
 
         <JoinMent></JoinMent>
       </S.JoinScene>
-
       <JoinWithKakao></JoinWithKakao>
 
       <S.KakaoBtn onClick={KakaoLoginClickHandler}>
         <img src={KakaobtnImg} className="KakaobtnImg" />
       </S.KakaoBtn>
+
+      {btn}
     </>
   );
 }
