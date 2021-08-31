@@ -22,7 +22,7 @@ function LogInPage() {
         //         access_token: authObj.access_token,
         //     }),
         // })
-        fetch("https://poppymail.shop/account/login", {
+        fetch("https://poppymail.shop/account/login/", {
           method: "POST",
           headers: {
             // 'Authorization' : '7dTk9-OoODnnr5g71IBC0NLqJTlQYkiNlgTupgo9dVwAAAF7jFnnrg',

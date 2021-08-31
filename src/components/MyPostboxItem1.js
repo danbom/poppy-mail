@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { React, useState } from "react";
+import MyPostboxImg from "../image/mypostboxitemimg.png";
+import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
+// import * as S from './styles';
 
-import * as S from "./styles";
-import Navbar from "../../components/Navbar";
-import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
-import BackBtn from "../../components/Btn/BackBtn";
-import LinkName from "../../components/Txt/LinkName";
-import AlertCopy from "../../components/Alert/AlertCopy";
-import PostboxAfter from "../../components/Img/PostboxAfter";
-import CompleteBtn from "../../components/Btn/CompleteBtn";
-
-function CreatePostBoxPage3() {
-  const [_alert, setAlert] = useState(<AlertCopy></AlertCopy>);
+function MyPostboxItem1() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+
+  const [item1_link_title, setItemTitle1] = useState(null);
+  const [item1_mailbox_link, setItemLink1] = useState(null);
+  const [item1_number_letter, setItemLetter1] = useState(null);
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -49,6 +45,10 @@ function CreatePostBoxPage3() {
         localStorage.setItem("1st_link_title", res[0].link_title);
         localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
         localStorage.setItem("1st_number_letter", res[0].number_of_letter);
+
+        setItemTitle1(localStorage.getItem("1st_link_title"));
+        setItemLink1(localStorage.getItem("1st_mailbox_link"));
+        setItemLetter1(localStorage.getItem("1st_number_letter"));
       }
 
       if (res[1]) {
@@ -76,34 +76,22 @@ function CreatePostBoxPage3() {
       }
     });
 
-  setTimeout(() => {
-    setAlert(null);
-  }, 2000);
-
-  //   if (loading) return <LoadingScreen />;
-  //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.CreatePostBoxScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          <Navbar></Navbar>
+      <div className="copy-my-post-box-link-ment">이 우체통 링크 복사하기</div>
 
-          <LogoNameCreatePostBox></LogoNameCreatePostBox>
+      <img src={MyPostboxImg} className="MyPostboxImg"></img>
 
-          {_alert}
-
-          <PostboxAfter></PostboxAfter>
-
-          <LinkName></LinkName>
-
-          <Link to="/kakaoplus">
-            <CompleteBtn></CompleteBtn>
-          </Link>
-        </div>
-      </S.CreatePostBoxScene>
+      <div className="my-post-box-item-ment1">&lt;{item1_link_title}&gt;</div>
+      <div className="my-post-box-item-ment2">
+        편지 {item1_number_letter}개 도착
+      </div>
+      <div className="my-post-box-item-ment3">
+        편지 열람이 가능할 때 알림이 가요!
+      </div>
+      <OpenPostboxBtn></OpenPostboxBtn>
     </>
   );
 }
 
-export default CreatePostBoxPage3;
+export default MyPostboxItem1;

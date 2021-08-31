@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
 
 import * as S from "./styles";
@@ -10,7 +10,11 @@ import SwiperCore, { Thumbs, Pagination, Autoplay } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/thumbs/thumbs.scss";
 import "swiper/components/pagination/pagination.scss";
-import MyPostboxItem from "../../components/MyPostboxItem";
+import MyPostboxItem1 from "../../components/MyPostboxItem1";
+import MyPostboxItem2 from "../../components/MyPostboxItem2";
+import MyPostboxItem3 from "../../components/MyPostboxItem3";
+import MyPostboxItem4 from "../../components/MyPostboxItem4";
+import MyPostboxItem5 from "../../components/MyPostboxItem5";
 import AlertCopyWhite from "../../components/Alert/AlertCopyWhite";
 
 SwiperCore.use([Thumbs, Pagination, Autoplay]);
@@ -18,6 +22,7 @@ SwiperCore.use([Thumbs, Pagination, Autoplay]);
 function MyPostbox() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;
+
   return (
     <>
       <S.MyPostboxScene>
@@ -39,21 +44,33 @@ function MyPostbox() {
               autoplay={{ delay: 5000 }}
               id="mypostboxswiper"
             >
-              <SwiperSlide>
-                <MyPostboxItem></MyPostboxItem>
-              </SwiperSlide>
-              <SwiperSlide>
-                <MyPostboxItem></MyPostboxItem>
-              </SwiperSlide>
-              <SwiperSlide>
-                <MyPostboxItem></MyPostboxItem>
-              </SwiperSlide>
-              <SwiperSlide>
-                <MyPostboxItem></MyPostboxItem>
-              </SwiperSlide>
-              <SwiperSlide>
-                <MyPostboxItem></MyPostboxItem>
-              </SwiperSlide>
+              {!!localStorage.getItem("1st_link_title") && (
+                <SwiperSlide>
+                  <MyPostboxItem1></MyPostboxItem1>
+                </SwiperSlide>
+              )}
+
+              {!!localStorage.getItem("2nd_link_title") && (
+                <SwiperSlide>
+                  <MyPostboxItem2></MyPostboxItem2>
+                </SwiperSlide>
+              )}
+
+              {!!localStorage.getItem("3rd_link_title") && (
+                <SwiperSlide>
+                  <MyPostboxItem3></MyPostboxItem3>
+                </SwiperSlide>
+              )}
+              {!!localStorage.getItem("4th_link_title") && (
+                <SwiperSlide>
+                  <MyPostboxItem4></MyPostboxItem4>
+                </SwiperSlide>
+              )}
+              {!!localStorage.getItem("5th_link_title") && (
+                <SwiperSlide>
+                  <MyPostboxItem5></MyPostboxItem5>
+                </SwiperSlide>
+              )}
             </Swiper>
           </div>
         </div>

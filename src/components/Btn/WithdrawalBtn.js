@@ -6,7 +6,7 @@ function WithdrawalBtn() {
 
   const WithdrawalRequest = () => {
     const access = localStorage.getItem("access");
-    fetch("https://poppymail.shop/account/signout", {
+    fetch("https://poppymail.shop/account/signout/", {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + access,

@@ -16,7 +16,7 @@ function Navbar() {
 
   const LogoutRequest = () => {
     const access = localStorage.getItem("access");
-    fetch("https://poppymail.shop/account/logout", {
+    fetch("https://poppymail.shop/account/logout/", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + access,
