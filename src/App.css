@@ -2028,3 +2028,30 @@ button#dropdown-basic-button {
 
   color: #000000;
 }
+
+.thumbnail1 {
+  position: absolute;
+  width: 2.353rem;
+  height: 2.18rem;
+  left: 12.95rem;
+  top: -0.1rem;
+  z-index: 2;
+}
+
+.thumbnail2 {
+  position: absolute;
+  width: 1.942rem;
+  height: 1.648rem;
+  left: 16.65rem;
+  top: 0.1rem;
+  z-index: 2;
+}
+
+.thumbnail3 {
+  position: absolute;
+  width: 1.942rem;
+  height: 1.942rem;
+  left: 20.2rem;
+  top: 0.05rem;
+  z-index: 2;
+}

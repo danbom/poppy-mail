@@ -1,6 +1,10 @@
 import { useContext, useState, useMemo } from "react";
 import React from "react";
 import { ColorContext } from "../pages/WriteMailPage";
+
+import Thumbnail1Img from "../image/thumbnail1.png";
+import Thumbnail2Img from "../image/thumbnail2.png";
+import Thumbnail3Img from "../image/thumbnail3.png";
 // import * as S from './styles';
 
 function Colorbar() {
@@ -60,21 +64,15 @@ function Colorbar() {
           id="color3"
           onClick={processColor3}
         ></div>
-        <div
-          className="colorbar-element"
-          id="color4"
-          onClick={processColor4}
-        ></div>
-        <div
-          className="colorbar-element"
-          id="color5"
-          onClick={processColor5}
-        ></div>
-        <div
-          className="colorbar-element"
-          id="color6"
-          onClick={processColor6}
-        ></div>
+        <div className="colorbar-element" id="color4" onClick={processColor4}>
+          <img className="thumbnail1" src={Thumbnail1Img}></img>
+        </div>
+        <div className="colorbar-element" id="color5" onClick={processColor5}>
+          <img className="thumbnail2" src={Thumbnail2Img}></img>
+        </div>
+        <div className="colorbar-element" id="color6" onClick={processColor6}>
+          <img className="thumbnail3" src={Thumbnail3Img}></img>
+        </div>
       </div>
     </>
   );
