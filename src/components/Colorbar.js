@@ -1,33 +1,45 @@
 import { useContext, useState, useMemo } from "react";
 import React from "react";
-import { ColorContext } from "../components/Letter";
+import { ColorContext } from "../pages/WriteMailPage";
 // import * as S from './styles';
 
 function Colorbar() {
   const { setColor } = useContext(ColorContext);
 
   const processColor1 = e => {
+    // setColor("#f2dba1");
     setColor("#f2dba1");
+    localStorage.setItem("letter_color", "#f2dba1");
   };
 
   const processColor2 = e => {
+    // setColor("#4b4362");
     setColor("#4b4362");
+    localStorage.setItem("letter_color", "#4b4362");
   };
 
   const processColor3 = e => {
-    setColor("#6b8f99");
+    // setColor("#87AFBA");
+    setColor("#87AFBA");
+    localStorage.setItem("letter_color", "#87AFBA");
   };
 
   const processColor4 = e => {
+    // setColor("#b88dcd");
     setColor("#b88dcd");
+    localStorage.setItem("letter_color", "#b88dcd");
   };
 
   const processColor5 = e => {
+    // setColor("#db7667");
     setColor("#db7667");
+    localStorage.setItem("letter_color", "#db7667");
   };
 
   const processColor6 = e => {
+    // setColor("#bdbe82");
     setColor("#bdbe82");
+    localStorage.setItem("letter_color", "#bdbe82");
   };
 
   return (
