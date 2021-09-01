@@ -1,8 +1,22 @@
-import React, { createContext, useState, useMemo } from "react";
+import React, { useContext, useState, useMemo } from "react";
+import { LetterContext } from "../pages/WriteMailPage";
 
 // import * as S from './styles';
 
 function Letter() {
+  // const [contents, setContents] = useState("");
+  // const [sender, setSender] = useState("");
+
+  const { setContents, setSender } = useContext(LetterContext);
+
+  const processContents = e => {
+    setContents(e.target.value);
+  };
+
+  const processSender = e => {
+    setSender(e.target.value);
+  };
+
   return (
     <>
       <div className="letter-element" id="to-box">
@@ -11,7 +25,10 @@ function Letter() {
         <input className="to-contents"></input>
       </div>
       <div className="letter-element" id="contents-box">
-        <textarea className="contents-contents"></textarea>
+        <textarea
+          className="contents-contents"
+          onChange={processContents}
+        ></textarea>
       </div>
       <div className="letter-element" id="from-box">
         <div className="from-txt">From.</div>
@@ -19,6 +36,7 @@ function Letter() {
         <input
           className="from-contents"
           placeholder="*친구가 알아볼 수 있도록 써주세요"
+          onChange={processSender}
         ></input>
       </div>
     </>

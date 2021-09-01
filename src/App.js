@@ -112,10 +112,14 @@ function App() {
 
             <PublicRoute
               component={LetterPage}
-              path="/letter/:mailbox_pk"
+              path="/letter/:mailbox_pk/:random_strkey"
               exact
             />
-            <PublicRoute component={WriteMailPage} path="/writemail" exact />
+            <PublicRoute
+              component={WriteMailPage}
+              path="/writemail/:mailbox_pk/:random_strkey"
+              exact
+            />
             <PublicRoute
               component={CheckWriteMailPage}
               path="/checkwritemail"

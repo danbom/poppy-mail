@@ -1,6 +1,7 @@
 import { useContext, useState, useMemo } from "react";
 import React from "react";
-import { ColorContext } from "../pages/WriteMailPage";
+// import { ColorContext } from "../pages/WriteMailPage";
+import { LetterContext } from "../pages/WriteMailPage";
 
 import Thumbnail1Img from "../image/thumbnail1.png";
 import Thumbnail2Img from "../image/thumbnail2.png";
@@ -8,7 +9,7 @@ import Thumbnail3Img from "../image/thumbnail3.png";
 // import * as S from './styles';
 
 function Colorbar() {
-  const { setColor } = useContext(ColorContext);
+  const { setColor } = useContext(LetterContext);
 
   const processColor1 = e => {
     // setColor("#f2dba1");

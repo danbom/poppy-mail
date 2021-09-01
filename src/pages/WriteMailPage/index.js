@@ -14,24 +14,55 @@ import letter_deco_2_2 from "../../image/letter_deco_2_2.png";
 import letter_deco_3_1 from "../../image/letter_deco_3_1.png";
 import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
 
-export const ColorContext = createContext({
-  setColor: () => {
-    "#f2dba1";
-  },
+export const LetterContext = createContext({
+  setColor: () => {},
+  setContents: () => {},
+  setSender: () => {},
 });
 
-function WriteMail() {
+function WriteMail(props) {
+  const mailbox_pk = props.match.params.mailbox_pk;
+  const random_strkey = props.match.params.random_strkey;
   const [color, setColor] = useState("#f2dba1");
-  const value = useMemo(() => ({ setColor }), [setColor]);
+  const [contents, setContents] = useState("");
+  const [sender, setSender] = useState("");
+  const value = useMemo(
+    () => ({ setColor, setContents, setSender }),
+    [setColor, setContents, setSender]
+  );
+
+  const SendLetterRequest = () => {
+    fetch("https://poppymail.shop/letter/" + mailbox_pk + "/" + random_strkey, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        content: contents,
+        sender: sender,
+        color: color,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res) {
+          console.log("콘솔 " + res);
+          console.log("셋  " + contents + sender + color);
+          //history.push("/");
+        }
+      });
+  };
 
   return (
     <>
-      <ColorContext.Provider value={value}>
+      <LetterContext.Provider value={value}>
         <div className="fullbox">
           <BackBtn></BackBtn>
-          <Link to="/checkwritemail">
-            <SmallCompleteBtn></SmallCompleteBtn>
-          </Link>
+          {/* <Link to="/checkwritemail"> */}
+          <div className="small-complete-btn" onClick={SendLetterRequest}>
+            완료
+          </div>
+          {/* </Link> */}
           <LogoNamePoppyMail></LogoNamePoppyMail>
           <Colorbar></Colorbar>
 
@@ -55,7 +86,7 @@ function WriteMail() {
             <Letter></Letter>
           </div>
         </div>
-      </ColorContext.Provider>
+      </LetterContext.Provider>
     </>
   );
 }
