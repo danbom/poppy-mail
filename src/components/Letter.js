@@ -3,19 +3,6 @@ import React, { createContext, useState, useMemo } from "react";
 // import * as S from './styles';
 
 function Letter() {
-  // if ( color === "color1" )
-  // color === "color1"
-  //   ? setColor("#f2dba1")
-  //   : color === "color2"
-  //   ? setColor("#4b4362")
-  //   : color === "color3"
-  //   ? setColor("#87AFBA")
-  //   : color === "color4"
-  //   ? setColor("#b88dcd")
-  //   : color === "color5"
-  //   ? setColor("#db7667")
-  //   : setColor("color6");
-
   return (
     <>
       <div className="letter-element" id="to-box">

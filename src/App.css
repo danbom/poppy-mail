@@ -2055,3 +2055,46 @@ button#dropdown-basic-button {
   top: 0.05rem;
   z-index: 2;
 }
+
+.letter_deco_1_1 {
+  position: absolute;
+  width: 21.53rem;
+  height: 5.353rem;
+  top: 1rem;
+}
+
+.letter_deco_1_2 {
+  position: absolute;
+  width: 21.53rem;
+  height: 8.3rem;
+  bottom: 1rem;
+}
+
+.letter_deco_2_1 {
+  position: absolute;
+  width: 21.53rem;
+  height: 4.3rem;
+  top: 1rem;
+  left: -1rem;
+}
+
+.letter_deco_2_2 {
+  position: absolute;
+  width: 21.53rem;
+  height: 9.12rem;
+  bottom: 0.8rem;
+}
+
+.letter_deco_3_1 {
+  position: absolute;
+  width: 21.53rem;
+  height: 5.353rem;
+  top: 1rem;
+}
+
+.letter_deco_3_2 {
+  position: absolute;
+  width: 21.53rem;
+  height: 7.333rem;
+  bottom: 1rem;
+}
