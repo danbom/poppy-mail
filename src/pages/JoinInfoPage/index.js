@@ -27,11 +27,18 @@ function JoinInfoPage() {
   );
   const access = localStorage.getItem("access");
 
+  var reg = /\d{4}\-\d{2}\-\d{2}/;
+
   const JoinRequest = () => {
-    if (name === "" || birthdate === "" || gender === "" || phone === "") {
-      alert(
-        "필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐" + access
-      );
+    if (!reg.test(birthdate)) {
+      alert("생년월일을 올바르게 입력해주세요.");
+    } else if (
+      name === "" ||
+      birthdate === "" ||
+      gender === "" ||
+      phone === ""
+    ) {
+      alert("필수 입력 요소가 작성되지 않았습니다.");
     } else {
       const access = localStorage.getItem("access");
       const User_id = localStorage.getItem("User_id");
@@ -48,8 +55,8 @@ function JoinInfoPage() {
           birthdate: birthdate,
         }),
       })
-        .then(res => res.json())
-        .then(res => {
+        .then((res) => res.json())
+        .then((res) => {
           history.push("/joincomplete");
           // localStorage.setItem("Kakao_token", res.access_token);
           // const kakao_token = localStorage.getItem("Kakao_token");
