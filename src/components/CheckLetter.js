@@ -8,18 +8,21 @@ function CheckLetter() {
         <div className="letter-element" id="to-box">
           <div className="to-txt">To.</div>
           <div className="to-underline"></div>
-          <div className="to-contents"></div>
+          <div className="to-contents" id="div">
+            {localStorage.getItem("receiver")}
+          </div>
         </div>
         <div className="letter-element" id="contents-box">
-          <div className="contents-contents"></div>
+          <div className="contents-contents">
+            {localStorage.getItem("contents")}
+          </div>
         </div>
         <div className="letter-element" id="from-box">
           <div className="from-txt">From.</div>
           <div className="from-underline"></div>
-          <div
-            className="from-contents"
-            placeholder="*친구가 알아볼 수 있도록 써주세요"
-          ></div>
+          <div id="div" className="from-contents">
+            {localStorage.getItem("sender")}
+          </div>
         </div>
       </div>
     </>

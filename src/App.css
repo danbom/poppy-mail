@@ -1765,6 +1765,7 @@ button#dropdown-basic-button {
   width: 18.8rem;
   height: 19rem;
   display: flex;
+  word-break: break-all;
 }
 
 .from-txt {

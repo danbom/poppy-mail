@@ -1,5 +1,5 @@
 import React, { createContext, useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtn";
@@ -18,39 +18,58 @@ export const LetterContext = createContext({
   setColor: () => {},
   setContents: () => {},
   setSender: () => {},
+  setReceiver: () => {},
 });
 
 function WriteMail(props) {
+  const history = useHistory();
   const mailbox_pk = props.match.params.mailbox_pk;
   const random_strkey = props.match.params.random_strkey;
   const [color, setColor] = useState("#f2dba1");
   const [contents, setContents] = useState("");
   const [sender, setSender] = useState("");
+  const [receiver, setReceiver] = useState("");
   const value = useMemo(
-    () => ({ setColor, setContents, setSender }),
-    [setColor, setContents, setSender]
+    () => ({ setColor, setContents, setSender, setReceiver }),
+    [setColor, setContents, setSender, setReceiver]
   );
 
   const SendLetterRequest = () => {
-    fetch("https://poppymail.shop/letter/" + mailbox_pk + "/" + random_strkey, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        content: contents,
-        sender: sender,
-        color: color,
-      }),
-    })
-      .then(res => res.json())
-      .then(res => {
-        if (res) {
-          console.log("콘솔 " + res);
-          console.log("셋  " + contents + sender + color);
-          //history.push("/");
+    if (contents === "" || sender === "" || receiver === "")
+      alert("필수 입력 요소가 작성되지 않았습니다.");
+    else {
+      fetch(
+        "https://poppymail.shop/letter/" +
+          mailbox_pk +
+          "/" +
+          random_strkey +
+          "/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            content: contents,
+            sender: sender,
+            receiver: receiver,
+            color: color,
+          }),
         }
-      });
+      )
+        // .then((res) => res.json())
+        .then((res) => {
+          if (res.ok) {
+            console.log("콘솔 " + res);
+            console.log("셋  " + contents + sender + color);
+            history.push("/checkwritemail");
+          } else {
+            alert("해당 우체통이 존재하지 않습니다.");
+            history.goBack();
+          }
+        });
+    }
   };
 
   return (

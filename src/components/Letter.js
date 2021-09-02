@@ -7,14 +7,21 @@ function Letter() {
   // const [contents, setContents] = useState("");
   // const [sender, setSender] = useState("");
 
-  const { setContents, setSender } = useContext(LetterContext);
+  const { setReceiver, setContents, setSender } = useContext(LetterContext);
 
-  const processContents = e => {
-    setContents(e.target.value);
+  const processReceiver = (e) => {
+    setReceiver(e.target.value);
+    localStorage.setItem("receiver", e.target.value);
   };
 
-  const processSender = e => {
+  const processContents = (e) => {
+    setContents(e.target.value);
+    localStorage.setItem("contents", e.target.value);
+  };
+
+  const processSender = (e) => {
     setSender(e.target.value);
+    localStorage.setItem("sender", e.target.value);
   };
 
   return (
@@ -22,7 +29,7 @@ function Letter() {
       <div className="letter-element" id="to-box">
         <div className="to-txt">To.</div>
         <div className="to-underline"></div>
-        <input className="to-contents"></input>
+        <input className="to-contents" onChange={processReceiver}></input>
       </div>
       <div className="letter-element" id="contents-box">
         <textarea
