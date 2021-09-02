@@ -4,9 +4,6 @@ import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 // import * as S from './styles';
 
 function MyPostboxItem1() {
-  const access = localStorage.getItem("access");
-  const refresh = localStorage.getItem("refresh");
-
   const [item1_link_title, setItemTitle1] = useState(null);
   const [item1_mailbox_link, setItemLink1] = useState(null);
   const [item1_number_letter, setItemLetter1] = useState(null);
@@ -17,7 +14,7 @@ function MyPostboxItem1() {
     alert("복사되었습니다!");
   };
 
-  const copyToClipboard = val => {
+  const copyToClipboard = (val) => {
     const t = document.createElement("textarea");
     document.body.appendChild(t);
     t.value = val;
@@ -25,6 +22,9 @@ function MyPostboxItem1() {
     document.execCommand("copy");
     document.body.removeChild(t);
   };
+
+  const access = localStorage.getItem("access");
+  const refresh = localStorage.getItem("refresh");
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -34,8 +34,8 @@ function MyPostboxItem1() {
       Accept: "application/json",
     },
   })
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
@@ -47,8 +47,8 @@ function MyPostboxItem1() {
             refresh: refresh,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             if (res) {
               console.log(res);
               localStorage.setItem("access", res.access);
