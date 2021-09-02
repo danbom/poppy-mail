@@ -9,7 +9,6 @@ import WelcomeMent from "../../components/Txt/WelcomeMent";
 
 function WelcomePage() {
   const is_new = !!localStorage.getItem("is_new");
-  const access = !!localStorage.getItem("access");
 
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
@@ -48,10 +47,6 @@ function WelcomePage() {
         localStorage.setItem("1st_link_title", res[0].link_title);
         localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
         localStorage.setItem("1st_number_letter", res[0].number_of_letter);
-
-        setItemTitle1(localStorage.getItem("1st_link_title"));
-        setItemLink1(localStorage.getItem("1st_mailbox_link"));
-        setItemLetter1(localStorage.getItem("1st_number_letter"));
       }
 
       if (res[1]) {
