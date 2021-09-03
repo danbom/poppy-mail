@@ -23,6 +23,7 @@ function CreatePostBoxPage1() {
   const [nickname, setNickname] = useState("");
   const [navbar, setNavbar] = useState(null);
   const value = useMemo(() => ({ setNickname }), [setNickname]);
+  const nickReg = /^.{1,10}$/;
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -32,8 +33,8 @@ function CreatePostBoxPage1() {
       Accept: "application/json",
     },
   })
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
@@ -45,8 +46,8 @@ function CreatePostBoxPage1() {
             refresh: refresh,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             if (res) {
               console.log(res);
               localStorage.setItem("access", res.access);
@@ -96,8 +97,8 @@ function CreatePostBoxPage1() {
         nickname: nickname,
       }),
     })
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
         if (res) {
           console.log(res);
           if (res[0] === "우체통 개수 초과하여 생성 불가") {
@@ -115,7 +116,9 @@ function CreatePostBoxPage1() {
 
   const CreatepostboxRequest = () => {
     if (nickname === "") {
-      alert("필수 입력 요소가 작성되지 않았습니다 ... 알림창 만드러야댐");
+      alert("필수 입력 요소가 작성되지 않았습니다.");
+    } else if (!nickReg.test(nickname)) {
+      alert("이름 혹은 닉네임은 10글자까지 가능합니다.");
     } else {
       //   alert(nickname);
       setAlert(
