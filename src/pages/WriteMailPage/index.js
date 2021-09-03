@@ -34,9 +34,15 @@ function WriteMail(props) {
     [setColor, setContents, setSender, setReceiver]
   );
 
+  const tenReg = /^.{1,10}$/;
+
   const SendLetterRequest = () => {
     if (contents === "" || sender === "" || receiver === "")
       alert("필수 입력 요소가 작성되지 않았습니다.");
+    else if (!tenReg.test(sender))
+      alert("보내는 이는 10글자까지 입력할 수 있습니다.");
+    else if (!tenReg.test(receiver))
+      alert("받는 이는 10글자까지 입력할 수 있습니다.");
     else {
       fetch(
         "https://poppymail.shop/letter/" +
