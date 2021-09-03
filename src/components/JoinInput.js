@@ -11,33 +11,44 @@ function JoinInput() {
   const { setName, setBirthdate, setGender, setPhone } =
     useContext(UserContext);
 
+  const [birthnum, setBirthnum] = useState("");
+  const [year, setYear] = useState("");
+  const [month, setMonth] = useState("");
+  const [date, setDate] = useState("");
   const [titlegender, setTitlegender] = useState("남");
 
-  const processName = e => {
+  const processName = (e) => {
     setName(e.target.value);
     localStorage.setItem("name", e.target.value);
   };
 
-  const processBirthdate = e => {
+  const processBirthdate = (e) => {
+    // setBirthnum(e.target.value);
+    // setYear(birthnum.substr(0, 4));
+    // setMonth(birthnum.substr(4, 2));
+    // setDate(birthnum.substr(6, 2));
+    // console.log(birthnum);
+
+    // setBirthdate(year + "-" + month + "-" + date);
     setBirthdate(e.target.value);
   };
 
-  const setMan = e => {
+  const setMan = (e) => {
     setGender("남");
     setTitlegender("남");
   };
 
-  const setWoman = e => {
+  const setWoman = (e) => {
     setGender("여");
     setTitlegender("여");
   };
 
-  const setNone = e => {
+  const setNone = (e) => {
     setGender("");
     setTitlegender("선택하지 않음");
   };
 
-  const processPhone = e => {
+  const processPhone = (e) => {
     setPhone(e.target.value);
   };
 
@@ -56,7 +67,7 @@ function JoinInput() {
         <div className="birth-title">생년월일 </div>
         <input
           className="input-birth"
-          placeholder="2000-10-18"
+          placeholder="yyyymmdd"
           onChange={processBirthdate}
         ></input>
       </div>
