@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtn";
@@ -19,8 +18,8 @@ function Withdrawal() {
       Accept: "application/json",
     },
   })
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
@@ -32,8 +31,8 @@ function Withdrawal() {
             refresh: refresh,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             if (res) {
               console.log(res);
               localStorage.setItem("access", res.access);
@@ -48,7 +47,7 @@ function Withdrawal() {
         <div className="fullbox">
           <BackBtn></BackBtn>
 
-          <img src={withdrawalimg} className="withdrawal-img"></img>
+          <img src={withdrawalimg} alt="탈퇴" className="withdrawal-img"></img>
 
           <WithdrawalMent></WithdrawalMent>
 

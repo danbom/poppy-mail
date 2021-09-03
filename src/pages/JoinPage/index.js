@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import { Link, useHistory, Redirect, Route } from "react-router-dom";
+import { React } from "react";
+import { useHistory } from "react-router-dom";
 
 import * as S from "./styles";
 import LogoNameJoin from "../../components/Txt/LogoNameJoin";
@@ -11,11 +11,7 @@ import JoinWithKakao from "../../components/Txt/JoinWithKakao";
 const { Kakao } = window;
 
 function JoinPage() {
-  const [btn, setBtn] = useState("");
-
   const history = useHistory();
-
-  const access = !!localStorage.getItem("access");
 
   const KakaoLoginClickHandler = () => {
     Kakao.Auth.login({
@@ -31,8 +27,8 @@ function JoinPage() {
             access_token: authObj.access_token,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             localStorage.setItem("access", res.access);
             localStorage.setItem("User_id", res.user_id);
             localStorage.setItem("refresh", res.refresh);
@@ -64,10 +60,8 @@ function JoinPage() {
       <JoinWithKakao></JoinWithKakao>
 
       <S.KakaoBtn onClick={KakaoLoginClickHandler}>
-        <img src={KakaobtnImg} className="KakaobtnImg" />
+        <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
       </S.KakaoBtn>
-
-      {btn}
     </>
   );
 }

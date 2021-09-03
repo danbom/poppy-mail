@@ -1,8 +1,7 @@
 import React, { createContext, useState, useMemo } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import JoinInfoMent from "../../components/Txt/JoinInfoMent";
 import LogoNameJoin from "../../components/Txt/LogoNameJoin";
-import CompleteBtn from "../../components/Btn/CompleteBtn";
 
 import * as S from "./styles";
 import JoinInput from "../../components/JoinInput";
@@ -25,7 +24,6 @@ function JoinInfoPage() {
     () => ({ setName, setBirthdate, setGender, setPhone }),
     [setName, setBirthdate, setGender, setPhone]
   );
-  const access = localStorage.getItem("access");
 
   var nameReg = /^[가-힣]{1,5}$/;
   var birthReg = /^\d{8}$/;

@@ -1,11 +1,10 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 import MetooBtn from "../../components/Btn/MetooBtn";
 import GoHomeBtn from "../../components/Btn/GoHomeBtnWhite";
 import LogoName from "../../components/Txt/LogoName";
 import BackBtn from "../../components/Btn/BackBtn";
-import CompleteWriteMailMent from "../../components/Txt/CompleteWriteMailMent";
 import Poppyimg from "../../image/completewritemailpoppy.png";
 
 function CompleteWriteMail() {
@@ -24,7 +23,11 @@ function CompleteWriteMail() {
             넣었습니다!
           </div>
 
-          <img src={Poppyimg} className="completewritemail-poppy-img" />
+          <img
+            src={Poppyimg}
+            className="completewritemail-poppy-img"
+            alt="poppy img"
+          />
 
           <Link to="/">
             <MetooBtn></MetooBtn>

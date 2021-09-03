@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Thumbs, Pagination, Autoplay } from "swiper";
@@ -33,8 +33,8 @@ function HowToPage() {
       Accept: "application/json",
     },
   })
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
@@ -46,8 +46,8 @@ function HowToPage() {
             refresh: refresh,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             if (res) {
               console.log(res);
               localStorage.setItem("access", res.access);

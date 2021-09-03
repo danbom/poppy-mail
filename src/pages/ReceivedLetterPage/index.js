@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import * as S from "./styles";
 import Navbar from "../../components/NavbarDark";
@@ -24,14 +23,14 @@ function ReceivedLetterPage() {
           <ReceivedLetterMent></ReceivedLetterMent>
 
           <div className="ReceivedLetterPoppy">
-            <img src={ReceivedLetterPoppyImg} />
+            <img src={ReceivedLetterPoppyImg} alt="poppy" />
           </div>
 
           <div className="kakaoplus-desc">아직 추가하지 않았다면,</div>
 
           <a href="https://pf.kakao.com/_hxaxjUs">
             <div className="kakaoplus-received-letter-page">
-              <img src={KakaoPlusImg} />
+              <img src={KakaoPlusImg} alt="kakao plus" />
             </div>
           </a>
         </div>

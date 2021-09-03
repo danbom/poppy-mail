@@ -5,7 +5,6 @@ import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 
 function MyPostboxItem5() {
   const access = localStorage.getItem("access");
-  const refresh = localStorage.getItem("refresh");
 
   const [item5_link_title, setItemTitle5] = useState(null);
   const [item5_mailbox_link, setItemLink5] = useState(null);
@@ -17,7 +16,7 @@ function MyPostboxItem5() {
     alert("복사되었습니다!");
   };
 
-  const copyToClipboard = val => {
+  const copyToClipboard = (val) => {
     const t = document.createElement("textarea");
     document.body.appendChild(t);
     t.value = val;
@@ -34,8 +33,8 @@ function MyPostboxItem5() {
       Accept: "application/json",
     },
   })
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       if (res[4]) {
         localStorage.setItem("5th_link_title", res[4].link_title);
         localStorage.setItem("5th_mailbox_link", res[4].mailbox_link);
@@ -53,7 +52,7 @@ function MyPostboxItem5() {
         이 우체통 링크 복사하기
       </div>
 
-      <img src={MyPostboxImg} className="MyPostboxImg"></img>
+      <img src={MyPostboxImg} className="MyPostboxImg" alt="postbox"></img>
 
       <div className="my-post-box-item-ment1">&lt;{item5_link_title}&gt;</div>
       <div className="my-post-box-item-ment2">

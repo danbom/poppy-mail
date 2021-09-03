@@ -1,5 +1,4 @@
-import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { React } from "react";
 
 import * as S from "./styles";
 import Navbar from "../../components/NavbarDark";
@@ -15,7 +14,6 @@ import MyPostboxItem2 from "../../components/MyPostboxItem2";
 import MyPostboxItem3 from "../../components/MyPostboxItem3";
 import MyPostboxItem4 from "../../components/MyPostboxItem4";
 import MyPostboxItem5 from "../../components/MyPostboxItem5";
-import AlertCopyWhite from "../../components/Alert/AlertCopyWhite";
 
 SwiperCore.use([Thumbs, Pagination, Autoplay]);
 

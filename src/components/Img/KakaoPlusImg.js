@@ -8,12 +8,12 @@ function KakaoPlusImg() {
     <>
       <a href="https://pf.kakao.com/_hxaxjUs">
         <div className="kakao-plus-img">
-          <img src={KakaoPlusimage}></img>
+          <img src={KakaoPlusimage} alt="kakaoplus"></img>
         </div>
       </a>
 
       <div className="arrow-img">
-        <img src={Arrowimage}></img>
+        <img src={Arrowimage} alt="arrow"></img>
       </div>
     </>
   );

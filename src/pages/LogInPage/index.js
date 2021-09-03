@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import * as S from "./styles";
 import LogoNameLogin from "../../components/Txt/LogoNameLogin";
@@ -32,8 +32,8 @@ function LogInPage() {
             access_token: authObj.access_token,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             localStorage.setItem("access", res.user_id);
             if (res.access) {
               console.log(res);
@@ -72,7 +72,7 @@ function LogInPage() {
         <LoginWithKakao></LoginWithKakao>
 
         <S.KakaoBtn onClick={KakaoLoginClickHandler}>
-          <img src={KakaobtnImg} className="KakaobtnImg" />
+          <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
         </S.KakaoBtn>
       </S.LogInScene>
     </>

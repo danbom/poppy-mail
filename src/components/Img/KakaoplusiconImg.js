@@ -6,7 +6,7 @@ function KakaoplusiconImg() {
   return (
     <>
       <div className="Nav-icon">
-        <img src={KakaoIcon}></img>
+        <img src={KakaoIcon} alt="kakao"></img>
       </div>
     </>
   );

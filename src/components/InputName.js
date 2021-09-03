@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { CreatepostboxContext } from "../pages/CreatePostBoxPage1";
 // import * as S from './styles';
 

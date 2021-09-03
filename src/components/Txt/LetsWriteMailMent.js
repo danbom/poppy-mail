@@ -6,14 +6,13 @@ import cancelImg from "../../image/cancel.png";
 function LetsWriteMailMent() {
   //   var _article = null;
   const [_article, setArticle] = useState(null);
-  const [popupwhatispoppymail, setPopupwhatispoppymail] = useState(false);
 
   const PopupPoppyMail = () => {
     setArticle(
       <div>
         <div className="whatispoppymail-box">
           <div className="whatispoppymail-title">파피메일이란?</div>
-          <img className="popuppoppy" src={poppyImg}></img>
+          <img className="popuppoppy" src={poppyImg} alt="poppy"></img>
           <div className="whatispoppymail-desc">
             편지를 쓰면 나, 파피의 발명품<br></br>
             "타임메일머신"을 통해 편지가 전해진단<br></br> 다! 재밌는 건, 언제
@@ -26,6 +25,7 @@ function LetsWriteMailMent() {
           className="cancelimg"
           src={cancelImg}
           onClick={PopdownPoppyMail}
+          alt="cancle"
         ></img>
       </div>
     );

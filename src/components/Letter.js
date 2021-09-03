@@ -1,4 +1,4 @@
-import React, { useContext, useState, useMemo } from "react";
+import React, { useContext } from "react";
 import { LetterContext } from "../pages/WriteMailPage";
 
 // import * as S from './styles';

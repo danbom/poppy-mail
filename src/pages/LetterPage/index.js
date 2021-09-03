@@ -1,12 +1,10 @@
 import { React, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import * as S from "./styles";
 import LetsWriteMailMent from "../../components/Txt/LetsWriteMailMent";
 import LetsWriteMailImg from "../../components/Img/LetsWriteMailImg";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
-import PostLinkTitle from "../../components/PostLinkTitle";
-import WriteMailBtn from "../../components/Btn/WriteMailBtn";
 
 function LetterPage(props) {
   const mailbox_pk = props.match.params.mailbox_pk;

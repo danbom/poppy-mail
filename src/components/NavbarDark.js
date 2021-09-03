@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
 /* 아이콘 컬러 전체 변경 기능 */
 import { IconContext } from "react-icons";
 
@@ -25,7 +24,7 @@ function Navbar() {
       body: JSON.stringify({}),
     })
       // .then(res => res.json())
-      .then(res => {
+      .then((res) => {
         if (res) {
           console.log(res);
           localStorage.clear();

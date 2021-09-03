@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 
 import WelcomePage from "./pages/welcomePage";
 import JoinPage from "./pages/JoinPage";
@@ -21,8 +21,7 @@ import WithdrawalPage from "./pages/WithdrawalPage";
 
 import "./App.css";
 
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import styled from "styled-components";
+import { BrowserRouter, Switch } from "react-router-dom";
 import PublicRoute from "./lib/PublicRoute";
 import PrivateRoute from "./lib/PrivateRoute";
 

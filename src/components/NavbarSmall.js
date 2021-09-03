@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
-import { SidebarData } from "./SidebarData";
 
 import AboutImg from "./Img/AboutImg";
 import FaqImg from "./Img/FaqImg";
@@ -9,29 +8,6 @@ import FaqImg from "./Img/FaqImg";
 /* 아이콘 컬러 전체 변경 기능 */
 import { IconContext } from "react-icons";
 function Navbar() {
-  const history = useHistory();
-
-  const LogoutRequest = () => {
-    const access = localStorage.getItem("access");
-    fetch("https://poppymail.shop/account/logout/", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + access,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({}),
-    })
-      // .then(res => res.json())
-      .then(res => {
-        if (res) {
-          console.log(res);
-          localStorage.clear();
-          alert("로그아웃!");
-          history.push("/");
-        }
-      });
-  };
-
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);

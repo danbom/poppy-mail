@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 // import * as S from './styles';
-import { Link, useHistory } from 'react-router-dom';
-import backbtnImg from '../../image/back-btn.png'
+import { useHistory } from "react-router-dom";
+import backbtnImg from "../../image/back-btn.png";
 
-function BackBtn({History}) {
-
+function BackBtn({ History }) {
   const history = useHistory();
 
   const goBack = () => {
@@ -13,7 +12,9 @@ function BackBtn({History}) {
 
   return (
     <>
-      <div className="back-btn"><img onClick={goBack} src={backbtnImg}></img></div>
+      <div className="back-btn">
+        <img onClick={goBack} src={backbtnImg} alt="goback"></img>
+      </div>
     </>
   );
 }

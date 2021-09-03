@@ -6,7 +6,7 @@ function Flow5() {
   return (
     <>
       <div className="FlowImg">
-        <img src={flow5}></img>
+        <img src={flow5} alt="flow5"></img>
       </div>
       <div className="flow5-txt">
         "사실 이 기계의 가장 설레는 점은 <br></br> 언제 도착할지 모른다는거지!{" "}

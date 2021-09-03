@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 import LoginBtn from "../../components/Btn/LoginBtn";
 import JoinBtn from "../../components/Btn/JoinBtn";
@@ -11,7 +11,6 @@ function WelcomePage() {
   const is_new = !!localStorage.getItem("is_new");
 
   const access = localStorage.getItem("access");
-  const refresh = localStorage.getItem("refresh");
 
   // fetch("https://poppymail.shop/mailbox/", {
   //   method: "GET",

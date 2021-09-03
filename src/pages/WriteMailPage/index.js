@@ -1,12 +1,10 @@
 import React, { createContext, useState, useMemo } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtn";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 import Colorbar from "../../components/Colorbar";
 import Letter from "../../components/Letter";
-import SmallCompleteBtn from "../../components/Btn/SmallCompleteBtn";
 import letter_deco_1_1 from "../../image/letter_deco_1_1.png";
 import letter_deco_1_2 from "../../image/letter_deco_1_2.png";
 import letter_deco_2_1 from "../../image/letter_deco_2_1.png";
@@ -94,18 +92,42 @@ function WriteMail(props) {
           <div className="letter-box" style={{ backgroundColor: color }}>
             {color === "#b88dcd" ? (
               <div className="letter_deco_1">
-                <img className="letter_deco_1_1" src={letter_deco_1_1} />
-                <img className="letter_deco_1_2" src={letter_deco_1_2} />
+                <img
+                  className="letter_deco_1_1"
+                  src={letter_deco_1_1}
+                  alt="deco"
+                />
+                <img
+                  className="letter_deco_1_2"
+                  src={letter_deco_1_2}
+                  alt="deco"
+                />
               </div>
             ) : color === "#db7667" ? (
               <div className="letter_deco_2">
-                <img className="letter_deco_2_1" src={letter_deco_2_1} />
-                <img className="letter_deco_2_2" src={letter_deco_2_2} />
+                <img
+                  className="letter_deco_2_1"
+                  src={letter_deco_2_1}
+                  alt="deco"
+                />
+                <img
+                  className="letter_deco_2_2"
+                  src={letter_deco_2_2}
+                  alt="deco"
+                />
               </div>
             ) : color === "#bdbe82" ? (
               <div className="letter_deco_3">
-                <img className="letter_deco_3_1" src={letter_deco_3_1} />
-                <img className="letter_deco_3_2" src={letter_deco_3_2} />
+                <img
+                  className="letter_deco_3_1"
+                  src={letter_deco_3_1}
+                  alt="deco"
+                />
+                <img
+                  className="letter_deco_3_2"
+                  src={letter_deco_3_2}
+                  alt="deco"
+                />
               </div>
             ) : null}
             <Letter></Letter>

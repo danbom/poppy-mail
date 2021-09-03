@@ -6,7 +6,7 @@ function Flow3() {
   return (
     <>
       <div className="FlowImg">
-        <img src={flow3}></img>
+        <img src={flow3} alt="flow3"></img>
       </div>
       <div className="flow3-txt">
         "바로 타임 메일 머신이야. <br></br> 너를 사랑하는 친구들이 편지를

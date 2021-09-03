@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtnDark";
@@ -12,7 +11,6 @@ import CheckLetter from "../../components/CheckArrivedLetter";
 import LogoNameMyCheckArrivedMail from "../../components/Txt/LogoNameCheckArrivedMail";
 import CheckArrivedLetterMent from "../../components/Txt/CheckArrivedMailMent";
 import PeopleImg from "../../image/people.png";
-import { DropdownButton, Dropdown } from "react-bootstrap";
 
 SwiperCore.use([Thumbs, Pagination]);
 
@@ -29,7 +27,7 @@ function CheckArrivedMail() {
 
           <CheckArrivedLetterMent></CheckArrivedLetterMent>
 
-          <img className="people-img" src={PeopleImg}></img>
+          <img className="people-img" src={PeopleImg} alt="people"></img>
 
           <div>
             <Swiper

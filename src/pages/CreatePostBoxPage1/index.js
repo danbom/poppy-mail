@@ -1,11 +1,10 @@
 import React, { createContext, useState, useMemo } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import * as S from "./styles";
 import Navbar from "../../components/Navbar";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
-import CompleteBtn from "../../components/Btn/CompleteBtn";
 import InputName from "../../components/InputName";
 import AlertNickname from "../../components/Alert/AlertNickname";
 
@@ -21,7 +20,6 @@ function CreatePostBoxPage1() {
   const refresh = localStorage.getItem("refresh");
 
   const [nickname, setNickname] = useState("");
-  const [navbar, setNavbar] = useState(null);
   const value = useMemo(() => ({ setNickname }), [setNickname]);
   const nickReg = /^.{1,10}$/;
 

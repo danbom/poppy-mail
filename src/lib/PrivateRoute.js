@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import isLogin from "../lib/isLogin";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -7,7 +7,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     // Otherwise, redirect the user to /login page
     <Route
       {...rest}
-      render={props =>
+      render={(props) =>
         isLogin() ? <Component {...props} /> : <Redirect to="/join" />
       }
     />

@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
-import { SidebarData } from "./SidebarData";
 
 import MyPageImg from "./Img/MyPageImg";
 import AboutImg from "./Img/AboutImg";
@@ -25,7 +24,7 @@ function Navbar() {
       body: JSON.stringify({}),
     })
       // .then(res => res.json())
-      .then(res => {
+      .then((res) => {
         if (res) {
           console.log(res);
           localStorage.clear();

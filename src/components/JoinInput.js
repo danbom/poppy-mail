@@ -10,11 +10,6 @@ function JoinInput() {
   // const [phone, setPhone] = useState("");
   const { setName, setBirthdate, setGender, setPhone } =
     useContext(UserContext);
-
-  const [birthnum, setBirthnum] = useState("");
-  const [year, setYear] = useState("");
-  const [month, setMonth] = useState("");
-  const [date, setDate] = useState("");
   const [titlegender, setTitlegender] = useState("남");
 
   const processName = (e) => {
