@@ -98,6 +98,29 @@ function CheckArrivedMail() {
             >
               {!!localStorage.getItem("sender0") ? (
                 <SwiperSlide>
+                  <span>
+                    <span>{localStorage.getItem("sender0")} </span>
+                    <span>{localStorage.getItem("sender1")} </span>
+                    <span>{localStorage.getItem("sender2")} </span>
+                    <span>{localStorage.getItem("sender3")} </span>
+                    <span>{localStorage.getItem("sender4")} </span>
+                    <span>{localStorage.getItem("sender5")} </span>
+                    <span>{localStorage.getItem("sender6")} </span>
+                    <span>{localStorage.getItem("sender7")} </span>
+                    <span>{localStorage.getItem("sender8")} </span>
+                    <span>{localStorage.getItem("sender9")} </span>
+                    <span>{localStorage.getItem("sender10")} </span>
+                    <span>{localStorage.getItem("sender11")} </span>
+                    <span>{localStorage.getItem("sender12")} </span>
+                    <span>{localStorage.getItem("sender13")} </span>
+                    <span>{localStorage.getItem("sender14")} </span>
+                    <span>{localStorage.getItem("sender15")} </span>
+                    <span>{localStorage.getItem("sender16")} </span>
+                    <span>{localStorage.getItem("sender17")} </span>
+                    <span>{localStorage.getItem("sender18")} </span>
+                    <span>{localStorage.getItem("sender19")} </span>
+                    <span>{localStorage.getItem("sender20")} </span>
+                  </span>
                   <div
                     className="check-letter-box"
                     style={{
