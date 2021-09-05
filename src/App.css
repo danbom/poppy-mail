@@ -1721,6 +1721,17 @@ button#dropdown-basic-button {
   border-radius: 8px;
 }
 
+.check-letter-box#check {
+  position: absolute;
+  width: 21.6rem;
+  height: 29.48rem;
+  left: calc(50% - 10.8rem);
+  top: 9.6rem;
+
+  background: #d66e56;
+  border-radius: 8px;
+}
+
 .check-arrived-letter-box {
   position: absolute;
   width: 21.6rem;
