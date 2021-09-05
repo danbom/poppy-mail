@@ -13,8 +13,8 @@ function ReceivedLetterMent() {
       Accept: "application/json",
     },
   })
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
@@ -26,11 +26,15 @@ function ReceivedLetterMent() {
             refresh: refresh,
           }),
         })
-          .then(res => res.json())
-          .then(res => {
+          .then((res) => res.json())
+          .then((res) => {
             if (res) {
               console.log(res);
-              localStorage.setItem("access", res.access);
+              if (res.detail === "Token is invalid or expired") {
+                localStorage.clear();
+              } else {
+                localStorage.setItem("access", res.access);
+              }
             }
           });
       }

@@ -48,7 +48,11 @@ function CreatePostBoxPage1() {
           .then((res) => {
             if (res) {
               console.log(res);
-              localStorage.setItem("access", res.access);
+              if (res.detail === "Token is invalid or expired") {
+                localStorage.clear();
+              } else {
+                localStorage.setItem("access", res.access);
+              }
             }
           });
       }
