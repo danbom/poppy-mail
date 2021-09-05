@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtnDark";
@@ -17,20 +17,27 @@ function CheckArrivedMail() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
 
-  fetch("https://poppymail.shop/mailbox/4/letters/", {
-    method: "GET",
-    headers: {
-      Authorization: "Bearer " + access,
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
+  fetch(
+    "https://poppymail.shop/mailbox/" +
+      localStorage.getItem("id") +
+      "/letters/",
+    {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }
+  )
     .then((res) => res.json())
     .then((res) => {
-      // console.log();
+      console.log(res);
+
       var step;
       for (step = 0; step < 30; step++) {
         // Runs 5 times, with values of step 0 through 4.
+
         if (res[step]) {
           localStorage.setItem("length", res.length);
           localStorage.setItem("receiver" + step, res[step].receiver);

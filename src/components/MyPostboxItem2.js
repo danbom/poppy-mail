@@ -1,4 +1,6 @@
 import { React, useState } from "react";
+import { useHistory } from "react-router";
+import { History } from "swiper";
 import MyPostboxImg from "../image/mypostboxitemimg.png";
 import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 // import * as S from './styles';
@@ -25,6 +27,20 @@ function MyPostboxItem2() {
     document.body.removeChild(t);
   };
 
+  const history = useHistory();
+
+  const openSpecificPostboxRequest = () => {
+    history.push(
+      "/checkarrivedmail/" + localStorage.getItem("2nd_id") + "/letters/"
+    );
+    localStorage.setItem("id", localStorage.getItem("2nd_id"));
+    var step;
+    for (step = 0; step < 30; step++) {
+      localStorage.removeItem("sender" + step);
+      localStorage.removeItem("length");
+    }
+  };
+
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
     headers: {
@@ -39,6 +55,7 @@ function MyPostboxItem2() {
         localStorage.setItem("2nd_link_title", res[1].link_title);
         localStorage.setItem("2nd_mailbox_link", res[1].mailbox_link);
         localStorage.setItem("2nd_number_letter", res[1].number_of_letter);
+        localStorage.setItem("2nd_id", res[1].id);
 
         setItemTitle2(localStorage.getItem("2nd_link_title"));
         setItemLink2(localStorage.getItem("2nd_mailbox_link"));
@@ -61,7 +78,9 @@ function MyPostboxItem2() {
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
-      <OpenPostboxBtn></OpenPostboxBtn>
+      <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
+        우체통 열기
+      </div>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { useHistory } from "react-router";
 import MyPostboxImg from "../image/mypostboxitemimg.png";
 import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 // import * as S from './styles';
@@ -25,6 +26,7 @@ function MyPostboxItem1() {
 
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+  const [id, setId] = useState("");
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -37,6 +39,11 @@ function MyPostboxItem1() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
+      console.log(id);
+      localStorage.removeItem("sender0");
+      localStorage.removeItem("sender1");
+      localStorage.removeItem("sender2");
+      localStorage.removeItem("sender3");
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
           method: "POST",
@@ -64,6 +71,8 @@ function MyPostboxItem1() {
         localStorage.setItem("1st_link_title", res[0].link_title);
         localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
         localStorage.setItem("1st_number_letter", res[0].number_of_letter);
+        localStorage.setItem("1st_id", res[0].id);
+        setId(res[0].id);
 
         setItemTitle1(localStorage.getItem("1st_link_title"));
         setItemLink1(localStorage.getItem("1st_mailbox_link"));
@@ -95,6 +104,18 @@ function MyPostboxItem1() {
       }
     });
 
+  const history = useHistory();
+
+  const openSpecificPostboxRequest = () => {
+    history.push("/checkarrivedmail/" + id + "/letters/");
+    localStorage.setItem("id", id);
+    var step;
+    for (step = 0; step < 30; step++) {
+      localStorage.removeItem("sender" + step);
+      localStorage.removeItem("length");
+    }
+  };
+
   return (
     <>
       <div className="copy-my-post-box-link-ment" onClick={Copy}>
@@ -110,7 +131,9 @@ function MyPostboxItem1() {
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
-      <OpenPostboxBtn></OpenPostboxBtn>
+      <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
+        우체통 열기
+      </div>
     </>
   );
 }
