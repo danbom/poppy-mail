@@ -133,7 +133,7 @@ function App() {
             <PrivateRoute component={MyPostboxPage} path="/mypostbox" exact />
             <PrivateRoute
               component={CheckArrivedMailPage}
-              path="/checkarrivedmail"
+              path="/checkarrivedmail/:mailbox_pk/letters/"
               exact
             />
             <PrivateRoute component={WithdrawalPage} path="/withdrawal" exact />

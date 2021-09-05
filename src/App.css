@@ -139,28 +139,57 @@ html [type="input"] {
   width: max-content;
   left: 1.412rem;
   top: 1.4em;
+  overflow-x: scroll;
+}
+
+.swiper-container#checkarrivedmailswiper .swiper-pagination-bullets#test span {
+  text-align: center;
+  color: #fff;
+  z-index: 3;
+}
+
+.swiper-container#checkarrivedmailswiper
+  .swiper-pagination-bullets#test
+  span
+  div {
+  color: #fff;
+  z-index: 4;
+}
+
+/* .swiper-container#checkarrivedmailswiper
+  .swiper-pagination-bullets#test
+  .swiper-pagination-bullet {
+  color: #fff;
+  z-index: 5;
+  opacity: 1 !important;
+} */
+
+.swiper-container#checkarrivedmailswiper {
+  overflow-x: scroll;
 }
 
 .swiper-container#checkarrivedmailswiper .swiper-pagination-bullet {
-  background: #c4c4c4 !important;
-  opacity: 0.2 !important;
+  background: #767185 !important;
+  /* opacity: 0.2 !important; */
   width: 6.236rem !important;
   height: 2.353rem !important;
   border-radius: 34px !important;
   transform: translateY(0rem);
   margin: 0 0.12rem !important;
   display: inline-block;
+  overflow-x: scroll;
 }
 
 .swiper-container#checkarrivedmailswiper .swiper-pagination-bullet-active {
   background: #c4c4c4 !important;
-  opacity: 1 !important;
+  /* opacity: 1 !important; */
   width: 6.236rem !important;
   height: 2.353rem !important;
   border-radius: 34px !important;
   transform: translateY(0rem);
   margin: 0 0.12rem !important;
   display: inline-block;
+  overflow-x: scroll;
 }
 
 .swiper-pagination-fraction,
@@ -803,6 +832,14 @@ background: #4243554D;
   position: absolute;
   width: 25rem;
   height: 31rem;
+  left: 0;
+  top: 5.942rem;
+}
+
+.letter-flow {
+  position: absolute;
+  width: 25rem;
+  height: 50rem;
   left: 0;
   top: 5.942rem;
 }
@@ -1678,7 +1715,7 @@ button#dropdown-basic-button {
   width: 21.6rem;
   height: 29.48rem;
   left: calc(50% - 10.8rem);
-  top: 9.412rem;
+  top: 5rem;
 
   background: #d66e56;
   border-radius: 8px;
