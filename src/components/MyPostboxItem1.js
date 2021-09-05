@@ -108,12 +108,20 @@ function MyPostboxItem1() {
 
   const openSpecificPostboxRequest = () => {
     history.push("/checkarrivedmail/" + id + "/letters/");
+
     localStorage.setItem("id", id);
     var step;
     for (step = 0; step < 30; step++) {
       localStorage.removeItem("sender" + step);
       localStorage.removeItem("length");
     }
+
+    setTimeout(function () {
+      window.location.reload();
+    }, 3000);
+    setTimeout(function () {
+      window.location.reload();
+    }, 500);
   };
 
   return (
