@@ -19,8 +19,8 @@ function Colorbar() {
 
   const processColor2 = (e) => {
     // setColor("#4b4362");
-    setColor("#4b4362");
-    localStorage.setItem("letter_color", "#4b4362");
+    setColor("#85A7CB");
+    localStorage.setItem("letter_color", "#85A7CB");
   };
 
   const processColor3 = (e) => {
