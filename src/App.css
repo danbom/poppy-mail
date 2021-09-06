@@ -1676,7 +1676,7 @@ button#dropdown-basic-button {
 }
 
 .colorbar-element#color1 {
-  background: #f2dba1;
+  background: #daae40;
 }
 
 .colorbar-element#color2 {
@@ -1994,6 +1994,22 @@ button#dropdown-basic-button {
   position: absolute;
   left: 12.3rem;
   top: 0rem;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.24rem;
+  /* identical to box height */
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.delete-my-post-box {
+  position: absolute;
+  left: 21rem;
+  top: 1.5rem;
 
   font-family: "Roboto";
   font-style: normal;

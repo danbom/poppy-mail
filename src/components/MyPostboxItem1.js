@@ -24,6 +24,23 @@ function MyPostboxItem1() {
     document.body.removeChild(t);
   };
 
+  const deleteRequest = () => {
+    fetch("https://poppymail.shop/mailbox/" + id + "/", {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((res) => res)
+      .then((res) => {
+        console.log(res);
+        localStorage.removeItem("1st_link_title");
+        window.location.reload();
+      });
+  };
+
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
   const [id, setId] = useState("");
@@ -133,7 +150,7 @@ function MyPostboxItem1() {
         이 우체통 링크 복사하기
       </div>
 
-      <div className="copy-my-post-box-link-ment" onClick={Copy}>
+      <div className="delete-my-post-box" onClick={deleteRequest}>
         삭제
       </div>
 
