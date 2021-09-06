@@ -15,14 +15,16 @@ function WithdrawalBtn() {
       body: JSON.stringify({}),
     })
       //   .then(res => res.json())
-      .then(res => {
+      .then((res) => {
         // localStorage.setItem("Kakao_token", res.access_token);
         // const kakao_token = localStorage.getItem("Kakao_token");
-        if (res) {
+        if (res.ok) {
           console.log(res);
           alert("탈퇴완료!");
           localStorage.clear();
           history.push("/");
+        } else {
+          alert("다시 시도해주세요!");
         }
       });
   };

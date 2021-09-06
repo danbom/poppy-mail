@@ -41,10 +41,14 @@ function MyPostboxItem5() {
       .then((res) => res)
       .then((res) => {
         console.log(res);
-        localStorage.removeItem("5th_link_title");
-        localStorage.removeItem("5th_open_date");
-        alert("삭제 완료!");
-        window.location.reload();
+        if (res.ok) {
+          localStorage.removeItem("1st_link_title");
+          localStorage.removeItem("1st_open_date");
+          alert("삭제 완료!");
+          window.location.reload();
+        } else {
+          alert("다시 시도해주세요");
+        }
       });
   };
 

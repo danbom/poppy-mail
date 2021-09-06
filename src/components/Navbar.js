@@ -42,11 +42,13 @@ function Navbar() {
     })
       // .then(res => res.json())
       .then((res) => {
-        if (res) {
+        if (res.ok) {
           console.log(res);
           localStorage.clear();
           alert("로그아웃!");
           history.push("/");
+        } else {
+          alert("다시 시도해주세요!");
         }
       });
   };
