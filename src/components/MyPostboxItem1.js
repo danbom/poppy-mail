@@ -40,6 +40,7 @@ function MyPostboxItem1() {
       .then((res) => {
         console.log(res);
         localStorage.removeItem("1st_link_title");
+        localStorage.removeItem("1st_open_date");
         alert("삭제 완료!");
         window.location.reload();
       });

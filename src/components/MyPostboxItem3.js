@@ -42,6 +42,7 @@ function MyPostboxItem3() {
       .then((res) => {
         console.log(res);
         localStorage.removeItem("3rd_link_title");
+        localStorage.removeItem("3rd_open_date");
         alert("삭제 완료!");
         window.location.reload();
       });
