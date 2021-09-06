@@ -118,10 +118,13 @@ function MyPostboxItem1() {
 
     setTimeout(function () {
       window.location.reload();
-    }, 3000);
+    }, 1000);
     setTimeout(function () {
       window.location.reload();
     }, 500);
+    setTimeout(function () {
+      window.location.reload();
+    }, 1500);
   };
 
   return (

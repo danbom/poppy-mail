@@ -2144,3 +2144,17 @@ button#dropdown-basic-button {
   height: 7.333rem;
   bottom: 1rem;
 }
+
+.carosel-box {
+  position: absolute;
+  left: 1.412rem;
+  width: max-content;
+  overflow: scroll;
+}
+
+.carosel-text {
+  width: 6.236rem;
+  display: inline-block;
+  margin: 0 0.12rem;
+  background-color: #000;
+}
