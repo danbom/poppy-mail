@@ -143,7 +143,7 @@ function CreatePostBoxPage1() {
         <div className="fullbox">
           <BackBtn></BackBtn>
 
-          <Navbar></Navbar>
+          {/* <Navbar></Navbar> */}
 
           <LogoNameCreatePostBox></LogoNameCreatePostBox>
 

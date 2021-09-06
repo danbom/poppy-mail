@@ -13,6 +13,23 @@ import { IconContext } from "react-icons";
 function Navbar() {
   const history = useHistory();
 
+  const first_open_date = new Date(
+    localStorage.getItem("1st_open_date") + " " + "00:00:00"
+  );
+  const second_open_date = new Date(
+    localStorage.getItem("2nd_open_date") + " " + "00:00:00"
+  );
+  const third_open_date = new Date(
+    localStorage.getItem("3rd_open_date") + " " + "00:00:00"
+  );
+  const fourth_open_date = new Date(
+    localStorage.getItem("4th_open_date") + " " + "00:00:00"
+  );
+  const fifth_open_date = new Date(
+    localStorage.getItem("5th_open_date") + " " + "00:00:00"
+  );
+  const now = new Date();
+
   const LogoutRequest = () => {
     const access = localStorage.getItem("access");
     fetch("https://poppymail.shop/account/logout/", {
@@ -51,6 +68,15 @@ function Navbar() {
           <ul className="nav-menu-items" onClick={showSidebar}>
             <div className="navbar-toggle"></div>
             {/* SidebarData를 순서대로 담기*/}
+            {first_open_date <= now ||
+            second_open_date <= now ||
+            third_open_date <= now ||
+            fourth_open_date <= now ||
+            fifth_open_date <= now ? (
+              <div>
+                <div className="red-circle"></div>
+              </div>
+            ) : null}
             <div className="nav-item-zone">
               <li className="nav-text1">
                 <a>

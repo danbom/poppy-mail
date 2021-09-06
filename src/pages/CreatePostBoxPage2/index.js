@@ -25,7 +25,7 @@ function CreatePostBoxPage2() {
     console.log("Copied!");
   };
 
-  const copyToClipboard = val => {
+  const copyToClipboard = (val) => {
     const t = document.createElement("textarea");
     document.body.appendChild(t);
     t.value = val;
@@ -41,7 +41,7 @@ function CreatePostBoxPage2() {
       <S.CreatePostBoxScene>
         <div className="fullbox">
           <BackBtn></BackBtn>
-          <Navbar></Navbar>
+          {/* <Navbar></Navbar> */}
 
           <LogoNameCreatePostBox></LogoNameCreatePostBox>
 

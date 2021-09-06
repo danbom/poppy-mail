@@ -53,30 +53,35 @@ function CreatePostBoxPage3() {
         localStorage.setItem("1st_link_title", res[0].link_title);
         localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
         localStorage.setItem("1st_number_letter", res[0].number_of_letter);
+        localStorage.setItem("1st_open_date", res[0].open_date);
       }
 
       if (res[1]) {
         localStorage.setItem("2nd_link_title", res[1].link_title);
         localStorage.setItem("2nd_mailbox_link", res[1].mailbox_link);
         localStorage.setItem("2nd_number_letter", res[1].number_of_letter);
+        localStorage.setItem("2nd_open_date", res[1].open_date);
       }
 
       if (res[2]) {
         localStorage.setItem("3rd_link_title", res[2].link_title);
         localStorage.setItem("3rd_mailbox_link", res[2].mailbox_link);
         localStorage.setItem("3rd_number_letter", res[2].number_of_letter);
+        localStorage.setItem("3rd_open_date", res[2].open_date);
       }
 
       if (res[3]) {
         localStorage.setItem("4th_link_title", res[3].link_title);
         localStorage.setItem("4th_mailbox_link", res[3].mailbox_link);
         localStorage.setItem("4th_number_letter", res[3].number_of_letter);
+        localStorage.setItem("4th_open_date", res[3].open_date);
       }
 
       if (res[4]) {
         localStorage.setItem("5th_link_title", res[4].link_title);
         localStorage.setItem("5th_mailbox_link", res[4].mailbox_link);
         localStorage.setItem("5th_number_letter", res[4].number_of_letter);
+        localStorage.setItem("5th_open_date", res[4].open_date);
       }
     });
 
@@ -91,13 +96,15 @@ function CreatePostBoxPage3() {
       <S.CreatePostBoxScene>
         <div className="fullbox">
           <BackBtn></BackBtn>
-          <Navbar></Navbar>
+          {/* <Navbar></Navbar> */}
 
           <LogoNameCreatePostBox></LogoNameCreatePostBox>
 
           {_alert}
 
           <PostboxAfter></PostboxAfter>
+
+          {}
 
           <LinkName></LinkName>
 

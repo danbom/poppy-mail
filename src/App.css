@@ -258,7 +258,7 @@ html [type="input"] {
   opacity: 1;
   transition: 350ms;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .nav-text {
@@ -2173,4 +2173,43 @@ button#dropdown-basic-button {
   display: inline-block;
   margin: 0 0.12rem;
   background-color: #000;
+}
+
+.union {
+  position: absolute;
+  width: 11.12rem;
+  height: 5.6rem;
+  left: 12.412rem;
+  top: 4.83rem;
+  z-index: 3;
+}
+
+.union-text {
+  position: absolute;
+  width: 10rem;
+  height: 2.83rem;
+  left: 14rem;
+  top: 6.83rem;
+
+  /* popup_title */
+
+  font-family: Cafe24 Ssurround;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.88rem;
+  line-height: 1.42rem;
+  z-index: 3;
+
+  color: #ffffff;
+}
+
+.red-circle {
+  position: absolute;
+  width: 0.69rem;
+  height: 0.69rem;
+  left: 11.5rem;
+  top: 12rem;
+  border-radius: 50%;
+
+  background: #d66e56;
 }
