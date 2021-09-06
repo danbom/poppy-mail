@@ -25,18 +25,22 @@ function MyPostboxItem1() {
   };
 
   const deleteRequest = () => {
-    fetch("https://poppymail.shop/mailbox/" + id + "/", {
-      method: "DELETE",
-      headers: {
-        Authorization: "Bearer " + access,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch(
+      "https://poppymail.shop/mailbox/" + localStorage.getItem("1st_id") + "/",
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: "Bearer " + access,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    )
       .then((res) => res)
       .then((res) => {
         console.log(res);
         localStorage.removeItem("1st_link_title");
+        alert("삭제 완료!");
         window.location.reload();
       });
   };

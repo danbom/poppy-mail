@@ -28,7 +28,7 @@ function MyPostboxItem4() {
 
   const deleteRequest = () => {
     fetch(
-      "https://poppymail.shop/mailbox/" + localStorage.getItem("id") + "/",
+      "https://poppymail.shop/mailbox/" + localStorage.getItem("4th_id") + "/",
       {
         method: "DELETE",
         headers: {
@@ -42,6 +42,7 @@ function MyPostboxItem4() {
       .then((res) => {
         console.log(res);
         localStorage.removeItem("4th_link_title");
+        alert("삭제 완료!");
         window.location.reload();
       });
   };
