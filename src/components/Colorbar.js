@@ -12,9 +12,9 @@ function Colorbar() {
   const { setColor } = useContext(LetterContext);
 
   const processColor1 = (e) => {
-    // setColor("#f2dba1");
-    setColor("#f2dba1");
-    localStorage.setItem("letter_color", "#f2dba1");
+    // setColor("#DAAE40");
+    setColor("#DAAE40");
+    localStorage.setItem("letter_color", "#DAAE40");
   };
 
   const processColor2 = (e) => {

@@ -68,6 +68,10 @@ function MyPostboxItem3() {
         이 우체통 링크 복사하기
       </div>
 
+      <div className="copy-my-post-box-link-ment" onClick={Copy}>
+        삭제
+      </div>
+
       <img src={MyPostboxImg} className="MyPostboxImg" alt="postbox"></img>
 
       <div className="my-post-box-item-ment1">&lt;{item3_link_title}&gt;</div>

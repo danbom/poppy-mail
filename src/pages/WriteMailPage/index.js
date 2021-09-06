@@ -23,7 +23,7 @@ function WriteMail(props) {
   const history = useHistory();
   const mailbox_pk = props.match.params.mailbox_pk;
   const random_strkey = props.match.params.random_strkey;
-  const [color, setColor] = useState("#f2dba1");
+  const [color, setColor] = useState("#DAAE40");
   const [contents, setContents] = useState("");
   const [sender, setSender] = useState("");
   const [receiver, setReceiver] = useState("");
