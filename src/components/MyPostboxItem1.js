@@ -8,6 +8,7 @@ function MyPostboxItem1() {
   const [item1_link_title, setItemTitle1] = useState(null);
   const [item1_mailbox_link, setItemLink1] = useState(null);
   const [item1_number_letter, setItemLetter1] = useState(null);
+  const history = useHistory();
 
   const Copy = () => {
     copyToClipboard(item1_mailbox_link);
@@ -128,9 +129,12 @@ function MyPostboxItem1() {
         localStorage.setItem("5th_mailbox_link", res[4].mailbox_link);
         localStorage.setItem("5th_number_letter", res[4].number_of_letter);
       }
-    });
 
-  const history = useHistory();
+      if (res.detail === "User not found") {
+        alert("다시 로그인해주세요!");
+        localStorage.clear();
+      }
+    });
 
   const openSpecificPostboxRequest = () => {
     history.push("/checkarrivedmail/" + id + "/letters/");

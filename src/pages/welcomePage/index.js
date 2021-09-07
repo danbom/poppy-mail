@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import * as S from "./styles";
 import LoginBtn from "../../components/Btn/LoginBtn";
 import JoinBtn from "../../components/Btn/JoinBtn";
@@ -12,6 +12,7 @@ function WelcomePage() {
 
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+  const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -42,6 +43,11 @@ function WelcomePage() {
             }
           });
       }
+
+      // if (res.detail === "User not found") {
+      //   alert("다시 로그인해주세요!");
+      //   history.push("/");
+      // }
     });
 
   return (

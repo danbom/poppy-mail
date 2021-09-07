@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtn";
@@ -9,6 +10,7 @@ import WithdrawalBtn from "../../components/Btn/WithdrawalBtn";
 function Withdrawal() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+  const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -42,6 +44,11 @@ function Withdrawal() {
               }
             }
           });
+      }
+
+      if (res.detail === "User not found") {
+        alert("다시 로그인해주세요!");
+        localStorage.clear();
       }
     });
 

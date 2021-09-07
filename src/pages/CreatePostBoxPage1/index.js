@@ -86,6 +86,11 @@ function CreatePostBoxPage1() {
         localStorage.setItem("5th_mailbox_link", res[4].mailbox_link);
         localStorage.setItem("5th_number_letter", res[4].number_of_letter);
       }
+
+      if (res.detail === "User not found") {
+        alert("다시 로그인해주세요!");
+        localStorage.clear();
+      }
     });
 
   const CreatepostboxRequest2 = () => {

@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { useHistory } from "react-router";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtnDark";
@@ -22,6 +23,7 @@ SwiperCore.use([Thumbs, Pagination]);
 function CheckArrivedMail() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+  const history = useHistory();
 
   fetch(
     "https://poppymail.shop/mailbox/" +
@@ -74,6 +76,11 @@ function CheckArrivedMail() {
               }
             }
           });
+      }
+
+      if (res.detail === "User not found") {
+        alert("다시 로그인해주세요!");
+        localStorage.clear();
       }
     });
 

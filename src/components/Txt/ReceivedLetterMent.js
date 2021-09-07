@@ -1,9 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router";
 // import * as S from './styles';
 
 function ReceivedLetterMent() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+  const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -67,6 +69,11 @@ function ReceivedLetterMent() {
         localStorage.setItem("5th_link_title", res[4].link_title);
         localStorage.setItem("5th_mailbox_link", res[4].mailbox_link);
         localStorage.setItem("5th_number_letter", res[4].number_of_letter);
+      }
+
+      if (res.detail === "User not found") {
+        alert("다시 로그인해주세요!");
+        localStorage.clear();
       }
     });
 
