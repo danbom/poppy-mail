@@ -9,7 +9,6 @@ import "swiper/swiper.scss";
 import "swiper/components/thumbs/thumbs.scss";
 import "swiper/components/pagination/pagination.scss";
 import LogoNameMyCheckArrivedMail from "../../components/Txt/LogoNameCheckArrivedMail";
-import CheckArrivedLetterMent from "../../components/Txt/CheckArrivedMailMent";
 import PeopleImg from "../../image/people.png";
 import letter_deco_1_1 from "../../image/letter_deco_1_1.png";
 import letter_deco_1_2 from "../../image/letter_deco_1_2.png";
@@ -25,34 +24,1831 @@ function CheckArrivedMail() {
   const refresh = localStorage.getItem("refresh");
   const history = useHistory();
 
-  const caroselRequest0 = () => {
+  const caroselRequest0 = (e) => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
       "transform: translate3d(0rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text0  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
   };
 
   const caroselRequest1 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
       "transform: translate3d(-25rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text1  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
   };
 
   const caroselRequest2 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
       "transform: translate3d(-50rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text2  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
   };
 
   const caroselRequest3 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
       "transform: translate3d(-75rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text3  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
   };
 
   const caroselRequest4 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
       "transform: translate3d(-100rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text4  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
   };
 
   const caroselRequest5 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
       "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text5  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest6 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text6  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest7 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text7  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest8 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text8  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest9 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text9  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest10 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text10  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest11 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text11 ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest12 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text12  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest13 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text13  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest14 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text14 ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest15 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text15  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest16 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text16  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest17 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text17  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest18 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text18  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest19 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text19  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text20  ")[0]) {
+      document.getElementsByClassName("carosel-text20  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+  };
+
+  const caroselRequest20 = () => {
+    document.getElementsByClassName("swiper-wrapper")[0].style =
+      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+    document.getElementsByClassName("carosel-text20  ")[0].style =
+      "background-color: #fff !important";
+    if (document.getElementsByClassName("carosel-text0  ")[0]) {
+      document.getElementsByClassName("carosel-text0  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text1  ")[0]) {
+      document.getElementsByClassName("carosel-text1  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text2  ")[0]) {
+      document.getElementsByClassName("carosel-text2  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text3  ")[0]) {
+      document.getElementsByClassName("carosel-text3  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text4  ")[0]) {
+      document.getElementsByClassName("carosel-text4  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text5  ")[0]) {
+      document.getElementsByClassName("carosel-text5  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text6  ")[0]) {
+      document.getElementsByClassName("carosel-text6  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text7  ")[0]) {
+      document.getElementsByClassName("carosel-text7  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text8  ")[0]) {
+      document.getElementsByClassName("carosel-text8  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text9  ")[0]) {
+      document.getElementsByClassName("carosel-text9  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text10  ")[0]) {
+      document.getElementsByClassName("carosel-text10  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text11  ")[0]) {
+      document.getElementsByClassName("carosel-text11  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text12  ")[0]) {
+      document.getElementsByClassName("carosel-text12  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text13  ")[0]) {
+      document.getElementsByClassName("carosel-text13  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text14  ")[0]) {
+      document.getElementsByClassName("carosel-text14  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text15  ")[0]) {
+      document.getElementsByClassName("carosel-text15  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text16  ")[0]) {
+      document.getElementsByClassName("carosel-text16  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text17  ")[0]) {
+      document.getElementsByClassName("carosel-text17  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text18  ")[0]) {
+      document.getElementsByClassName("carosel-text18  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
+    if (document.getElementsByClassName("carosel-text19  ")[0]) {
+      document.getElementsByClassName("carosel-text19  ")[0].style =
+        "background-color: #c4c4c4 !important";
+    }
   };
 
   fetch(
@@ -125,67 +1921,67 @@ function CheckArrivedMail() {
           </div>
           <img className="people-img" src={PeopleImg} alt="people"></img>
           <span className="carosel-box">
-            <div className="carosel-text" onClick={caroselRequest0}>
+            <div className="carosel-text0" onClick={caroselRequest0}>
               {localStorage.getItem("sender0")}
             </div>
-            <div className="carosel-text" onClick={caroselRequest1}>
+            <div className="carosel-text1" onClick={caroselRequest1}>
               {localStorage.getItem("sender1")}
             </div>
-            <div className="carosel-text" onClick={caroselRequest2}>
+            <div className="carosel-text2" onClick={caroselRequest2}>
               {localStorage.getItem("sender2")}
             </div>
-            <div className="carosel-text" onClick={caroselRequest3}>
+            <div className="carosel-text3" onClick={caroselRequest3}>
               {localStorage.getItem("sender3")}
             </div>
-            <div className="carosel-text" onClick={caroselRequest4}>
+            <div className="carosel-text4" onClick={caroselRequest4}>
               {localStorage.getItem("sender4")}
             </div>
-            <div className="carosel-text" onClick={caroselRequest5}>
+            <div className="carosel-text5" onClick={caroselRequest5}>
               {localStorage.getItem("sender5")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text6" onClick={caroselRequest6}>
               {localStorage.getItem("sender6")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text7" onClick={caroselRequest7}>
               {localStorage.getItem("sender7")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text8" onClick={caroselRequest8}>
               {localStorage.getItem("sender8")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text9" onClick={caroselRequest9}>
               {localStorage.getItem("sender9")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text10" onClick={caroselRequest10}>
               {localStorage.getItem("sender10")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text11" onClick={caroselRequest11}>
               {localStorage.getItem("sender11")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text12" onClick={caroselRequest12}>
               {localStorage.getItem("sender12")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text13" onClick={caroselRequest13}>
               {localStorage.getItem("sender13")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text14" onClick={caroselRequest14}>
               {localStorage.getItem("sender14")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text15" onClick={caroselRequest15}>
               {localStorage.getItem("sender15")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text16" onClick={caroselRequest16}>
               {localStorage.getItem("sender16")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text17" onClick={caroselRequest17}>
               {localStorage.getItem("sender17")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text18" onClick={caroselRequest18}>
               {localStorage.getItem("sender18")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text19" onClick={caroselRequest19}>
               {localStorage.getItem("sender19")}
             </div>
-            <div className="carosel-text">
+            <div className="carosel-text20" onClick={caroselRequest20}>
               {localStorage.getItem("sender20")}
             </div>
           </span>
