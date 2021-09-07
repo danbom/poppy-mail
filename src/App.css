@@ -125,9 +125,22 @@ html [type="input"] {
   margin: 0 0.5rem !important;
 }
 
+.carosel-text {
+  background: #c4c4c4 !important;
+  width: max-content !important;
+  height: 0.6470588235294118rem !important;
+  line-height: 0.6470588235294118rem !important;
+  transform: translateY(0);
+  margin: 0 0.2rem !important;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  color: var(--main-txt-color);
+}
+
 .swiper-container#mypostboxswiper .swiper-pagination-bullet-active {
   background: #c4c4c4 !important;
-  opacity: 1 !important;
+  display: none;
   width: 0.6470588235294118rem !important;
   height: 0.6470588235294118rem !important;
   transform: translateY(0);
@@ -140,6 +153,7 @@ html [type="input"] {
   left: 1.412rem;
   top: 1.4em;
   overflow-x: scroll;
+  display: none;
 }
 
 .swiper-container#checkarrivedmailswiper .swiper-pagination-bullets#test span {
@@ -2164,16 +2178,19 @@ button#dropdown-basic-button {
 .carosel-box {
   position: absolute;
   left: 1.412rem;
+  top: 8rem;
   width: max-content;
   overflow: scroll;
+  z-index: 2;
+  display: flex;
 }
 
-.carosel-text {
+/* .carosel-text {
   width: 6.236rem;
   display: inline-block;
   margin: 0 0.12rem;
   background-color: #000;
-}
+} */
 
 .union {
   position: absolute;
