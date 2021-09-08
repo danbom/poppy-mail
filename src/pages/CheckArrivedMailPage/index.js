@@ -1923,107 +1923,170 @@ function CheckArrivedMail() {
           <span className="carosel-box">
             {!!localStorage.getItem("sender0") && (
               <div className="carosel-text0" onClick={caroselRequest0}>
-                {localStorage.getItem("sender0")}
+                {localStorage.getItem("sender0").substring(0, 3)}
+                {localStorage.getItem("sender0").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender1") && (
               <div className="carosel-text1" onClick={caroselRequest1}>
-                {localStorage.getItem("sender1")}
+                {localStorage.getItem("sender1").substring(0, 3)}
+                {localStorage.getItem("sender1").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender2") && (
               <div className="carosel-text2" onClick={caroselRequest2}>
-                {localStorage.getItem("sender2")}
+                {localStorage.getItem("sender2").substring(0, 3)}
+                {localStorage.getItem("sender2").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender3") && (
               <div className="carosel-text3" onClick={caroselRequest3}>
-                {localStorage.getItem("sender3")}
+                {localStorage.getItem("sender3").substring(0, 3)}
+                {localStorage.getItem("sender3").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender4") && (
               <div className="carosel-text4" onClick={caroselRequest4}>
-                {localStorage.getItem("sender4")}
+                {localStorage.getItem("sender4").substring(0, 3)}
+                {localStorage.getItem("sender4").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender5") && (
               <div className="carosel-text5" onClick={caroselRequest5}>
-                {localStorage.getItem("sender5")}
+                {localStorage.getItem("sender5").substring(0, 3)}
+                {localStorage.getItem("sender5").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender6") && (
               <div className="carosel-text6" onClick={caroselRequest6}>
-                {localStorage.getItem("sender6")}
+                {localStorage.getItem("sender6").substring(0, 3)}
+                {localStorage.getItem("sender6").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender7") && (
               <div className="carosel-text7" onClick={caroselRequest7}>
-                {localStorage.getItem("sender7")}
+                {localStorage.getItem("sender7").substring(0, 3)}
+                {localStorage.getItem("sender7").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender8") && (
               <div className="carosel-text8" onClick={caroselRequest8}>
-                {localStorage.getItem("sender8")}
+                {localStorage.getItem("sender8").substring(0, 3)}
+                {localStorage.getItem("sender8").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender9") && (
               <div className="carosel-text9" onClick={caroselRequest9}>
-                {localStorage.getItem("sender9")}
+                {localStorage.getItem("sender9").substring(0, 3)}
+                {localStorage.getItem("sender9").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender10") && (
               <div className="carosel-text10" onClick={caroselRequest10}>
-                {localStorage.getItem("sender10")}
+                {localStorage.getItem("sender10").substring(0, 3)}
+                {localStorage.getItem("sender10").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender11") && (
               <div className="carosel-text11" onClick={caroselRequest11}>
-                {localStorage.getItem("sender11")}
+                {localStorage.getItem("sender11").substring(0, 3)}
+                {localStorage.getItem("sender11").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender12") && (
               <div className="carosel-text12" onClick={caroselRequest12}>
-                {localStorage.getItem("sender12")}
+                {localStorage.getItem("sender12").substring(0, 3)}
+                {localStorage.getItem("sender12").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender13") && (
               <div className="carosel-text13" onClick={caroselRequest13}>
-                {localStorage.getItem("sender13")}
+                {localStorage.getItem("sender13").substring(0, 3)}
+                {localStorage.getItem("sender13").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender14") && (
               <div className="carosel-text14" onClick={caroselRequest14}>
-                {localStorage.getItem("sender14")}
+                {localStorage.getItem("sender14").substring(0, 3)}
+                {localStorage.getItem("sender14").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender15") && (
               <div className="carosel-text15" onClick={caroselRequest15}>
-                {localStorage.getItem("sender15")}
+                {localStorage.getItem("sender15").substring(0, 3)}
+                {localStorage.getItem("sender15").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender16") && (
               <div className="carosel-text16" onClick={caroselRequest16}>
-                {localStorage.getItem("sender16")}
+                {localStorage.getItem("sender16").substring(0, 3)}
+                {localStorage.getItem("sender16").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender17") && (
               <div className="carosel-text17" onClick={caroselRequest17}>
-                {localStorage.getItem("sender17")}
+                {localStorage.getItem("sender17").substring(0, 3)}
+                {localStorage.getItem("sender17").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender18") && (
               <div className="carosel-text18" onClick={caroselRequest18}>
-                {localStorage.getItem("sender18")}
+                {localStorage.getItem("sender18").substring(0, 3)}
+                {localStorage.getItem("sender18").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender19") && (
               <div className="carosel-text19" onClick={caroselRequest19}>
-                {localStorage.getItem("sender19")}
+                {localStorage.getItem("sender19").substring(0, 3)}
+                {localStorage.getItem("sender19").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
             {!!localStorage.getItem("sender20") && (
               <div className="carosel-text20" onClick={caroselRequest20}>
-                {localStorage.getItem("sender20")}
+                {localStorage.getItem("sender20").substring(0, 3)}
+                {localStorage.getItem("sender20").length >= 4 ? (
+                  <span>...</span>
+                ) : null}
               </div>
             )}
           </span>

@@ -147,6 +147,8 @@ html [type="input"] {
 .carosel-text20 {
   background: #c4c4c4 !important;
   width: max-content !important;
+  min-width: 5.5rem;
+  text-align: center;
   height: 0.6470588235294118rem !important;
   line-height: 0.323rem;
   transform: translateY(0rem);
@@ -158,9 +160,35 @@ html [type="input"] {
   cursor: pointer;
 }
 
+.carosel-text0 span,
+.carosel-text1 span,
+.carosel-text2 span,
+.carosel-text3 span,
+.carosel-text4 span,
+.carosel-text5 span,
+.carosel-text6 span,
+.carosel-text7 span,
+.carosel-text8 span,
+.carosel-text9 span,
+.carosel-text10 span,
+.carosel-text11 span,
+.carosel-text12 span,
+.carosel-text13 span,
+.carosel-text14 span,
+.carosel-text15 span,
+.carosel-text16 span,
+.carosel-text17 span,
+.carosel-text18 span,
+.carosel-text19 span,
+.carosel-text20 span {
+  font-size: 0.5rem;
+}
+
 .carosel-text0 {
   background: #fff !important;
   width: max-content !important;
+  min-width: 5.5rem;
+  text-align: center;
   height: 0.6470588235294118rem !important;
   line-height: 0.323rem;
   transform: translateY(0rem);
