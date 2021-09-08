@@ -58,10 +58,9 @@
 }
 
 /* scroll bar */
-::-webkit-scrollbar {
-  /* display: none; */
-  webkit-overflow-scrolling: touch;
-}
+/* ::-webkit-scrollbar {
+  display: none;
+} */
 
 input,
 html [type="input"] {
@@ -98,6 +97,7 @@ html [type="input"] {
   color: var(--dark-txt-color);
   width: 25rem;
   height: 60rem;
+  overflow: hidden;
 }
 
 .FlowImg img {
@@ -2214,11 +2214,11 @@ button#dropdown-basic-button {
 }
 
 .carosel-box::-webkit-scrollbar {
-  opacity: 0.2;
+  opacity: 1;
 }
 
 .carosel-box::-webkit-scrollbar-thumb {
-  opacity: 0.2;
+  opacity: 1;
 }
 
 /* .carosel-text {
