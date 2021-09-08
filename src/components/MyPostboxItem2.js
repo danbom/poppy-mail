@@ -48,8 +48,8 @@ function MyPostboxItem2() {
       .then((res) => {
         console.log(res);
         if (res.ok) {
-          localStorage.removeItem("1st_link_title");
-          localStorage.removeItem("1st_open_date");
+          localStorage.removeItem("2nd_link_title");
+          localStorage.removeItem("2nd_open_date");
           alert("삭제 완료!");
           window.location.reload();
         } else {
