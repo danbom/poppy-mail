@@ -12,6 +12,11 @@ function MyPostboxItem2() {
   const [item2_mailbox_link, setItemLink2] = useState(null);
   const [item2_number_letter, setItemLetter2] = useState(null);
 
+  const second_open_date = new Date(
+    localStorage.getItem("2nd_open_date") + " " + "00:00:00"
+  );
+  const now = new Date();
+
   const Copy = () => {
     copyToClipboard(item2_mailbox_link);
 
@@ -108,9 +113,13 @@ function MyPostboxItem2() {
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
-      <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
-        우체통 열기
-      </div>
+      {second_open_date <= now ? (
+        <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
+          우체통 열기
+        </div>
+      ) : (
+        <div className="open-post-box-btn-disable">우체통 열기</div>
+      )}
     </>
   );
 }

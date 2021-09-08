@@ -2137,6 +2137,29 @@ button#dropdown-basic-button {
   cursor: pointer;
 }
 
+.open-post-box-btn-disable {
+  font-family: "Roboto bold";
+  font-weight: bold;
+  font-size: 1.012373453318335rem;
+
+  position: absolute;
+  width: 21rem;
+  height: 3.7rem;
+  left: calc(50% - 10.5rem);
+  top: 27.3rem;
+
+  /* indego */
+
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 3.7rem;
+  opacity: 0.3;
+  cursor: default;
+}
+
 .withdrawal-img {
   position: absolute;
   width: 4rem;
