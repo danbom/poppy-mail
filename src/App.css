@@ -59,7 +59,8 @@
 
 /* scroll bar */
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+  webkit-overflow-scrolling: touch;
 }
 
 input,
@@ -97,7 +98,6 @@ html [type="input"] {
   color: var(--dark-txt-color);
   width: 25rem;
   height: 60rem;
-  overflow: visible;
 }
 
 .FlowImg img {
@@ -108,7 +108,7 @@ html [type="input"] {
 
 .swiper-container {
   margin: 0 !important;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .swiper-container#mypostboxswiper .swiper-pagination-bullets {
@@ -186,7 +186,6 @@ html [type="input"] {
   width: max-content;
   left: 1.412rem;
   top: 1.4em;
-  overflow-x: scroll;
   display: none;
 }
 
@@ -212,10 +211,6 @@ html [type="input"] {
   opacity: 1 !important;
 } */
 
-.swiper-container#checkarrivedmailswiper {
-  overflow-x: scroll;
-}
-
 .swiper-container#checkarrivedmailswiper .swiper-pagination-bullet {
   background: #767185 !important;
   /* opacity: 0.2 !important; */
@@ -225,7 +220,6 @@ html [type="input"] {
   transform: translateY(0rem);
   margin: 0 0.12rem !important;
   display: inline-block;
-  overflow-x: scroll;
 }
 
 .swiper-container#checkarrivedmailswiper .swiper-pagination-bullet-active {
@@ -237,7 +231,6 @@ html [type="input"] {
   transform: translateY(0rem);
   margin: 0 0.12rem !important;
   display: inline-block;
-  overflow-x: scroll;
 }
 
 .swiper-pagination-fraction,
@@ -2213,10 +2206,19 @@ button#dropdown-basic-button {
   position: absolute;
   left: 1.412rem;
   top: 8rem;
-  width: max-content;
-  overflow: scroll;
+  width: 22rem;
+  overflow-x: auto;
+  overflow-y: hidden;
   z-index: 2;
   display: flex;
+}
+
+.carosel-box::-webkit-scrollbar {
+  opacity: 0.2;
+}
+
+.carosel-box::-webkit-scrollbar-thumb {
+  opacity: 0.2;
 }
 
 /* .carosel-text {
