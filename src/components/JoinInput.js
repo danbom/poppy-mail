@@ -39,7 +39,7 @@ function JoinInput() {
   };
 
   const setNone = (e) => {
-    setGender("");
+    setGender("선택하지 않음");
     setTitlegender("선택하지 않음");
   };
 
