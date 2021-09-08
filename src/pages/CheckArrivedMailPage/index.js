@@ -26,7 +26,7 @@ function CheckArrivedMail() {
 
   const caroselRequest0 = (e) => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(0rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(0rem, 0px, 0px); transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text0  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text1  ")[0]) {
@@ -113,7 +113,7 @@ function CheckArrivedMail() {
 
   const caroselRequest1 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-25rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-25rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text1  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -200,7 +200,7 @@ function CheckArrivedMail() {
 
   const caroselRequest2 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-50rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-50rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text2  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -287,7 +287,7 @@ function CheckArrivedMail() {
 
   const caroselRequest3 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-75rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-75rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text3  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -374,7 +374,7 @@ function CheckArrivedMail() {
 
   const caroselRequest4 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-100rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-100rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text4  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -461,7 +461,7 @@ function CheckArrivedMail() {
 
   const caroselRequest5 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-125rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-125rem, 0px, 0px);  transition: 0.1s all ease";
     document.getElementsByClassName("carosel-text5  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -548,7 +548,7 @@ function CheckArrivedMail() {
 
   const caroselRequest6 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-150rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-150rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text6  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -635,7 +635,7 @@ function CheckArrivedMail() {
 
   const caroselRequest7 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-175rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-175rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text7  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -722,7 +722,7 @@ function CheckArrivedMail() {
 
   const caroselRequest8 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-200rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-200rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text8  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -809,7 +809,7 @@ function CheckArrivedMail() {
 
   const caroselRequest9 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-225rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-225rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text9  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -896,7 +896,7 @@ function CheckArrivedMail() {
 
   const caroselRequest10 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-250rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-250rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text10  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -983,7 +983,7 @@ function CheckArrivedMail() {
 
   const caroselRequest11 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-275rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-275rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text11 ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1070,7 +1070,7 @@ function CheckArrivedMail() {
 
   const caroselRequest12 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-300rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-300rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text12  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1157,7 +1157,7 @@ function CheckArrivedMail() {
 
   const caroselRequest13 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-325rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-325rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text13  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1244,7 +1244,7 @@ function CheckArrivedMail() {
 
   const caroselRequest14 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-350rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-350rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text14 ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1331,7 +1331,7 @@ function CheckArrivedMail() {
 
   const caroselRequest15 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-375rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-375rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text15  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1418,7 +1418,7 @@ function CheckArrivedMail() {
 
   const caroselRequest16 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-400rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-400rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text16  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1505,7 +1505,7 @@ function CheckArrivedMail() {
 
   const caroselRequest17 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-425rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-425rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text17  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1592,7 +1592,7 @@ function CheckArrivedMail() {
 
   const caroselRequest18 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-450rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-450rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text18  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1679,7 +1679,7 @@ function CheckArrivedMail() {
 
   const caroselRequest19 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-475rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-475rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text19  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
@@ -1766,7 +1766,7 @@ function CheckArrivedMail() {
 
   const caroselRequest20 = () => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
-      "transform: translate3d(-500rem, 0px, 0px); transition-duration: 0ms;";
+      "transform: translate3d(-500rem, 0px, 0px);  transition: 0.1s all ease;";
     document.getElementsByClassName("carosel-text20  ")[0].style =
       "background-color: #fff !important";
     if (document.getElementsByClassName("carosel-text0  ")[0]) {
