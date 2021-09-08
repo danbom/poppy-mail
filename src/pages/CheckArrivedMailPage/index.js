@@ -2290,7 +2290,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender0")}
@@ -2360,7 +2360,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender1")}
@@ -2430,7 +2430,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender2")}
@@ -2500,7 +2500,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender3")}
@@ -2570,7 +2570,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender4")}
@@ -2640,7 +2640,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender5")}
@@ -2710,7 +2710,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender6")}
@@ -2780,7 +2780,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender7")}
@@ -2850,7 +2850,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender8")}
@@ -2920,7 +2920,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender9")}
@@ -2990,7 +2990,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender10")}
@@ -3060,7 +3060,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender11")}
@@ -3130,7 +3130,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender12")}
@@ -3200,7 +3200,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender13")}
@@ -3270,7 +3270,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender14")}
@@ -3340,7 +3340,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender15")}
@@ -3410,7 +3410,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender16")}
@@ -3480,7 +3480,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender17")}
@@ -3550,7 +3550,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender18")}
@@ -3620,7 +3620,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender19")}
@@ -3690,7 +3690,7 @@ function CheckArrivedMail() {
                       </div>
                     </div>
                     <div className="letter-element" id="from-box">
-                      <div className="from-txt">To.</div>
+                      <div className="from-txt">From.</div>
                       <div className="from-underline"></div>
                       <div className="from-contents" id="div">
                         {localStorage.getItem("sender20")}
