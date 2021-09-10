@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import { useHistory } from "react-router";
+import { React } from "react";
+// import { useHistory } from "react-router";
 
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtnDark";
@@ -22,7 +22,7 @@ SwiperCore.use([Thumbs, Pagination]);
 function CheckArrivedMail() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
-  const history = useHistory();
+  // const history = useHistory();
 
   const caroselRequest0 = (e) => {
     document.getElementsByClassName("swiper-wrapper")[0].style =

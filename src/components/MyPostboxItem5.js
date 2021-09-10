@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { useHistory } from "react-router";
 import MyPostboxImg from "../image/mypostboxitemimg.png";
-import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
+// import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 // import * as S from './styles';
 
 function MyPostboxItem5() {
