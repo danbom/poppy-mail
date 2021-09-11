@@ -2254,6 +2254,7 @@ button#dropdown-basic-button {
 }
 
 .carosel-box {
+  opacity: 0;
   position: absolute;
   left: 1.412rem;
   top: 8rem;
@@ -2265,11 +2266,11 @@ button#dropdown-basic-button {
 }
 
 .carosel-box::-webkit-scrollbar {
-  opacity: 1;
+  opacity: 0;
 }
 
 .carosel-box::-webkit-scrollbar-thumb {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* .carosel-text {
