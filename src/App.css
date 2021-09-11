@@ -701,7 +701,7 @@ font-weight: normal; */
   width: 21rem;
   height: 3.7rem;
   left: calc(50% - 10.5rem);
-  top: 41.353rem;
+  top: 53.353rem;
 
   /* indego */
 
@@ -1818,7 +1818,7 @@ button#dropdown-people-button {
 .letter-box {
   position: absolute;
   width: 21.6rem;
-  height: 29.48rem;
+  height: max-content;
   left: calc(50% - 10.8rem);
   top: 9.412rem;
 
@@ -1829,9 +1829,10 @@ button#dropdown-people-button {
 .check-letter-box {
   position: absolute;
   width: 21.6rem;
-  height: 29.48rem;
+  /* height: 29.48rem; */
   left: calc(50% - 10.8rem);
   top: 5rem;
+  padding-left: 0.5rem;
 
   background: #daae40;
   border-radius: 8px;
@@ -1840,9 +1841,10 @@ button#dropdown-people-button {
 .check-letter-box#check {
   position: absolute;
   width: 21.6rem;
-  height: 29.48rem;
+  /* height: 29.48rem; */
   left: calc(50% - 10.8rem);
   top: 9.6rem;
+  padding-left: 0.5rem;
 
   background: #daae40;
   border-radius: 8px;
@@ -1886,11 +1888,12 @@ button#dropdown-people-button {
 }
 
 .letter-element#contents-box {
-  height: 20.3rem;
+  height: max-content;
 }
 
 .letter-element#from-box {
   height: 5.06rem;
+  position: relative;
 }
 
 .to-txt {
@@ -1915,23 +1918,27 @@ button#dropdown-people-button {
   top: 1.883rem;
   left: 3.1rem;
   width: 5rem;
+  z-index: 2;
 
   line-height: 151.9%;
 }
 
 .contents-contents {
-  position: absolute;
+  /* position: absolute;
   top: 4.95rem;
-  left: calc(50% - 9.4rem);
+  left: calc(50% - 9.4rem); */
+  margin-top: 1rem;
+  margin-left: 1rem;
   width: 18.8rem;
-  height: 19rem;
+  min-height: 19rem;
   display: flex;
   word-break: break-all;
+  z-index: 2;
 }
 
 .from-txt {
   position: absolute;
-  top: 25.89rem;
+  top: 1.1rem;
   left: 5.53rem;
   font-size: 1.1rem;
   line-height: 2.24rem;
@@ -1939,7 +1946,7 @@ button#dropdown-people-button {
 
 .from-underline {
   position: absolute;
-  top: 27.353rem;
+  top: 2.7rem;
   left: 8.942rem;
   width: 11.06rem;
   height: 0.059rem;
@@ -1955,11 +1962,12 @@ button#dropdown-people-button {
   line-height: 2.24rem; */
 
   position: absolute;
-  top: 25.8rem;
+  top: 1.1rem;
   left: 9rem;
   width: 11rem;
 
   line-height: 151.9%;
+  z-index: 2;
 }
 
 .from-contents::placeholder {
