@@ -14,6 +14,9 @@ function JoinPage() {
   const history = useHistory();
 
   const KakaoLoginClickHandler = () => {
+    localStorage.getItem("is_new") === "true"
+      ? history.push("/joininfo")
+      : history.push("/howto");
     Kakao.Auth.login({
       success: function (authObj) {
         // console.log(authObj);
