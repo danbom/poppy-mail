@@ -1777,6 +1777,18 @@ button#dropdown-people-button {
   border-radius: 2rem;
   margin: 0 0.736rem;
   cursor: pointer;
+  position: relative;
+}
+
+.colorbar-element.active::before {
+  content: "";
+  position: absolute;
+  left: -0.355rem;
+  top: -0.355rem;
+  width: 2.71rem;
+  height: 2.71rem;
+  border-radius: 50%;
+  border: 0.09rem solid #4b4362;
 }
 
 .colorbar-element#color1 {
