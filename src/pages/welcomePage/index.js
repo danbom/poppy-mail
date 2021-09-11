@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as S from "./styles";
 import LoginBtn from "../../components/Btn/LoginBtn";
 import JoinBtn from "../../components/Btn/JoinBtn";
@@ -12,7 +12,7 @@ function WelcomePage() {
 
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
-  const history = useHistory();
+  // const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",

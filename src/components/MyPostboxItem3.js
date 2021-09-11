@@ -12,7 +12,7 @@ function MyPostboxItem3() {
   const [item3_number_letter, setItemLetter3] = useState(null);
 
   const third_open_date = new Date(
-    localStorage.getItem("3rd_open_date") + " " + "00:00:00"
+    localStorage.getItem("3rd_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const now = new Date();
 

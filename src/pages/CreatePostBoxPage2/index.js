@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import * as S from "./styles";
-import Navbar from "../../components/Navbar";
+// import Navbar from "../../components/Navbar";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
 import CreatePostBoxMent from "../../components/Txt/CreatePostBoxMent";

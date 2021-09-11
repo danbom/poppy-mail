@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Thumbs, Pagination, Autoplay } from "swiper";
 import "swiper/swiper.scss";
@@ -25,7 +25,7 @@ SwiperCore.use([Thumbs, Pagination, Autoplay]);
 function HowToPage() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
-  const history = useHistory();
+  // const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",
@@ -109,19 +109,19 @@ function HowToPage() {
     });
 
   const first_open_date = new Date(
-    localStorage.getItem("1st_open_date") + " " + "00:00:00"
+    localStorage.getItem("1st_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const second_open_date = new Date(
-    localStorage.getItem("2nd_open_date") + " " + "00:00:00"
+    localStorage.getItem("2nd_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const third_open_date = new Date(
-    localStorage.getItem("3rd_open_date") + " " + "00:00:00"
+    localStorage.getItem("3rd_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const fourth_open_date = new Date(
-    localStorage.getItem("4th_open_date") + " " + "00:00:00"
+    localStorage.getItem("4th_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const fifth_open_date = new Date(
-    localStorage.getItem("5th_open_date") + " " + "00:00:00"
+    localStorage.getItem("5th_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const now = new Date();
 

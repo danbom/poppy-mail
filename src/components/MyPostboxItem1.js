@@ -10,7 +10,7 @@ function MyPostboxItem1() {
   const history = useHistory();
 
   const first_open_date = new Date(
-    localStorage.getItem("1st_open_date") + " " + "00:00:00"
+    localStorage.getItem("1st_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const now = new Date();
 

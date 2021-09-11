@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import * as S from "./styles";
-import Navbar from "../../components/Navbar";
+// import Navbar from "../../components/Navbar";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
 import LinkName from "../../components/Txt/LinkName";
@@ -14,7 +14,7 @@ function CreatePostBoxPage3() {
   const [_alert, setAlert] = useState(<AlertCopy></AlertCopy>);
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
-  const history = useHistory();
+  // const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",

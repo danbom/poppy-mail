@@ -1,11 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 // import * as S from './styles';
 
 function ReceivedLetterMent() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
-  const history = useHistory();
+  // const history = useHistory();
 
   fetch("https://poppymail.shop/mailbox/", {
     method: "GET",

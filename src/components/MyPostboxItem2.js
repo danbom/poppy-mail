@@ -11,7 +11,7 @@ function MyPostboxItem2() {
   const [item2_number_letter, setItemLetter2] = useState(null);
 
   const second_open_date = new Date(
-    localStorage.getItem("2nd_open_date") + " " + "00:00:00"
+    localStorage.getItem("2nd_open_date") + " " + "00:00:00" // eslint-disable-line
   );
   const now = new Date();
 
