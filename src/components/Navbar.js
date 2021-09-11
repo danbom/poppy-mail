@@ -70,11 +70,12 @@ function Navbar() {
           <ul className="nav-menu-items" onClick={showSidebar}>
             <div className="navbar-toggle"></div>
             {/* SidebarData를 순서대로 담기*/}
-            {first_open_date <= now ||
-            second_open_date <= now ||
-            third_open_date <= now ||
-            fourth_open_date <= now ||
-            fifth_open_date <= now ? (
+            {localStorage.getItem("check_mailbox_today") === "true" &&
+            (first_open_date <= now ||
+              second_open_date <= now ||
+              third_open_date <= now ||
+              fourth_open_date <= now ||
+              fifth_open_date <= now) ? (
               <div>
                 <div className="red-circle"></div>
               </div>

@@ -131,11 +131,12 @@ function HowToPage() {
         <div className="fullbox">
           <BackBtn></BackBtn>
           <Navbar></Navbar>
-          {first_open_date <= now ||
-          second_open_date <= now ||
-          third_open_date <= now ||
-          fourth_open_date <= now ||
-          fifth_open_date <= now ? (
+          {localStorage.getItem("check_mailbox_today") === "true" &&
+          (first_open_date <= now ||
+            second_open_date <= now ||
+            third_open_date <= now ||
+            fourth_open_date <= now ||
+            fifth_open_date <= now) ? (
             <div>
               <img src={union} className="union" alt="말풍선"></img>
               <div className="union-text">
