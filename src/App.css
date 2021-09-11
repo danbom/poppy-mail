@@ -1706,6 +1706,22 @@ button#dropdown-people-button {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
 }
 
+.delete-postbox-box {
+  position: relative;
+  width: 19rem;
+  height: 18.2rem;
+  left: calc(50% - 9.5rem);
+  top: 6.59rem;
+
+  background: #ffffff;
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .whatispoppymail-title {
   position: absolute;
   width: 100%;
@@ -1726,6 +1742,26 @@ button#dropdown-people-button {
   color: #736f7e;
 }
 
+.delete-postbox-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 2.2rem;
+
+  /* popup_title */
+
+  font-family: "Cafe24 Ssurround";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  /* identical to box height */
+
+  /* indego */
+
+  color: #4b4362;
+}
+
 .whatispoppymail-desc {
   position: absolute;
   width: 16.2rem;
@@ -1743,6 +1779,73 @@ button#dropdown-people-button {
   /* indego */
 
   color: #4b4362;
+}
+
+.delete-postbox-desc {
+  position: absolute;
+  width: 16.2rem;
+  left: calc(50% - 8.1rem);
+  top: 4.2rem;
+
+  /* popup_text */
+
+  font-family: "Cafe24 Ssurround air";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.89rem;
+  line-height: 1.5rem;
+  text-align: center;
+
+  /* indego */
+
+  color: #4b4362;
+}
+
+.delete-postbox-box-no {
+  width: 16.06rem;
+  height: 3.53rem;
+  z-index: 2;
+
+  background: #a38aee;
+  border-radius: 30px;
+  margin-top: 6rem;
+  margin-bottom: 0.5rem;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 3.53rem;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.delete-postbox-box-yes {
+  width: 16.06rem;
+  height: 3.53rem;
+  z-index: 2;
+
+  background: #ffffff;
+  border: 1.5px solid #a38aee;
+  border-radius: 30px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 3.53rem;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* indego */
+
+  color: #4b4362;
+  cursor: pointer;
 }
 
 .popuppoppy {

@@ -144,6 +144,12 @@ function HowToPage() {
               </div>
             </div>
           ) : null}
+          {/* <div>
+            <img src={union} className="union" alt="말풍선"></img>
+            <div className="union-text">
+              우편함이 열렸습니다.<br></br>편지를 확인해주세요!
+            </div>
+          </div> */}
 
           <LogoNameHowto></LogoNameHowto>
 

@@ -29,6 +29,33 @@ function MyPostboxItem1() {
     document.body.removeChild(t);
   };
 
+  const [_article, setArticle] = useState(null);
+
+  const PopupDelete = () => {
+    setArticle(
+      <div>
+        <div className="delete-postbox-box">
+          <div className="delete-postbox-title">
+            이 우체통을 삭제하시겠습니까?
+          </div>
+          <div className="delete-postbox-desc">
+            한 번 삭제하신 우체통은 복구가 불가능합니다. 정말 삭제하시겠습니까?
+          </div>
+          <div className="delete-postbox-box-no" onClick={PopdownDelete}>
+            아니요
+          </div>
+          <div className="delete-postbox-box-yes" onClick={deleteRequest}>
+            네 삭제할래요.
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const PopdownDelete = () => {
+    setArticle(null);
+  };
+
   const deleteRequest = () => {
     fetch(
       "https://poppymail.shop/mailbox/" + localStorage.getItem("1st_id") + "/",
@@ -167,7 +194,7 @@ function MyPostboxItem1() {
         이 우체통 링크 복사하기
       </div>
 
-      <div className="delete-my-post-box" onClick={deleteRequest}>
+      <div className="delete-my-post-box" onClick={PopupDelete}>
         삭제
       </div>
 
@@ -190,6 +217,7 @@ function MyPostboxItem1() {
       <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
         우체통 열기
       </div>
+      {_article}
     </>
   );
 }

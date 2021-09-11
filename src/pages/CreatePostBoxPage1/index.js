@@ -2,7 +2,6 @@ import React, { createContext, useState, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 
 import * as S from "./styles";
-import Navbar from "../../components/Navbar";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
 import InputName from "../../components/InputName";
