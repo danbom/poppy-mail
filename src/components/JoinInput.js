@@ -76,7 +76,7 @@ function JoinInput() {
           <Dropdown.Item eventKey="item2" onClick={setWoman}>
             여
           </Dropdown.Item>
-          <Dropdown.Item eventKey="item2" onClick={setNone}>
+          <Dropdown.Item eventKey="item3" onClick={setNone}>
             선택하지 않음
           </Dropdown.Item>
         </DropdownButton>

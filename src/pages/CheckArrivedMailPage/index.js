@@ -16,6 +16,7 @@ import letter_deco_2_1 from "../../image/letter_deco_2_1.png";
 import letter_deco_2_2 from "../../image/letter_deco_2_2.png";
 import letter_deco_3_1 from "../../image/letter_deco_3_1.png";
 import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
+import { DropdownButton, Dropdown } from "react-bootstrap";
 
 SwiperCore.use([Thumbs, Pagination]);
 
@@ -1919,7 +1920,118 @@ function CheckArrivedMail() {
           <div className="check-arrived-letter-ment">
             {localStorage.getItem("length")}개의 편지
           </div>
-          <img className="people-img" src={PeopleImg} alt="people"></img>
+          <img className="people-img" src={PeopleImg} alt="people" />
+          <DropdownButton id="dropdown-people-button" title="">
+            {!!localStorage.getItem("sender0") ? (
+              <Dropdown.Item
+                eventKey="item1"
+                id="dropdown-people-item"
+                onClick={caroselRequest0}
+              >
+                {localStorage.getItem("sender0")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender1") ? (
+              <Dropdown.Item eventKey="item2" onClick={caroselRequest1}>
+                {localStorage.getItem("sender1")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender2") ? (
+              <Dropdown.Item eventKey="item3" onClick={caroselRequest2}>
+                {localStorage.getItem("sender2")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender3") ? (
+              <Dropdown.Item eventKey="item4" onClick={caroselRequest3}>
+                {localStorage.getItem("sender3")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender4") ? (
+              <Dropdown.Item eventKey="item5" onClick={caroselRequest4}>
+                {localStorage.getItem("sender4")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender5") ? (
+              <Dropdown.Item eventKey="item6" onClick={caroselRequest5}>
+                {localStorage.getItem("sender5")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender6") ? (
+              <Dropdown.Item eventKey="item7" onClick={caroselRequest6}>
+                {localStorage.getItem("sender6")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender7") ? (
+              <Dropdown.Item eventKey="item8" onClick={caroselRequest7}>
+                {localStorage.getItem("sender7")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender8") ? (
+              <Dropdown.Item eventKey="item9" onClick={caroselRequest8}>
+                {localStorage.getItem("sender8")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender9") ? (
+              <Dropdown.Item eventKey="item10" onClick={caroselRequest9}>
+                {localStorage.getItem("sender9")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender10") ? (
+              <Dropdown.Item eventKey="item11" onClick={caroselRequest10}>
+                {localStorage.getItem("sender10")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender11") ? (
+              <Dropdown.Item eventKey="item12" onClick={caroselRequest11}>
+                {localStorage.getItem("sender11")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender12") ? (
+              <Dropdown.Item eventKey="item13" onClick={caroselRequest12}>
+                {localStorage.getItem("sender12")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender13") ? (
+              <Dropdown.Item eventKey="item14" onClick={caroselRequest13}>
+                {localStorage.getItem("sender13")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender14") ? (
+              <Dropdown.Item eventKey="item15" onClick={caroselRequest14}>
+                {localStorage.getItem("sender14")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender15") ? (
+              <Dropdown.Item eventKey="item16" onClick={caroselRequest15}>
+                {localStorage.getItem("sender15")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender16") ? (
+              <Dropdown.Item eventKey="item17" onClick={caroselRequest16}>
+                {localStorage.getItem("sender16")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender17") ? (
+              <Dropdown.Item eventKey="item18" onClick={caroselRequest17}>
+                {localStorage.getItem("sender17")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender18") ? (
+              <Dropdown.Item eventKey="item19" onClick={caroselRequest18}>
+                {localStorage.getItem("sender18")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender19") ? (
+              <Dropdown.Item eventKey="item20" onClick={caroselRequest19}>
+                {localStorage.getItem("sender19")}
+              </Dropdown.Item>
+            ) : null}
+            {!!localStorage.getItem("sender20") ? (
+              <Dropdown.Item eventKey="item19" onClick={caroselRequest20}>
+                {localStorage.getItem("sender20")}
+              </Dropdown.Item>
+            ) : null}
+          </DropdownButton>
           <span className="carosel-box">
             {!!localStorage.getItem("sender0") && (
               <div className="carosel-text0" onClick={caroselRequest0}>

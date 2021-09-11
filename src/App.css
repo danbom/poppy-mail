@@ -1513,6 +1513,41 @@ button#dropdown-basic-button {
   z-index: 2;
 }
 
+button#dropdown-people-button {
+  opacity: 0;
+  position: absolute;
+  width: 1.83rem;
+  height: 1.236rem;
+  left: 20.824rem;
+  top: 4.942rem;
+  resize: none;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+.fullbox-dark .dropdown-menu {
+  opacity: 0.95;
+  position: absolute;
+  min-width: 10rem;
+  height: 14.56rem;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0.25rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .btn-primary {
   color: #4b4362;
   background-color: #fff;
@@ -1566,7 +1601,7 @@ button#dropdown-basic-button {
   top: 47%;
 }
 
-.dropdown-menu {
+.joininput-sex .dropdown-menu {
   width: 20rem;
 }
 
@@ -2254,7 +2289,6 @@ button#dropdown-basic-button {
 }
 
 .carosel-box {
-  opacity: 0;
   position: absolute;
   left: 1.412rem;
   top: 8rem;
