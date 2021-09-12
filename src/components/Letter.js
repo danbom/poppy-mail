@@ -14,7 +14,7 @@ function Letter() {
     localStorage.setItem("receiver", e.target.value);
   };
 
-  const contentsReg = /^.{1,530}$/;
+  const contentsReg = /^.{0,530}$/;
 
   const processContents = (e) => {
     e.target.style.height = "1px";

@@ -39,7 +39,7 @@ function CheckLetter() {
           </div>
         </div>
         <div className="letter-element" id="contents-box">
-          <div className="contents-contents">
+          <div className="contents-contents" id="check">
             {localStorage.getItem("contents")}
           </div>
         </div>

@@ -80,6 +80,9 @@ function Navbar() {
                 <div className="red-circle"></div>
               </div>
             ) : null}
+            {/* <div>
+              <div className="red-circle"></div>
+            </div> */}
             <div className="nav-item-zone">
               <li className="nav-text1">
                 <a>

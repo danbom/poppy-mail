@@ -2030,13 +2030,26 @@ button#dropdown-people-button {
   /* position: absolute;
   top: 4.95rem;
   left: calc(50% - 9.4rem); */
+  position: relative;
+  margin-top: 1rem;
+  margin-left: 1.2rem;
+  width: 18.8rem;
+  min-height: 19rem;
+  display: flex;
+  word-break: break-all;
+}
+
+.contents-contents#check {
+  /* position: absolute;
+  top: 4.95rem;
+  left: calc(50% - 9.4rem); */
+  position: relative;
   margin-top: 1rem;
   margin-left: 1rem;
   width: 18.8rem;
   min-height: 19rem;
   display: flex;
   word-break: break-all;
-  z-index: 2;
 }
 
 .from-txt {

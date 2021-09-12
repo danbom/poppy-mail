@@ -11,7 +11,7 @@ function CheckArrivedLetter() {
           <div className="to-contents"></div>
         </div>
         <div className="letter-element" id="contents-box">
-          <div className="contents-contents"></div>
+          <div className="contents-contents" id="check"></div>
         </div>
         <div className="letter-element" id="from-box">
           <div className="from-txt">From.</div>

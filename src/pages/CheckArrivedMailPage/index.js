@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useEffect } from "react";
 // import { useHistory } from "react-router";
 
 import * as S from "./styles";
@@ -24,6 +24,27 @@ function CheckArrivedMail() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
   // const history = useHistory();
+
+  // var style;
+
+  // useEffect(() => {
+  //   var style = document.getElementsByClassName("swiper-slide-next")[0];
+  //   console.log(style);
+  //   if (
+  //     document
+  //       .getElementsByClassName("swiper-slide-active")[0]
+  //       .getAttribute("id") === "slide1"
+  //   ) {
+  //     console.log("slide1");
+  //   }
+  //   if (
+  //     document
+  //       .getElementsByClassName("swiper-slide-active")[0]
+  //       .getAttribute("id") === "slide2"
+  //   ) {
+  //     console.log("slide2");
+  //   }
+  // }, [style]);
 
   const caroselRequest0 = (e) => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
