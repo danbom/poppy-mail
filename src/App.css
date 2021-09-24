@@ -47,6 +47,7 @@
 @media screen and (max-width: 768px) {
   html {
     font-size: 4vw;
+    overflow-x: hidden;
   }
 }
 
@@ -54,6 +55,7 @@
   html {
     font-size: 1.25rem;
     min-height: 120vh;
+    overflow-x: hidden;
   }
 }
 
@@ -87,7 +89,7 @@ html [type="input"] {
   position: relative;
   background-color: var(--main-bg-color);
   width: 25rem;
-  height: 60rem;
+  height: 95rem;
   overflow: hidden;
 }
 
@@ -96,7 +98,7 @@ html [type="input"] {
   background-color: var(--dark-bg-color);
   color: var(--dark-txt-color);
   width: 25rem;
-  height: 60rem;
+  height: 95rem;
   overflow: hidden;
 }
 
