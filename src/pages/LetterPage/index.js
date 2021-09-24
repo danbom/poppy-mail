@@ -29,6 +29,10 @@ function LetterPage(props) {
         setLinkname(res.nickname);
         localStorage.setItem("nickname", res.nickname);
       }
+      if (!res.ok) {
+        alert("해당 우체통이 존재하지 않습니다.");
+        history.push("/");
+      }
     });
 
   const GoWriteRequest = () => {
