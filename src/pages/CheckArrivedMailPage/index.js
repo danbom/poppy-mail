@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 // import { useHistory } from "react-router";
 
 import * as S from "./styles";
@@ -23,28 +23,13 @@ SwiperCore.use([Thumbs, Pagination]);
 function CheckArrivedMail() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
-  // const history = useHistory();
 
-  // var style;
-
-  // useEffect(() => {
-  //   var style = document.getElementsByClassName("swiper-slide-next")[0];
-  //   console.log(style);
-  //   if (
-  //     document
-  //       .getElementsByClassName("swiper-slide-active")[0]
-  //       .getAttribute("id") === "slide1"
-  //   ) {
-  //     console.log("slide1");
-  //   }
-  //   if (
-  //     document
-  //       .getElementsByClassName("swiper-slide-active")[0]
-  //       .getAttribute("id") === "slide2"
-  //   ) {
-  //     console.log("slide2");
-  //   }
-  // }, [style]);
+  // if (
+  //   document.getElementsByClassName("swiper-wrapper")[0].style.transform ===
+  //   "translate3d(-500rem, 0px, 0px)"
+  // ) {
+  //   console.log("wef");
+  // }
 
   const caroselRequest0 = (e) => {
     document.getElementsByClassName("swiper-wrapper")[0].style =
@@ -2232,138 +2217,8 @@ function CheckArrivedMail() {
               pagination={{ clickable: true }}
               id="checkarrivedmailswiper"
             >
-              {/* <span className="carosel-box">
-                <span className="carosel-text" onClick={caroselRequest0}>
-                  {localStorage.getItem("sender0")}
-                </span>
-                <span className="carosel-text" onClick={caroselRequest1}>
-                  {localStorage.getItem("sender1")}
-                </span>
-                <span className="carosel-text" onClick={caroselRequest2}>
-                  {localStorage.getItem("sender2")}
-                </span>
-                <span className="carosel-text" onClick={caroselRequest3}>
-                  {localStorage.getItem("sender3")}
-                </span>
-                <span className="carosel-text" onClick={caroselRequest4}>
-                  {localStorage.getItem("sender4")}
-                </span>
-                <span className="carosel-text" onClick={caroselRequest5}>
-                  {localStorage.getItem("sender5")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender6")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender7")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender8")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender9")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender10")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender11")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender12")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender13")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender14")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender15")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender16")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender17")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender18")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender19")}
-                </span>
-                <span className="carosel-text">
-                  {localStorage.getItem("sender20")}
-                </span>
-              </span> */}
               {!!localStorage.getItem("sender0") ? (
                 <SwiperSlide id="slide1">
-                  {/* <span className="carosel-box">
-                    <span className="carosel-text" onClick={caroselRequest0}>
-                      {localStorage.getItem("sender0")}
-                    </span>
-                    <span className="carosel-text" onClick={caroselRequest1}>
-                      {localStorage.getItem("sender1")}
-                    </span>
-                    <span className="carosel-text" onClick={caroselRequest2}>
-                      {localStorage.getItem("sender2")}
-                    </span>
-                    <span className="carosel-text" onClick={caroselRequest3}>
-                      {localStorage.getItem("sender3")}
-                    </span>
-                    <span className="carosel-text" onClick={caroselRequest4}>
-                      {localStorage.getItem("sender4")}
-                    </span>
-                    <span className="carosel-text" onClick={caroselRequest5}>
-                      {localStorage.getItem("sender5")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender6")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender7")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender8")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender9")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender10")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender11")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender12")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender13")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender14")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender15")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender16")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender17")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender18")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender19")}
-                    </span>
-                    <span className="carosel-text">
-                      {localStorage.getItem("sender20")}
-                    </span>
-                  </span> */}
                   <div
                     className="check-letter-box"
                     style={{
