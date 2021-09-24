@@ -130,6 +130,8 @@ function MyPostboxItem1() {
         localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
         localStorage.setItem("1st_number_letter", res[0].number_of_letter);
         localStorage.setItem("1st_id", res[0].id);
+
+        localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
         setId(res[0].id);
 
         setItemTitle1(localStorage.getItem("1st_link_title"));

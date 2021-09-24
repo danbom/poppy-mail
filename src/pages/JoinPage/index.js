@@ -33,10 +33,6 @@ function JoinPage() {
             localStorage.setItem("User_id", res.user_id);
             localStorage.setItem("refresh", res.refresh);
             localStorage.setItem("is_new", res.is_new);
-            localStorage.setItem(
-              "check_mailbox_today",
-              res.check_mailbox_today
-            );
 
             if (res.access) {
               const is_new = localStorage.getItem("is_new");

@@ -65,6 +65,7 @@ function HowToPage() {
         localStorage.setItem("1st_link_title", res[0].link_title);
         localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
         localStorage.setItem("1st_number_letter", res[0].number_of_letter);
+        localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
       }
 
       if (res[0]) {
