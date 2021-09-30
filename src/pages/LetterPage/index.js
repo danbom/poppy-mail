@@ -29,6 +29,11 @@ function LetterPage(props) {
         setLinkname(res.nickname);
         localStorage.setItem("nickname", res.nickname);
       }
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("존재하지 않는 우체통입니다.");
+      history.push("/");
     });
 
   const GoWriteRequest = () => {
