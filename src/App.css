@@ -873,7 +873,7 @@ background: #4243554D;
 
 .join-complete-ment-big {
   position: absolute;
-  width: 10.17997750281215rem;
+  width: 13rem;
   height: 1.968503937007874rem;
   left: 2.137232845894263rem;
   top: 15.95rem;
@@ -2013,7 +2013,7 @@ button#dropdown-people-button {
   position: absolute;
   top: 3.412rem;
   left: 3.471rem;
-  width: 3.18rem;
+  width: 9rem;
   height: 0.059rem;
   background: #fff;
 }
@@ -2022,7 +2022,7 @@ button#dropdown-people-button {
   position: absolute;
   top: 1.883rem;
   left: 3.1rem;
-  width: 5rem;
+  width: 10rem;
   z-index: 2;
 
   line-height: 151.9%;
@@ -2065,8 +2065,8 @@ button#dropdown-people-button {
 .from-underline {
   position: absolute;
   top: 2.7rem;
-  left: 8.942rem;
-  width: 11.06rem;
+  left: 9.6rem;
+  width: 9.6rem;
   height: 0.059rem;
   background: #fff;
 }
@@ -2081,15 +2081,14 @@ button#dropdown-people-button {
 
   position: absolute;
   top: 1.1rem;
-  left: 9rem;
+  left: 9.6rem;
   width: 11rem;
-
   line-height: 151.9%;
   z-index: 2;
 }
 
 .from-contents::placeholder {
-  font-size: 0.6667rem;
+  font-size: 0.5rem;
   color: #fff;
   opacity: 0.5;
 }
