@@ -46,7 +46,7 @@ function JoinInfoPage() {
     } else {
       const access = localStorage.getItem("access");
       const User_id = localStorage.getItem("User_id");
-      fetch("https://poppymail.shop/account/" + User_id + "/userInfo", {
+      fetch("https://poppymail.shop/account/" + User_id + "/userInfo/", {
         method: "PATCH",
         headers: {
           Authorization: "Bearer " + access,
