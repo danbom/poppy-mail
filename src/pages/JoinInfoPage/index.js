@@ -46,6 +46,8 @@ function JoinInfoPage() {
     } else {
       const access = localStorage.getItem("access");
       const User_id = localStorage.getItem("User_id");
+      localStorage.setItem("username", name);
+      history.push("/joincomplete");
       fetch("https://poppymail.shop/account/" + User_id + "/userInfo/", {
         method: "PATCH",
         headers: {
@@ -67,13 +69,11 @@ function JoinInfoPage() {
       })
         .then((res) => res.json())
         .then((res) => {
-          history.push("/joincomplete");
           // localStorage.setItem("Kakao_token", res.access_token);
           // const kakao_token = localStorage.getItem("Kakao_token");
           if (res) {
             console.log(access);
             console.log(res);
-
             // alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
             // history.push("/joininfo");
           }

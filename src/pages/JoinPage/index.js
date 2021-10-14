@@ -33,10 +33,12 @@ function JoinPage() {
             localStorage.setItem("User_id", res.user_id);
             localStorage.setItem("refresh", res.refresh);
             localStorage.setItem("is_new", res.is_new);
+            localStorage.setItem("username", res.username);
 
             if (res.access) {
               const is_new = localStorage.getItem("is_new");
-              is_new === "true"
+              const username = localStorage.getItem("username");
+              is_new === "true" || username === ""
                 ? history.push("/joininfo")
                 : history.push("/howto");
             }
