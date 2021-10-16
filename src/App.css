@@ -2356,29 +2356,29 @@ button#dropdown-people-button {
 }
 
 .thumbnail1 {
-  position: absolute;
-  width: 2.353rem;
-  height: 2.18rem;
-  left: 12.95rem;
-  top: -0.1rem;
+  position: relative;
+  width: 2.2rem;
+  height: 2rem;
+  left: -0.15rem;
+  top: 0rem;
   z-index: 2;
 }
 
 .thumbnail2 {
-  position: absolute;
+  position: relative;
   width: 1.942rem;
   height: 1.648rem;
-  left: 16.65rem;
+  left: 0rem;
   top: 0.1rem;
   z-index: 2;
 }
 
 .thumbnail3 {
-  position: absolute;
+  position: relative;
   width: 1.942rem;
   height: 1.942rem;
-  left: 20.2rem;
-  top: 0.05rem;
+  left: 0;
+  top: 0.1rem;
   z-index: 2;
 }
 
