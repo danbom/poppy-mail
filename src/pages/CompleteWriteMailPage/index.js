@@ -4,7 +4,7 @@ import * as S from "./styles";
 import MetooBtn from "../../components/Btn/MetooBtn";
 import GoHomeBtn from "../../components/Btn/GoHomeBtnWhite";
 import LogoName from "../../components/Txt/LogoName";
-import BackBtn from "../../components/Btn/BackBtn";
+// import BackBtn from "../../components/Btn/BackBtn";
 import Poppyimg from "../../image/completewritemailpoppy.png";
 
 function CompleteWriteMail() {
@@ -16,7 +16,7 @@ function CompleteWriteMail() {
       <S.CompleteWriteMailScene>
         <div className="fullbox">
           <LogoName></LogoName>
-          <BackBtn></BackBtn>
+          {/* <BackBtn></BackBtn> */}
 
           <div className="complete-write-mail-ment">
             {localStorage.getItem("nickname")}님의 우편함에<br></br>편지를
