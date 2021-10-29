@@ -2536,3 +2536,12 @@ button#dropdown-people-button {
   position: absolute;
   top: 7rem;
 }
+
+.noeditnick {
+  color: var(--poppy-purple);
+  font-size: 0.75rem;
+  font-family: "Roboto";
+  position: absolute;
+  left: 1.8rem;
+  top: 14.2rem;
+}
