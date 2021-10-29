@@ -48,7 +48,7 @@ function Navbar() {
           alert("로그아웃!");
           history.push("/");
         } else {
-          alert("다시 시도해주세요!");
+          localStorage.clear();
         }
       });
   };

@@ -24,7 +24,9 @@ function WithdrawalBtn() {
           localStorage.clear();
           history.push("/");
         } else {
-          alert("다시 시도해주세요!");
+          localStorage.clear();
+          alert("다시 로그인 후 탈퇴해주세요!");
+          history.push("/");
         }
       });
   };
