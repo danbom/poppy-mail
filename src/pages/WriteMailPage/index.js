@@ -22,7 +22,9 @@ export const LetterContext = createContext({
 function WriteMail(props) {
   const history = useHistory();
   const mailbox_pk = props.match.params.mailbox_pk;
+  localStorage.setItem("mailbox_pk", mailbox_pk);
   const random_strkey = props.match.params.random_strkey;
+  localStorage.setItem("random_strkey", random_strkey);
   const [color, setColor] = useState("#DAAE40");
   const [contents, setContents] = useState("");
   const [sender, setSender] = useState("");
@@ -42,37 +44,11 @@ function WriteMail(props) {
     else if (!tenReg.test(receiver))
       alert("받는 이는 10글자까지 입력할 수 있습니다.");
     else {
-      fetch(
-        "https://poppymail.shop/letter/" +
-          mailbox_pk +
-          "/" +
-          random_strkey +
-          "/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            content: contents,
-            sender: sender,
-            receiver: receiver,
-            color: color,
-          }),
-        }
-      )
-        // .then((res) => res.json())
-        .then((res) => {
-          if (res.ok) {
-            console.log("콘솔 " + res);
-            console.log("셋  " + contents + sender + color);
-            history.push("/checkwritemail");
-          } else {
-            alert("해당 우체통이 존재하지 않습니다.");
-            history.goBack();
-          }
-        });
+      localStorage.setItem("contents", contents);
+      localStorage.setItem("sender", sender);
+      localStorage.setItem("receiver", receiver);
+      localStorage.setItem("theme", color);
+      history.push("/checkwritemail");
     }
   };
 
@@ -81,11 +57,9 @@ function WriteMail(props) {
       <LetterContext.Provider value={value}>
         <div className="fullbox">
           <BackBtn></BackBtn>
-          {/* <Link to="/checkwritemail"> */}
           <div className="small-complete-btn" onClick={SendLetterRequest}>
             완료
           </div>
-          {/* </Link> */}
           <LogoNamePoppyMail></LogoNamePoppyMail>
           <Colorbar></Colorbar>
 
