@@ -5,7 +5,7 @@ import Navbar from "../../components/NavbarDark";
 import BackBtn from "../../components/Btn/BackBtnDark";
 import LogoNameMyPostbox from "../../components/Txt/LogoNameMyPostbox";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Thumbs, Pagination, Autoplay } from "swiper";
+import SwiperCore, { Navigation, Thumbs, Pagination, Autoplay } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/thumbs/thumbs.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -15,7 +15,7 @@ import MyPostboxItem3 from "../../components/MyPostboxItem3";
 import MyPostboxItem4 from "../../components/MyPostboxItem4";
 import MyPostboxItem5 from "../../components/MyPostboxItem5";
 
-SwiperCore.use([Thumbs, Pagination, Autoplay]);
+SwiperCore.use([Navigation, Thumbs, Pagination, Autoplay]);
 
 function MyPostbox() {
   //   if (loading) return <LoadingScreen />;
@@ -40,6 +40,7 @@ function MyPostbox() {
             className="service-flow"
             spaceBetween={0}
             slidesPerView={1}
+            navigation
             thumbs
             pagination={{ clickable: true }}
             autoplay={{ delay: 5000 }}
