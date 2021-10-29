@@ -9,6 +9,7 @@ import LinkName from "../../components/Txt/LinkName";
 import AlertCopy from "../../components/Alert/AlertCopy";
 import PostboxAfter from "../../components/Img/PostboxAfter";
 import CompleteBtn from "../../components/Btn/CompleteBtn";
+import CreatePostBoxMent from "../../components/Txt/CreatePostBoxMent";
 
 function CreatePostBoxPage3() {
   const [_alert, setAlert] = useState(<AlertCopy></AlertCopy>);
@@ -107,6 +108,11 @@ function CreatePostBoxPage3() {
           <LogoNameCreatePostBox></LogoNameCreatePostBox>
 
           {_alert}
+
+          <div className="create-post-box-ment">
+            우체통 링크는 3일간만<br></br> 활성화되어있어요.
+          </div>
+          <div className="create-post-box-ment-deco1"></div>
 
           <PostboxAfter></PostboxAfter>
 

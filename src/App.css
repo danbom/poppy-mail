@@ -582,7 +582,15 @@ html [type="input"] {
   width: 12.68rem;
   height: 19.91rem;
   left: 6.65rem;
-  top: 10.24rem;
+  top: 11.49rem;
+}
+
+.fanfare {
+  position: absolute;
+  left: 3.4rem;
+  top: 9.99rem;
+  width: 17.55rem;
+  height: 20rem;
 }
 
 @keyframes fingeranimation {
@@ -602,7 +610,7 @@ html [type="input"] {
   width: 6.35rem;
   height: 6.651rem;
   left: 3.8rem;
-  top: 11.24rem;
+  top: 12.49rem;
   animation-duration: 0.5s;
   animation-name: fingeranimation;
   animation-iteration-count: infinite;
@@ -614,13 +622,13 @@ html [type="input"] {
   width: 13.173rem;
   height: 20.06rem;
   left: 5.79rem;
-  top: 10.12rem;
+  top: 11.37rem;
 }
 
 .bird-txt {
   position: absolute;
-  left: 5rem;
-  top: 22.3rem;
+  left: 3rem;
+  top: 23.45rem;
   font-size: 0.9rem;
   line-height: 140.5%;
 
@@ -632,7 +640,7 @@ html [type="input"] {
   width: 4.22rem;
   height: 5.64rem;
   left: 4.92rem;
-  top: 22.7rem;
+  top: 24.35rem;
 }
 
 .welcome-ment {
@@ -1126,17 +1134,29 @@ background: #4243554D;
   top: 7.65rem;
 
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
   color: #2b2b2b;
   z-index: 2;
 }
 
 .create-post-box-ment-deco {
   position: absolute;
-  width: 12rem;
-  height: 1.12rem;
+  width: 5.5rem;
+  height: 1rem;
 
-  left: 5.1rem;
+  left: 12rem;
+  top: 9.4rem;
+
+  background-color: #fff8dd;
+  z-index: 1;
+}
+
+.create-post-box-ment-deco1 {
+  position: absolute;
+  width: 3.8rem;
+  height: 1rem;
+
+  left: 13.7rem;
   top: 8rem;
 
   background-color: #fff8dd;
