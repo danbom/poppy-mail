@@ -129,7 +129,7 @@ function HowToPage() {
   return (
     <>
       <S.HowToScene>
-        <BackBtn></BackBtn>
+        {/* <BackBtn></BackBtn> */}
         <Navbar></Navbar>
         {localStorage.getItem("check_mailbox_today") === "true" &&
         (first_open_date <= now ||
