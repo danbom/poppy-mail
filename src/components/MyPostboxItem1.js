@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { useHistory } from "react-router";
 import MyPostboxImg from "../image/mypostboxitemimg.png";
+import PoppyImg from "../image/ReceivedLetterPoppy.png";
 // import * as S from './styles';
 
 function MyPostboxItem1() {
@@ -200,25 +201,38 @@ function MyPostboxItem1() {
         삭제
       </div>
 
-      <img src={MyPostboxImg} alt="postbox" className="MyPostboxImg"></img>
+      {first_open_date <= now ? (
+        <img src={MyPostboxImg} alt="postbox" className="MyPostboxImg"></img>
+      ) : (
+        <img src={PoppyImg} alt="postbox" className="PostboxPoppyImg"></img>
+      )}
 
       <div className="my-post-box-item-ment1">&lt;{item1_link_title}&gt;</div>
-      <div className="my-post-box-item-ment2">
+      {first_open_date <= now ? (
+        <div className="my-post-box-item-ment2">
+          편지 {item1_number_letter}개 도착
+        </div>
+      ) : (
+        <div className="my-post-box-item-ment2">
+          편지 {item1_number_letter}개 오는 중
+        </div>
+      )}
+      {/* <div className="my-post-box-item-ment2">
         편지 {item1_number_letter}개 도착
-      </div>
+      </div> */}
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
-      {/* {first_open_date <= now ? (
+      {first_open_date <= now ? (
         <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
           우체통 열기
         </div>
       ) : (
         <div className="open-post-box-btn-disable">우체통 열기</div>
-      )} */}
-      <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
+      )}
+      {/* <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
         우체통 열기
-      </div>
+      </div> */}
       {_article}
     </>
   );

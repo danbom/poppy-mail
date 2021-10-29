@@ -338,7 +338,7 @@ html [type="input"] {
   align-items: center;
   list-style: none;
   height: 2.23rem;
-  margin-bottom: 1.83rem;
+  margin-bottom: 1.3rem;
 }
 
 .nav-text1 {
@@ -450,7 +450,7 @@ html [type="input"] {
   height: 1.12rem;
   /* margin-bottom: 1.18rem;
   margin-left: 3.5rem; */
-  margin: 0 0 4.71rem 3.5rem;
+  margin: 0 0 3rem 3.5rem;
 }
 
 .nav-text-small3 a {
@@ -2209,6 +2209,14 @@ button#dropdown-people-button {
   top: 3.3rem;
 }
 
+.PostboxPoppyImg {
+  position: absolute;
+  width: 9.5rem;
+  height: 14.2rem;
+  left: calc(50% - 4.412rem);
+  top: 3.3rem;
+}
+
 .my-post-box-item-ment1 {
   position: absolute;
   width: 100%;
@@ -2510,10 +2518,10 @@ button#dropdown-people-button {
 
 .red-circle {
   position: absolute;
-  width: 0.69rem;
-  height: 0.69rem;
-  left: 12.4rem;
-  top: 14.6rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  left: 12.2rem;
+  top: 12.1rem;
   border-radius: 50%;
 
   background: #d66e56;

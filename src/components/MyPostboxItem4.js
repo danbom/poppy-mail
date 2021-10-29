@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { useHistory } from "react-router";
 import MyPostboxImg from "../image/mypostboxitemimg.png";
+import PoppyImg from "../image/ReceivedLetterPoppy.png";
 // import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
 // import * as S from './styles';
 
@@ -130,12 +131,23 @@ function MyPostboxItem4() {
         삭제
       </div>
 
-      <img src={MyPostboxImg} alt="postbox" className="MyPostboxImg"></img>
+      {fourth_open_date <= now ? (
+        <img src={MyPostboxImg} alt="postbox" className="MyPostboxImg"></img>
+      ) : (
+        <img src={PoppyImg} alt="postbox" className="PostboxPoppyImg"></img>
+      )}
 
       <div className="my-post-box-item-ment1">&lt;{item4_link_title}&gt;</div>
-      <div className="my-post-box-item-ment2">
-        편지 {item4_number_letter}개 도착
-      </div>
+      {fourth_open_date <= now ? (
+        <div className="my-post-box-item-ment2">
+          편지 {item4_number_letter}개 도착
+        </div>
+      ) : (
+        <div className="my-post-box-item-ment2">
+          편지 {item4_number_letter}개 오는 중
+        </div>
+      )}
+
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
