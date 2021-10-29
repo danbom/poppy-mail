@@ -14,29 +14,27 @@ function CompleteWriteMail() {
   return (
     <>
       <S.CompleteWriteMailScene>
-        <div className="fullbox">
-          <LogoName></LogoName>
-          {/* <BackBtn></BackBtn> */}
+        <LogoName></LogoName>
+        {/* <BackBtn></BackBtn> */}
 
-          <div className="complete-write-mail-ment">
-            {localStorage.getItem("nickname")}님의 우편함에<br></br>편지를
-            넣었습니다!
-          </div>
-
-          <img
-            src={Poppyimg}
-            className="completewritemail-poppy-img"
-            alt="poppy img"
-          />
-
-          <Link to="/">
-            <MetooBtn></MetooBtn>
-          </Link>
-
-          <Link to="/">
-            <GoHomeBtn></GoHomeBtn>
-          </Link>
+        <div className="complete-write-mail-ment">
+          {localStorage.getItem("nickname")}님의 우편함에<br></br>편지를
+          넣었습니다!
         </div>
+
+        <img
+          src={Poppyimg}
+          className="completewritemail-poppy-img"
+          alt="poppy img"
+        />
+
+        <Link to="/">
+          <MetooBtn></MetooBtn>
+        </Link>
+
+        <Link to="/">
+          <GoHomeBtn></GoHomeBtn>
+        </Link>
       </S.CompleteWriteMailScene>
     </>
   );

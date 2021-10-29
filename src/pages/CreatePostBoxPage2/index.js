@@ -39,31 +39,29 @@ function CreatePostBoxPage2() {
   return (
     <>
       <S.CreatePostBoxScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          {/* <Navbar></Navbar> */}
+        <BackBtn></BackBtn>
+        {/* <Navbar></Navbar> */}
 
-          <LogoNameCreatePostBox></LogoNameCreatePostBox>
+        <LogoNameCreatePostBox></LogoNameCreatePostBox>
 
-          {/* <AlertCretePostbox></AlertCretePostbox> */}
-          {_alert}
+        {/* <AlertCretePostbox></AlertCretePostbox> */}
+        {_alert}
 
-          <CreatePostBoxMent></CreatePostBoxMent>
+        <CreatePostBoxMent></CreatePostBoxMent>
 
-          {/* <CopyToClipboard text="우체통주소">
+        {/* <CopyToClipboard text="우체통주소">
             <Link to="/createpostboxstepthree">
               <PostboxBefore></PostboxBefore>
             </Link>
           </CopyToClipboard> */}
 
-          <div onClick={Copy}>
-            <Link to="/createpostboxstepthree">
-              <PostboxBefore></PostboxBefore>
-            </Link>
-          </div>
-
-          <LinkName></LinkName>
+        <div onClick={Copy}>
+          <Link to="/createpostboxstepthree">
+            <PostboxBefore></PostboxBefore>
+          </Link>
         </div>
+
+        <LinkName></LinkName>
       </S.CreatePostBoxScene>
     </>
   );

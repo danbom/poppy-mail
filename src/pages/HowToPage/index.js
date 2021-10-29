@@ -129,67 +129,65 @@ function HowToPage() {
   return (
     <>
       <S.HowToScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          <Navbar></Navbar>
-          {localStorage.getItem("check_mailbox_today") === "true" &&
-          (first_open_date <= now ||
-            second_open_date <= now ||
-            third_open_date <= now ||
-            fourth_open_date <= now ||
-            fifth_open_date <= now) ? (
-            <div>
-              <img src={union} className="union" alt="말풍선"></img>
-              <div className="union-text">
-                우편함이 열렸습니다.<br></br>편지를 확인해주세요!
-              </div>
+        <BackBtn></BackBtn>
+        <Navbar></Navbar>
+        {localStorage.getItem("check_mailbox_today") === "true" &&
+        (first_open_date <= now ||
+          second_open_date <= now ||
+          third_open_date <= now ||
+          fourth_open_date <= now ||
+          fifth_open_date <= now) ? (
+          <div>
+            <img src={union} className="union" alt="말풍선"></img>
+            <div className="union-text">
+              우편함이 열렸습니다.<br></br>편지를 확인해주세요!
             </div>
-          ) : null}
-          {/* <div>
+          </div>
+        ) : null}
+        {/* <div>
             <img src={union} className="union" alt="말풍선"></img>
             <div className="union-text">
               우편함이 열렸습니다.<br></br>편지를 확인해주세요!
             </div>
           </div> */}
 
-          <LogoNameHowto></LogoNameHowto>
+        <LogoNameHowto></LogoNameHowto>
 
-          <div>
-            <Swiper
-              className="service-flow"
-              spaceBetween={0}
-              slidesPerView={1}
-              thumbs
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 5000 }}
-            >
-              <SwiperSlide>
-                <Flow1></Flow1>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Flow2></Flow2>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Flow3></Flow3>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Flow4></Flow4>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Flow5></Flow5>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Flow6></Flow6>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-
-          <Link to="/createpostboxstepone">
-            <CreatePostboxBtn></CreatePostboxBtn>
-          </Link>
-
-          <Footer></Footer>
+        <div>
+          <Swiper
+            className="service-flow"
+            spaceBetween={0}
+            slidesPerView={1}
+            thumbs
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 5000 }}
+          >
+            <SwiperSlide>
+              <Flow1></Flow1>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Flow2></Flow2>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Flow3></Flow3>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Flow4></Flow4>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Flow5></Flow5>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Flow6></Flow6>
+            </SwiperSlide>
+          </Swiper>
         </div>
+
+        <Link to="/createpostboxstepone">
+          <CreatePostboxBtn></CreatePostboxBtn>
+        </Link>
+
+        <Footer></Footer>
       </S.HowToScene>
     </>
   );

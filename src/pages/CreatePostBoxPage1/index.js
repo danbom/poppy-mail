@@ -144,21 +144,19 @@ function CreatePostBoxPage1() {
   return (
     <CreatepostboxContext.Provider value={value}>
       <S.CreatePostBoxScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
+        <BackBtn></BackBtn>
 
-          {/* <Navbar></Navbar> */}
+        {/* <Navbar></Navbar> */}
 
-          <LogoNameCreatePostBox></LogoNameCreatePostBox>
+        <LogoNameCreatePostBox></LogoNameCreatePostBox>
 
-          <InputName></InputName>
+        <InputName></InputName>
 
-          <div className="create-post-box-btn" onClick={CreatepostboxRequest}>
-            완료
-          </div>
-
-          {_alert}
+        <div className="create-post-box-btn" onClick={CreatepostboxRequest}>
+          완료
         </div>
+
+        {_alert}
       </S.CreatePostBoxScene>
     </CreatepostboxContext.Provider>
   );

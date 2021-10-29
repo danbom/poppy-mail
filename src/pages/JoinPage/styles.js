@@ -5,6 +5,7 @@ export const JoinScene = styled.div`
   width: 25rem;
   height: calc(45.78177727784027rem + 0.1124859392575928rem + 60px);
   position: absolute;
+  overflow-x: hidden;
 `;
 
 export const KakaoBtn = styled.div`

@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const CompleteWriteMailScene = styled.div`
   background-color: #fff;
   width: 25rem;
-  height: calc(45.78177727784027rem + 0.1124859392575928rem + 60px);
+  height: 100%;
   position: absolute;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;

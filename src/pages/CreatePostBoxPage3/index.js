@@ -101,29 +101,27 @@ function CreatePostBoxPage3() {
   return (
     <>
       <S.CreatePostBoxScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          {/* <Navbar></Navbar> */}
+        <BackBtn></BackBtn>
+        {/* <Navbar></Navbar> */}
 
-          <LogoNameCreatePostBox></LogoNameCreatePostBox>
+        <LogoNameCreatePostBox></LogoNameCreatePostBox>
 
-          {_alert}
+        {_alert}
 
-          <div className="create-post-box-ment">
-            우체통 링크는 3일간만<br></br> 활성화되어있어요.
-          </div>
-          <div className="create-post-box-ment-deco1"></div>
-
-          <PostboxAfter></PostboxAfter>
-
-          {}
-
-          <LinkName></LinkName>
-
-          <Link to="/kakaoplus">
-            <CompleteBtn></CompleteBtn>
-          </Link>
+        <div className="create-post-box-ment">
+          우체통 링크는 3일간만<br></br> 활성화되어있어요.
         </div>
+        <div className="create-post-box-ment-deco1"></div>
+
+        <PostboxAfter></PostboxAfter>
+
+        {}
+
+        <LinkName></LinkName>
+
+        <Link to="/kakaoplus">
+          <CompleteBtn></CompleteBtn>
+        </Link>
       </S.CreatePostBoxScene>
     </>
   );

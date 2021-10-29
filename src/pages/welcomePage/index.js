@@ -54,16 +54,15 @@ function WelcomePage() {
   return (
     <>
       <S.WelcomeScene>
-        <div className="fullbox">
-          <LogoName></LogoName>
-          <Poppy></Poppy>
-          <WelcomeMent></WelcomeMent>
+        <LogoName></LogoName>
+        <Poppy></Poppy>
+        <WelcomeMent></WelcomeMent>
 
-          <Link to="/howtounlog">
-            <LoginBtn></LoginBtn>
-          </Link>
+        <Link to="/howtounlog">
+          <LoginBtn></LoginBtn>
+        </Link>
 
-          {/* {is_new ? (
+        {/* {is_new ? (
             <Link to="/joininfo">
               <JoinBtn></JoinBtn>
             </Link>
@@ -72,20 +71,19 @@ function WelcomePage() {
               <JoinBtn></JoinBtn>
             </Link>
           )} */}
-          {!access ? (
-            <Link to="/join">
-              <JoinBtn></JoinBtn>
-            </Link>
-          ) : !is_new ? (
-            <Link to="/joininfo">
-              <JoinBtn></JoinBtn>
-            </Link>
-          ) : (
-            <Link to="/howto">
-              <JoinBtn></JoinBtn>
-            </Link>
-          )}
-        </div>
+        {!access ? (
+          <Link to="/join">
+            <JoinBtn></JoinBtn>
+          </Link>
+        ) : !is_new ? (
+          <Link to="/joininfo">
+            <JoinBtn></JoinBtn>
+          </Link>
+        ) : (
+          <Link to="/howto">
+            <JoinBtn></JoinBtn>
+          </Link>
+        )}
       </S.WelcomeScene>
     </>
   );

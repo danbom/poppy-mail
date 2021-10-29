@@ -43,29 +43,27 @@ function LetterPage(props) {
   return (
     <>
       <S.LetsWriteMailScene>
-        <div className="fullbox">
-          <LogoNamePoppyMail></LogoNamePoppyMail>
+        <LogoNamePoppyMail></LogoNamePoppyMail>
 
-          <div className="post-link-title-box">
-            <div className="post-link-title-small">우체통 링크 제목</div>
-            <div className="post-link-title-big">{linkname}의 우체통</div>
-          </div>
-
-          <LetsWriteMailMent></LetsWriteMailMent>
-
-          <div className="lets-write-mail-ment-big">
-            {linkname}님의 우편함이 도착했습니다! <br></br> {linkname}님에게
-            언제 도착할 지 모르는 <br></br> 편지를 써주세요.
-          </div>
-
-          <LetsWriteMailImg></LetsWriteMailImg>
-
-          {/* <Link to="/writemail"> */}
-          <div className="create-post-box-btn" onClick={GoWriteRequest}>
-            편지쓰기
-          </div>
-          {/* </Link> */}
+        <div className="post-link-title-box">
+          <div className="post-link-title-small">우체통 링크 제목</div>
+          <div className="post-link-title-big">{linkname}의 우체통</div>
         </div>
+
+        <LetsWriteMailMent></LetsWriteMailMent>
+
+        <div className="lets-write-mail-ment-big">
+          {linkname}님의 우편함이 도착했습니다! <br></br> {linkname}님에게 언제
+          도착할 지 모르는 <br></br> 편지를 써주세요.
+        </div>
+
+        <LetsWriteMailImg></LetsWriteMailImg>
+
+        {/* <Link to="/writemail"> */}
+        <div className="create-post-box-btn" onClick={GoWriteRequest}>
+          편지쓰기
+        </div>
+        {/* </Link> */}
       </S.LetsWriteMailScene>
     </>
   );

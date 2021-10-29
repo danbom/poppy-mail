@@ -223,16 +223,16 @@ function MyPostboxItem1() {
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
-      {first_open_date <= now ? (
+      {/* {first_open_date <= now ? (
         <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
           우체통 열기
         </div>
       ) : (
         <div className="open-post-box-btn-disable">우체통 열기</div>
-      )}
-      {/* <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
+      )} */}
+      <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
         우체통 열기
-      </div> */}
+      </div>
       {_article}
     </>
   );

@@ -1920,1775 +1920,1773 @@ function CheckArrivedMail() {
   return (
     <>
       <S.CheckArrivedMailScene>
-        <div className="fullbox-dark">
-          <BackBtn></BackBtn>
-          <LogoNameMyCheckArrivedMail></LogoNameMyCheckArrivedMail>
-          <div className="check-arrived-letter-ment">
-            {localStorage.getItem("length")}개의 편지
-          </div>
-          <img className="people-img" src={PeopleImg} alt="people" />
-          <DropdownButton id="dropdown-people-button" title="">
+        <BackBtn></BackBtn>
+        <LogoNameMyCheckArrivedMail></LogoNameMyCheckArrivedMail>
+        <div className="check-arrived-letter-ment">
+          {localStorage.getItem("length")}개의 편지
+        </div>
+        <img className="people-img" src={PeopleImg} alt="people" />
+        <DropdownButton id="dropdown-people-button" title="">
+          {!!localStorage.getItem("sender0") ? (
+            <Dropdown.Item
+              eventKey="item1"
+              id="dropdown-people-item"
+              onClick={caroselRequest0}
+            >
+              {localStorage.getItem("sender0")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender1") ? (
+            <Dropdown.Item eventKey="item2" onClick={caroselRequest1}>
+              {localStorage.getItem("sender1")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender2") ? (
+            <Dropdown.Item eventKey="item3" onClick={caroselRequest2}>
+              {localStorage.getItem("sender2")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender3") ? (
+            <Dropdown.Item eventKey="item4" onClick={caroselRequest3}>
+              {localStorage.getItem("sender3")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender4") ? (
+            <Dropdown.Item eventKey="item5" onClick={caroselRequest4}>
+              {localStorage.getItem("sender4")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender5") ? (
+            <Dropdown.Item eventKey="item6" onClick={caroselRequest5}>
+              {localStorage.getItem("sender5")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender6") ? (
+            <Dropdown.Item eventKey="item7" onClick={caroselRequest6}>
+              {localStorage.getItem("sender6")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender7") ? (
+            <Dropdown.Item eventKey="item8" onClick={caroselRequest7}>
+              {localStorage.getItem("sender7")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender8") ? (
+            <Dropdown.Item eventKey="item9" onClick={caroselRequest8}>
+              {localStorage.getItem("sender8")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender9") ? (
+            <Dropdown.Item eventKey="item10" onClick={caroselRequest9}>
+              {localStorage.getItem("sender9")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender10") ? (
+            <Dropdown.Item eventKey="item11" onClick={caroselRequest10}>
+              {localStorage.getItem("sender10")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender11") ? (
+            <Dropdown.Item eventKey="item12" onClick={caroselRequest11}>
+              {localStorage.getItem("sender11")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender12") ? (
+            <Dropdown.Item eventKey="item13" onClick={caroselRequest12}>
+              {localStorage.getItem("sender12")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender13") ? (
+            <Dropdown.Item eventKey="item14" onClick={caroselRequest13}>
+              {localStorage.getItem("sender13")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender14") ? (
+            <Dropdown.Item eventKey="item15" onClick={caroselRequest14}>
+              {localStorage.getItem("sender14")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender15") ? (
+            <Dropdown.Item eventKey="item16" onClick={caroselRequest15}>
+              {localStorage.getItem("sender15")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender16") ? (
+            <Dropdown.Item eventKey="item17" onClick={caroselRequest16}>
+              {localStorage.getItem("sender16")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender17") ? (
+            <Dropdown.Item eventKey="item18" onClick={caroselRequest17}>
+              {localStorage.getItem("sender17")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender18") ? (
+            <Dropdown.Item eventKey="item19" onClick={caroselRequest18}>
+              {localStorage.getItem("sender18")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender19") ? (
+            <Dropdown.Item eventKey="item20" onClick={caroselRequest19}>
+              {localStorage.getItem("sender19")}
+            </Dropdown.Item>
+          ) : null}
+          {!!localStorage.getItem("sender20") ? (
+            <Dropdown.Item eventKey="item19" onClick={caroselRequest20}>
+              {localStorage.getItem("sender20")}
+            </Dropdown.Item>
+          ) : null}
+        </DropdownButton>
+        <span className="carosel-box">
+          {!!localStorage.getItem("sender0") && (
+            <div className="carosel-text0" onClick={caroselRequest0}>
+              {localStorage.getItem("sender0").substring(0, 3)}
+              {localStorage.getItem("sender0").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender1") && (
+            <div className="carosel-text1" onClick={caroselRequest1}>
+              {localStorage.getItem("sender1").substring(0, 3)}
+              {localStorage.getItem("sender1").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender2") && (
+            <div className="carosel-text2" onClick={caroselRequest2}>
+              {localStorage.getItem("sender2").substring(0, 3)}
+              {localStorage.getItem("sender2").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender3") && (
+            <div className="carosel-text3" onClick={caroselRequest3}>
+              {localStorage.getItem("sender3").substring(0, 3)}
+              {localStorage.getItem("sender3").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender4") && (
+            <div className="carosel-text4" onClick={caroselRequest4}>
+              {localStorage.getItem("sender4").substring(0, 3)}
+              {localStorage.getItem("sender4").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender5") && (
+            <div className="carosel-text5" onClick={caroselRequest5}>
+              {localStorage.getItem("sender5").substring(0, 3)}
+              {localStorage.getItem("sender5").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender6") && (
+            <div className="carosel-text6" onClick={caroselRequest6}>
+              {localStorage.getItem("sender6").substring(0, 3)}
+              {localStorage.getItem("sender6").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender7") && (
+            <div className="carosel-text7" onClick={caroselRequest7}>
+              {localStorage.getItem("sender7").substring(0, 3)}
+              {localStorage.getItem("sender7").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender8") && (
+            <div className="carosel-text8" onClick={caroselRequest8}>
+              {localStorage.getItem("sender8").substring(0, 3)}
+              {localStorage.getItem("sender8").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender9") && (
+            <div className="carosel-text9" onClick={caroselRequest9}>
+              {localStorage.getItem("sender9").substring(0, 3)}
+              {localStorage.getItem("sender9").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender10") && (
+            <div className="carosel-text10" onClick={caroselRequest10}>
+              {localStorage.getItem("sender10").substring(0, 3)}
+              {localStorage.getItem("sender10").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender11") && (
+            <div className="carosel-text11" onClick={caroselRequest11}>
+              {localStorage.getItem("sender11").substring(0, 3)}
+              {localStorage.getItem("sender11").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender12") && (
+            <div className="carosel-text12" onClick={caroselRequest12}>
+              {localStorage.getItem("sender12").substring(0, 3)}
+              {localStorage.getItem("sender12").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender13") && (
+            <div className="carosel-text13" onClick={caroselRequest13}>
+              {localStorage.getItem("sender13").substring(0, 3)}
+              {localStorage.getItem("sender13").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender14") && (
+            <div className="carosel-text14" onClick={caroselRequest14}>
+              {localStorage.getItem("sender14").substring(0, 3)}
+              {localStorage.getItem("sender14").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender15") && (
+            <div className="carosel-text15" onClick={caroselRequest15}>
+              {localStorage.getItem("sender15").substring(0, 3)}
+              {localStorage.getItem("sender15").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender16") && (
+            <div className="carosel-text16" onClick={caroselRequest16}>
+              {localStorage.getItem("sender16").substring(0, 3)}
+              {localStorage.getItem("sender16").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender17") && (
+            <div className="carosel-text17" onClick={caroselRequest17}>
+              {localStorage.getItem("sender17").substring(0, 3)}
+              {localStorage.getItem("sender17").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender18") && (
+            <div className="carosel-text18" onClick={caroselRequest18}>
+              {localStorage.getItem("sender18").substring(0, 3)}
+              {localStorage.getItem("sender18").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender19") && (
+            <div className="carosel-text19" onClick={caroselRequest19}>
+              {localStorage.getItem("sender19").substring(0, 3)}
+              {localStorage.getItem("sender19").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+          {!!localStorage.getItem("sender20") && (
+            <div className="carosel-text20" onClick={caroselRequest20}>
+              {localStorage.getItem("sender20").substring(0, 3)}
+              {localStorage.getItem("sender20").length >= 4 ? (
+                <span>...</span>
+              ) : null}
+            </div>
+          )}
+        </span>
+        <div>
+          <Swiper
+            className="letter-flow"
+            spaceBetween={0}
+            slidesPerView={1}
+            thumbs
+            pagination={{ clickable: true }}
+            id="checkarrivedmailswiper"
+          >
             {!!localStorage.getItem("sender0") ? (
-              <Dropdown.Item
-                eventKey="item1"
-                id="dropdown-people-item"
-                onClick={caroselRequest0}
-              >
-                {localStorage.getItem("sender0")}
-              </Dropdown.Item>
+              <SwiperSlide id="slide1">
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color0"),
+                  }}
+                >
+                  {localStorage.getItem("color0") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color0") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color0") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver0")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content0")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender0")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender1") ? (
-              <Dropdown.Item eventKey="item2" onClick={caroselRequest1}>
-                {localStorage.getItem("sender1")}
-              </Dropdown.Item>
+              <SwiperSlide id="slide2">
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color1"),
+                  }}
+                >
+                  {localStorage.getItem("color1") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color1") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color1") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver1")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content1")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender1")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender2") ? (
-              <Dropdown.Item eventKey="item3" onClick={caroselRequest2}>
-                {localStorage.getItem("sender2")}
-              </Dropdown.Item>
+              <SwiperSlide id="slide3">
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color2"),
+                  }}
+                >
+                  {localStorage.getItem("color2") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color2") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color2") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver2")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content2")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender2")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender3") ? (
-              <Dropdown.Item eventKey="item4" onClick={caroselRequest3}>
-                {localStorage.getItem("sender3")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color3"),
+                  }}
+                >
+                  {localStorage.getItem("color3") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color3") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color3") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver3")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content3")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender3")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender4") ? (
-              <Dropdown.Item eventKey="item5" onClick={caroselRequest4}>
-                {localStorage.getItem("sender4")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color4"),
+                  }}
+                >
+                  {localStorage.getItem("color4") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color4") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color4") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver4")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content4")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender4")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender5") ? (
-              <Dropdown.Item eventKey="item6" onClick={caroselRequest5}>
-                {localStorage.getItem("sender5")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color5"),
+                  }}
+                >
+                  {localStorage.getItem("color5") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color5") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color5") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver5")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content5")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender5")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender6") ? (
-              <Dropdown.Item eventKey="item7" onClick={caroselRequest6}>
-                {localStorage.getItem("sender6")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color6"),
+                  }}
+                >
+                  {localStorage.getItem("color6") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color6") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color6") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver6")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content6")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender6")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender7") ? (
-              <Dropdown.Item eventKey="item8" onClick={caroselRequest7}>
-                {localStorage.getItem("sender7")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color7"),
+                  }}
+                >
+                  {localStorage.getItem("color7") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color7") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color7") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver7")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content7")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender7")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender8") ? (
-              <Dropdown.Item eventKey="item9" onClick={caroselRequest8}>
-                {localStorage.getItem("sender8")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color8"),
+                  }}
+                >
+                  {localStorage.getItem("color8") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color8") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color8") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver8")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content8")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender8")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender9") ? (
-              <Dropdown.Item eventKey="item10" onClick={caroselRequest9}>
-                {localStorage.getItem("sender9")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color9"),
+                  }}
+                >
+                  {localStorage.getItem("color9") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color9") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color9") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver9")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content9")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender9")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender10") ? (
-              <Dropdown.Item eventKey="item11" onClick={caroselRequest10}>
-                {localStorage.getItem("sender10")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color10"),
+                  }}
+                >
+                  {localStorage.getItem("color10") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color10") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color10") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver10")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content10")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender10")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender11") ? (
-              <Dropdown.Item eventKey="item12" onClick={caroselRequest11}>
-                {localStorage.getItem("sender11")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color11"),
+                  }}
+                >
+                  {localStorage.getItem("color11") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color11") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color11") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver11")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content11")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender11")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender12") ? (
-              <Dropdown.Item eventKey="item13" onClick={caroselRequest12}>
-                {localStorage.getItem("sender12")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color12"),
+                  }}
+                >
+                  {localStorage.getItem("color12") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color12") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color12") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver12")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content12")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender12")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender13") ? (
-              <Dropdown.Item eventKey="item14" onClick={caroselRequest13}>
-                {localStorage.getItem("sender13")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color13"),
+                  }}
+                >
+                  {localStorage.getItem("color13") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color13") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color13") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver13")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content13")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender13")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender14") ? (
-              <Dropdown.Item eventKey="item15" onClick={caroselRequest14}>
-                {localStorage.getItem("sender14")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color14"),
+                  }}
+                >
+                  {localStorage.getItem("color14") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color14") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color14") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver14")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content14")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender14")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender15") ? (
-              <Dropdown.Item eventKey="item16" onClick={caroselRequest15}>
-                {localStorage.getItem("sender15")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color15"),
+                  }}
+                >
+                  {localStorage.getItem("color15") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color15") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color15") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver15")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content15")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender15")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender16") ? (
-              <Dropdown.Item eventKey="item17" onClick={caroselRequest16}>
-                {localStorage.getItem("sender16")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color16"),
+                  }}
+                >
+                  {localStorage.getItem("color16") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color16") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color16") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver16")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content16")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender16")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender17") ? (
-              <Dropdown.Item eventKey="item18" onClick={caroselRequest17}>
-                {localStorage.getItem("sender17")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color17"),
+                  }}
+                >
+                  {localStorage.getItem("color17") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color17") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color17") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver17")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content17")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender17")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender18") ? (
-              <Dropdown.Item eventKey="item19" onClick={caroselRequest18}>
-                {localStorage.getItem("sender18")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color18"),
+                  }}
+                >
+                  {localStorage.getItem("color18") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color18") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color18") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver18")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content18")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender18")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender19") ? (
-              <Dropdown.Item eventKey="item20" onClick={caroselRequest19}>
-                {localStorage.getItem("sender19")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color19"),
+                  }}
+                >
+                  {localStorage.getItem("color19") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color19") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color19") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver19")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content19")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender19")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
             {!!localStorage.getItem("sender20") ? (
-              <Dropdown.Item eventKey="item19" onClick={caroselRequest20}>
-                {localStorage.getItem("sender20")}
-              </Dropdown.Item>
+              <SwiperSlide>
+                <div
+                  className="check-letter-box"
+                  style={{
+                    backgroundColor: localStorage.getItem("color20"),
+                  }}
+                >
+                  {localStorage.getItem("color20") === "#b88dcd" ? (
+                    <div className="letter_deco_1">
+                      <img
+                        className="letter_deco_1_1"
+                        src={letter_deco_1_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_1_2"
+                        src={letter_deco_1_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color20") === "#db7667" ? (
+                    <div className="letter_deco_2">
+                      <img
+                        className="letter_deco_2_1"
+                        src={letter_deco_2_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_2_2"
+                        src={letter_deco_2_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : localStorage.getItem("color20") === "#bdbe82" ? (
+                    <div className="letter_deco_3">
+                      <img
+                        className="letter_deco_3_1"
+                        src={letter_deco_3_1}
+                        alt="deco"
+                      />
+                      <img
+                        className="letter_deco_3_2"
+                        src={letter_deco_3_2}
+                        alt="deco"
+                      />
+                    </div>
+                  ) : null}
+                  <div className="letter-element" id="to-box">
+                    <div className="to-txt">To.</div>
+                    <div className="to-underline"></div>
+                    <div className="to-contents" id="div">
+                      {localStorage.getItem("receiver20")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="contents-box">
+                    <div className="contents-contents">
+                      {localStorage.getItem("content20")}
+                    </div>
+                  </div>
+                  <div className="letter-element" id="from-box">
+                    <div className="from-txt">From.</div>
+                    <div className="from-underline"></div>
+                    <div className="from-contents" id="div">
+                      {localStorage.getItem("sender20")}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             ) : null}
-          </DropdownButton>
-          <span className="carosel-box">
-            {!!localStorage.getItem("sender0") && (
-              <div className="carosel-text0" onClick={caroselRequest0}>
-                {localStorage.getItem("sender0").substring(0, 3)}
-                {localStorage.getItem("sender0").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender1") && (
-              <div className="carosel-text1" onClick={caroselRequest1}>
-                {localStorage.getItem("sender1").substring(0, 3)}
-                {localStorage.getItem("sender1").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender2") && (
-              <div className="carosel-text2" onClick={caroselRequest2}>
-                {localStorage.getItem("sender2").substring(0, 3)}
-                {localStorage.getItem("sender2").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender3") && (
-              <div className="carosel-text3" onClick={caroselRequest3}>
-                {localStorage.getItem("sender3").substring(0, 3)}
-                {localStorage.getItem("sender3").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender4") && (
-              <div className="carosel-text4" onClick={caroselRequest4}>
-                {localStorage.getItem("sender4").substring(0, 3)}
-                {localStorage.getItem("sender4").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender5") && (
-              <div className="carosel-text5" onClick={caroselRequest5}>
-                {localStorage.getItem("sender5").substring(0, 3)}
-                {localStorage.getItem("sender5").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender6") && (
-              <div className="carosel-text6" onClick={caroselRequest6}>
-                {localStorage.getItem("sender6").substring(0, 3)}
-                {localStorage.getItem("sender6").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender7") && (
-              <div className="carosel-text7" onClick={caroselRequest7}>
-                {localStorage.getItem("sender7").substring(0, 3)}
-                {localStorage.getItem("sender7").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender8") && (
-              <div className="carosel-text8" onClick={caroselRequest8}>
-                {localStorage.getItem("sender8").substring(0, 3)}
-                {localStorage.getItem("sender8").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender9") && (
-              <div className="carosel-text9" onClick={caroselRequest9}>
-                {localStorage.getItem("sender9").substring(0, 3)}
-                {localStorage.getItem("sender9").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender10") && (
-              <div className="carosel-text10" onClick={caroselRequest10}>
-                {localStorage.getItem("sender10").substring(0, 3)}
-                {localStorage.getItem("sender10").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender11") && (
-              <div className="carosel-text11" onClick={caroselRequest11}>
-                {localStorage.getItem("sender11").substring(0, 3)}
-                {localStorage.getItem("sender11").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender12") && (
-              <div className="carosel-text12" onClick={caroselRequest12}>
-                {localStorage.getItem("sender12").substring(0, 3)}
-                {localStorage.getItem("sender12").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender13") && (
-              <div className="carosel-text13" onClick={caroselRequest13}>
-                {localStorage.getItem("sender13").substring(0, 3)}
-                {localStorage.getItem("sender13").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender14") && (
-              <div className="carosel-text14" onClick={caroselRequest14}>
-                {localStorage.getItem("sender14").substring(0, 3)}
-                {localStorage.getItem("sender14").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender15") && (
-              <div className="carosel-text15" onClick={caroselRequest15}>
-                {localStorage.getItem("sender15").substring(0, 3)}
-                {localStorage.getItem("sender15").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender16") && (
-              <div className="carosel-text16" onClick={caroselRequest16}>
-                {localStorage.getItem("sender16").substring(0, 3)}
-                {localStorage.getItem("sender16").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender17") && (
-              <div className="carosel-text17" onClick={caroselRequest17}>
-                {localStorage.getItem("sender17").substring(0, 3)}
-                {localStorage.getItem("sender17").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender18") && (
-              <div className="carosel-text18" onClick={caroselRequest18}>
-                {localStorage.getItem("sender18").substring(0, 3)}
-                {localStorage.getItem("sender18").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender19") && (
-              <div className="carosel-text19" onClick={caroselRequest19}>
-                {localStorage.getItem("sender19").substring(0, 3)}
-                {localStorage.getItem("sender19").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-            {!!localStorage.getItem("sender20") && (
-              <div className="carosel-text20" onClick={caroselRequest20}>
-                {localStorage.getItem("sender20").substring(0, 3)}
-                {localStorage.getItem("sender20").length >= 4 ? (
-                  <span>...</span>
-                ) : null}
-              </div>
-            )}
-          </span>
-          <div>
-            <Swiper
-              className="letter-flow"
-              spaceBetween={0}
-              slidesPerView={1}
-              thumbs
-              pagination={{ clickable: true }}
-              id="checkarrivedmailswiper"
-            >
-              {!!localStorage.getItem("sender0") ? (
-                <SwiperSlide id="slide1">
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color0"),
-                    }}
-                  >
-                    {localStorage.getItem("color0") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color0") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color0") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver0")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content0")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender0")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender1") ? (
-                <SwiperSlide id="slide2">
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color1"),
-                    }}
-                  >
-                    {localStorage.getItem("color1") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color1") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color1") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver1")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content1")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender1")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender2") ? (
-                <SwiperSlide id="slide3">
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color2"),
-                    }}
-                  >
-                    {localStorage.getItem("color2") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color2") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color2") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver2")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content2")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender2")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender3") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color3"),
-                    }}
-                  >
-                    {localStorage.getItem("color3") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color3") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color3") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver3")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content3")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender3")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender4") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color4"),
-                    }}
-                  >
-                    {localStorage.getItem("color4") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color4") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color4") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver4")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content4")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender4")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender5") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color5"),
-                    }}
-                  >
-                    {localStorage.getItem("color5") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color5") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color5") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver5")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content5")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender5")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender6") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color6"),
-                    }}
-                  >
-                    {localStorage.getItem("color6") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color6") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color6") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver6")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content6")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender6")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender7") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color7"),
-                    }}
-                  >
-                    {localStorage.getItem("color7") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color7") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color7") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver7")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content7")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender7")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender8") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color8"),
-                    }}
-                  >
-                    {localStorage.getItem("color8") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color8") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color8") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver8")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content8")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender8")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender9") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color9"),
-                    }}
-                  >
-                    {localStorage.getItem("color9") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color9") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color9") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver9")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content9")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender9")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender10") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color10"),
-                    }}
-                  >
-                    {localStorage.getItem("color10") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color10") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color10") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver10")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content10")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender10")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender11") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color11"),
-                    }}
-                  >
-                    {localStorage.getItem("color11") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color11") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color11") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver11")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content11")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender11")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender12") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color12"),
-                    }}
-                  >
-                    {localStorage.getItem("color12") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color12") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color12") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver12")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content12")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender12")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender13") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color13"),
-                    }}
-                  >
-                    {localStorage.getItem("color13") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color13") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color13") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver13")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content13")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender13")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender14") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color14"),
-                    }}
-                  >
-                    {localStorage.getItem("color14") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color14") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color14") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver14")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content14")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender14")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender15") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color15"),
-                    }}
-                  >
-                    {localStorage.getItem("color15") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color15") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color15") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver15")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content15")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender15")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender16") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color16"),
-                    }}
-                  >
-                    {localStorage.getItem("color16") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color16") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color16") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver16")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content16")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender16")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender17") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color17"),
-                    }}
-                  >
-                    {localStorage.getItem("color17") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color17") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color17") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver17")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content17")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender17")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender18") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color18"),
-                    }}
-                  >
-                    {localStorage.getItem("color18") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color18") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color18") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver18")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content18")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender18")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender19") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color19"),
-                    }}
-                  >
-                    {localStorage.getItem("color19") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color19") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color19") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver19")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content19")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender19")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-              {!!localStorage.getItem("sender20") ? (
-                <SwiperSlide>
-                  <div
-                    className="check-letter-box"
-                    style={{
-                      backgroundColor: localStorage.getItem("color20"),
-                    }}
-                  >
-                    {localStorage.getItem("color20") === "#b88dcd" ? (
-                      <div className="letter_deco_1">
-                        <img
-                          className="letter_deco_1_1"
-                          src={letter_deco_1_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_1_2"
-                          src={letter_deco_1_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color20") === "#db7667" ? (
-                      <div className="letter_deco_2">
-                        <img
-                          className="letter_deco_2_1"
-                          src={letter_deco_2_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_2_2"
-                          src={letter_deco_2_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : localStorage.getItem("color20") === "#bdbe82" ? (
-                      <div className="letter_deco_3">
-                        <img
-                          className="letter_deco_3_1"
-                          src={letter_deco_3_1}
-                          alt="deco"
-                        />
-                        <img
-                          className="letter_deco_3_2"
-                          src={letter_deco_3_2}
-                          alt="deco"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="letter-element" id="to-box">
-                      <div className="to-txt">To.</div>
-                      <div className="to-underline"></div>
-                      <div className="to-contents" id="div">
-                        {localStorage.getItem("receiver20")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="contents-box">
-                      <div className="contents-contents">
-                        {localStorage.getItem("content20")}
-                      </div>
-                    </div>
-                    <div className="letter-element" id="from-box">
-                      <div className="from-txt">From.</div>
-                      <div className="from-underline"></div>
-                      <div className="from-contents" id="div">
-                        {localStorage.getItem("sender20")}
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ) : null}
-            </Swiper>
-          </div>
+          </Swiper>
         </div>
       </S.CheckArrivedMailScene>
     </>
