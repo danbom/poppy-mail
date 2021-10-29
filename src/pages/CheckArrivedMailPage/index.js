@@ -4,10 +4,10 @@ import { React } from "react";
 import * as S from "./styles";
 import BackBtn from "../../components/Btn/BackBtnDark";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Thumbs, Pagination } from "swiper";
+// import SwiperCore, { Pagination } from "swiper";
 import "swiper/swiper.scss";
-import "swiper/components/thumbs/thumbs.scss";
-import "swiper/components/pagination/pagination.scss";
+// import "swiper/components/thumbs/thumbs.scss";
+// import "swiper/components/pagination/pagination.scss";
 import LogoNameMyCheckArrivedMail from "../../components/Txt/LogoNameCheckArrivedMail";
 import PeopleImg from "../../image/people.png";
 import letter_deco_1_1 from "../../image/letter_deco_1_1.png";
@@ -18,7 +18,7 @@ import letter_deco_3_1 from "../../image/letter_deco_3_1.png";
 import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 
-SwiperCore.use([Thumbs, Pagination]);
+// SwiperCore.use([Pagination]);
 
 function CheckArrivedMail() {
   const access = localStorage.getItem("access");
@@ -2212,8 +2212,9 @@ function CheckArrivedMail() {
             className="letter-flow"
             spaceBetween={0}
             slidesPerView={1}
-            thumbs
-            pagination={{ clickable: true }}
+            // thumbs
+            // pagination={{ clickable: true }}
+            allowTouchMove={false}
             id="checkarrivedmailswiper"
           >
             {!!localStorage.getItem("sender0") ? (
