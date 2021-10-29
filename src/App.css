@@ -1637,6 +1637,15 @@ button#dropdown-people-button {
   font-family: "Roboto";
 }
 
+.joininput-phone .phone-comment {
+  color: var(--poppy-purple);
+  font-size: 0.75rem;
+  font-family: "Roboto";
+  position: absolute;
+  left: 2.5rem;
+  top: 38.2rem;
+}
+
 .post-link-title-box {
   position: absolute;
   width: 21.53rem;
