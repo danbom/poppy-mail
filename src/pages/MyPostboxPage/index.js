@@ -29,6 +29,10 @@ function MyPostbox() {
 
         <LogoNameMyPostbox></LogoNameMyPostbox>
 
+        {localStorage.getItem("1st_link_title") === null ? (
+          <div className="noPostbox">우체통이 없습니다. 만들어보세요!</div>
+        ) : null}
+
         {/* <AlertCopyWhite></AlertCopyWhite> */}
 
         <div>
