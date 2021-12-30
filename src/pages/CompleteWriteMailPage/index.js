@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import MetooBtn from "../../components/Btn/MetooBtn";
 import GoHomeBtn from "../../components/Btn/GoHomeBtnWhite";
 import LogoName from "../../components/Txt/LogoName";
 // import BackBtn from "../../components/Btn/BackBtn";
 import Poppyimg from "../../image/completewritemailpoppy.png";
+
+import Background from "../../image/background.png";
 
 function CompleteWriteMail() {
   //   if (loading) return <LoadingScreen />;
@@ -13,7 +15,7 @@ function CompleteWriteMail() {
 
   return (
     <>
-      <S.CompleteWriteMailScene>
+      <S.NoScrollbarScene>
         <LogoName></LogoName>
         {/* <BackBtn></BackBtn> */}
 
@@ -35,7 +37,7 @@ function CompleteWriteMail() {
         <Link to="/">
           <GoHomeBtn></GoHomeBtn>
         </Link>
-      </S.CompleteWriteMailScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

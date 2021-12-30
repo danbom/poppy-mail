@@ -1,12 +1,14 @@
 import { React } from "react";
 import { useHistory } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import LogoNameJoin from "../../components/Txt/LogoNameJoin";
 import BackBtn from "../../components/Btn/BackBtn";
 import JoinMent from "../../components/Txt/JoinMent";
 import KakaobtnImg from "../../image/kakao_login.png";
 import JoinWithKakao from "../../components/Txt/JoinWithKakao";
+
+import Background from "../../image/background.png";
 
 const { Kakao } = window;
 
@@ -52,17 +54,17 @@ function JoinPage() {
 
   return (
     <>
-      <S.JoinScene>
+      <S.LongScene>
         <BackBtn></BackBtn>
         <LogoNameJoin></LogoNameJoin>
 
         <JoinMent></JoinMent>
-      </S.JoinScene>
-      <JoinWithKakao></JoinWithKakao>
+        <JoinWithKakao></JoinWithKakao>
 
-      <S.KakaoBtn onClick={KakaoLoginClickHandler}>
-        <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
-      </S.KakaoBtn>
+        <S.KakaoBtn onClick={KakaoLoginClickHandler}>
+          <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
+        </S.KakaoBtn>
+      </S.LongScene>
     </>
   );
 }

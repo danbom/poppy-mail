@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 // import Navbar from "../../components/Navbar";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
@@ -10,6 +10,7 @@ import AlertCopy from "../../components/Alert/AlertCopy";
 import PostboxAfter from "../../components/Img/PostboxAfter";
 import CompleteBtn from "../../components/Btn/CompleteBtn";
 import CreatePostBoxMent from "../../components/Txt/CreatePostBoxMent";
+import Background from "../../image/background.png";
 
 function CreatePostBoxPage3() {
   const [_alert, setAlert] = useState(<AlertCopy></AlertCopy>);
@@ -100,7 +101,7 @@ function CreatePostBoxPage3() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.CreatePostBoxScene>
+      <S.LongScene>
         <BackBtn></BackBtn>
         {/* <Navbar></Navbar> */}
 
@@ -122,7 +123,7 @@ function CreatePostBoxPage3() {
         <Link to="/kakaoplus">
           <CompleteBtn></CompleteBtn>
         </Link>
-      </S.CreatePostBoxScene>
+      </S.LongScene>
     </>
   );
 }

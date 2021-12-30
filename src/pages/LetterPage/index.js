@@ -1,10 +1,12 @@
 import { React, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import LetsWriteMailMent from "../../components/Txt/LetsWriteMailMent";
 import LetsWriteMailImg from "../../components/Img/LetsWriteMailImg";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
+
+import Background from "../../image/background.png";
 
 function LetterPage(props) {
   const mailbox_pk = props.match.params.mailbox_pk;
@@ -42,7 +44,7 @@ function LetterPage(props) {
 
   return (
     <>
-      <S.LetsWriteMailScene>
+      <S.PercentHeightScene>
         <LogoNamePoppyMail></LogoNamePoppyMail>
 
         <div className="post-link-title-box">
@@ -64,7 +66,7 @@ function LetterPage(props) {
           편지쓰기
         </div>
         {/* </Link> */}
-      </S.LetsWriteMailScene>
+      </S.PercentHeightScene>
     </>
   );
 }

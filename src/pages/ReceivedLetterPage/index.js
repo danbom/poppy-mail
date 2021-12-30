@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import Navbar from "../../components/NavbarDark";
 import BackBtn from "../../components/Btn/BackBtnDark";
 import LogoNameReceivedLetter from "../../components/Txt/LogoNameReceivedLetter";
@@ -8,12 +8,14 @@ import ReceivedLetterMent from "../../components/Txt/ReceivedLetterMent";
 import ReceivedLetterPoppyImg from "../../image/ReceivedLetterPoppy.png";
 import KakaoPlusImg from "../../image/kakao_plus.png";
 
+import Background from "../../image/background.png";
+
 function ReceivedLetterPage() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.ReceivedLetterScene>
+      <S.DarkLongScene>
         <div className="fullbox-dark">
           <BackBtn></BackBtn>
           <Navbar></Navbar>
@@ -34,7 +36,7 @@ function ReceivedLetterPage() {
             </div>
           </a>
         </div>
-      </S.ReceivedLetterScene>
+      </S.DarkLongScene>
     </>
   );
 }

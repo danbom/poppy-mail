@@ -2,11 +2,13 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import BackBtn from "../../components/Btn/BackBtn";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 import CheckWriteMailMent from "../../components/Txt/CheckWriteMailMent";
 import CheckLetter from "../../components/CheckLetter";
+
+import Background from "../../image/background.png";
 
 function CheckWriteMail() {
   //   if (loading) return <LoadingScreen />;
@@ -50,7 +52,7 @@ function CheckWriteMail() {
   };
   return (
     <>
-      <S.WriteMailScene>
+      <S.NoScrollbarScene>
         <div className="fullbox">
           <BackBtn></BackBtn>
           <div className="small-complete-btn" onClick={SendLetterRequest}>
@@ -64,7 +66,7 @@ function CheckWriteMail() {
             <div className="give-letter-btn">우편함에 편지 넣기</div>
           </Link> */}
         </div>
-      </S.WriteMailScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

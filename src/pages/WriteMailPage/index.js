@@ -1,6 +1,9 @@
 import React, { createContext, useState, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 
+import * as S from "../../styles/globalstyle";
+import Background from "../../image/background.png";
+
 import BackBtn from "../../components/Btn/BackBtn";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 import Colorbar from "../../components/Colorbar";

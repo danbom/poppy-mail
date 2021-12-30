@@ -1,7 +1,7 @@
 import { React } from "react";
 // import { useHistory } from "react-router";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import BackBtn from "../../components/Btn/BackBtnDark";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import SwiperCore, { Pagination } from "swiper";
@@ -16,6 +16,8 @@ import letter_deco_2_1 from "../../image/letter_deco_2_1.png";
 import letter_deco_2_2 from "../../image/letter_deco_2_2.png";
 import letter_deco_3_1 from "../../image/letter_deco_3_1.png";
 import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
+
+import Background from "../../image/background.png";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 
 // SwiperCore.use([Pagination]);
@@ -1919,7 +1921,7 @@ function CheckArrivedMail() {
 
   return (
     <>
-      <S.CheckArrivedMailScene>
+      <S.DarkScene>
         <BackBtn></BackBtn>
         <LogoNameMyCheckArrivedMail></LogoNameMyCheckArrivedMail>
 
@@ -3697,7 +3699,7 @@ function CheckArrivedMail() {
             ) : null}
           </Swiper>
         </div>
-      </S.CheckArrivedMailScene>
+      </S.DarkScene>
     </>
   );
 }

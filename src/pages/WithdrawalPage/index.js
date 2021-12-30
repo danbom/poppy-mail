@@ -1,11 +1,13 @@
 import React from "react";
 // import { useHistory } from "react-router";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import BackBtn from "../../components/Btn/BackBtn";
 import WithdrawalMent from "../../components/Txt/WithdrawalMent";
 import withdrawalimg from "../../image/withdrawal.png";
 import WithdrawalBtn from "../../components/Btn/WithdrawalBtn";
+
+import Background from "../../image/background.png";
 
 function Withdrawal() {
   const access = localStorage.getItem("access");
@@ -54,7 +56,7 @@ function Withdrawal() {
 
   return (
     <>
-      <S.WithdrawalScene>
+      <S.NoHiddenScene>
         <div className="fullbox">
           <BackBtn></BackBtn>
 
@@ -64,7 +66,7 @@ function Withdrawal() {
 
           <WithdrawalBtn></WithdrawalBtn>
         </div>
-      </S.WithdrawalScene>
+      </S.NoHiddenScene>
     </>
   );
 }

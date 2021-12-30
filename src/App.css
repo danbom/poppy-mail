@@ -54,7 +54,7 @@
 @media screen and (min-width: 769px) {
   html {
     font-size: 1.25rem;
-    min-height: 120vh;
+    /* min-height: 100vh; */
     overflow-x: hidden;
   }
 }
@@ -75,6 +75,23 @@ html [type="input"] {
   --main-txt-color: #4b4362;
   --dark-bg-color: #4b4362;
   --dark-txt-color: #fff;
+}
+
+#super {
+  /* background-image: url(./image/background.png); */
+}
+
+.background {
+  animation: background 50s 1s infinite linear;
+}
+
+@keyframes background {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, -2200px);
+  }
 }
 
 .full {

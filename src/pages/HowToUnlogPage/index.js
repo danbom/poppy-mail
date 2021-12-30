@@ -6,7 +6,7 @@ import "swiper/swiper.scss";
 import "swiper/components/thumbs/thumbs.scss";
 import "swiper/components/pagination/pagination.scss";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import Navbar from "../../components/NavbarSmall";
 import LogoNameHowto from "../../components/Txt/LogoNameHowto";
 import BackBtn from "../../components/Btn/BackBtn";
@@ -19,6 +19,8 @@ import Flow6 from "../../components/ServiceFlow/Flow6";
 import CreatePostboxBtn from "../../components/Btn/CreatePostboxBtn";
 import Footer from "../../components/Footer";
 
+import Background from "../../image/background.png";
+
 SwiperCore.use([Thumbs, Pagination, Autoplay]);
 
 function HowToUnlogPage() {
@@ -26,7 +28,7 @@ function HowToUnlogPage() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.HowToUnlogScene>
+      <S.OverHeightScene>
         <BackBtn></BackBtn>
         <Navbar></Navbar>
 
@@ -67,7 +69,7 @@ function HowToUnlogPage() {
         </Link>
 
         <Footer></Footer>
-      </S.HowToUnlogScene>
+      </S.OverHeightScene>
     </>
   );
 }

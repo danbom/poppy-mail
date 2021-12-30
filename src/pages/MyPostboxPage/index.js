@@ -1,6 +1,6 @@
 import { React } from "react";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import Navbar from "../../components/NavbarDark";
 import BackBtn from "../../components/Btn/BackBtnDark";
 import LogoNameMyPostbox from "../../components/Txt/LogoNameMyPostbox";
@@ -15,6 +15,8 @@ import MyPostboxItem3 from "../../components/MyPostboxItem3";
 import MyPostboxItem4 from "../../components/MyPostboxItem4";
 import MyPostboxItem5 from "../../components/MyPostboxItem5";
 
+import Background from "../../image/background.png";
+
 SwiperCore.use([Navigation, Thumbs, Pagination, Autoplay]);
 
 function MyPostbox() {
@@ -23,7 +25,7 @@ function MyPostbox() {
 
   return (
     <>
-      <S.MyPostboxScene>
+      <S.DarkPercentHeightScene>
         <BackBtn></BackBtn>
         <Navbar></Navbar>
 
@@ -75,7 +77,7 @@ function MyPostbox() {
             )}
           </Swiper>
         </div>
-      </S.MyPostboxScene>
+      </S.DarkPercentHeightScene>
     </>
   );
 }

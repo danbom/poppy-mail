@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import LogoNameJoinComplete from "../../components/Txt/LogoNameJoinComplete";
 import JoinCompleteMent from "../../components/Txt/JoinCompleteMent";
 import JoinCompleteImg from "../../image/join-complete.png";
 import StartBtn from "../../components/Btn/StartBtn";
 
+import Background from "../../image/background.png";
+
 function JoinCompletePage() {
   return (
     <>
-      <S.JoinCompleteScene>
+      <S.LongScene>
         <LogoNameJoinComplete></LogoNameJoinComplete>
 
         <img
@@ -24,7 +26,7 @@ function JoinCompletePage() {
         <Link to="/howto">
           <StartBtn></StartBtn>
         </Link>
-      </S.JoinCompleteScene>
+      </S.LongScene>
     </>
   );
 }

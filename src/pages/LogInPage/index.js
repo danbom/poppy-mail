@@ -1,12 +1,14 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import LogoNameLogin from "../../components/Txt/LogoNameLogin";
 import BackBtn from "../../components/Btn/BackBtn";
 import LoginMent from "../../components/Txt/LoginMent";
 import KakaobtnImg from "../../image/kakao_login.png";
 import LoginWithKakao from "../../components/Txt/LoginWithKakao";
+
+import Background from "../../image/background.png";
 
 const { Kakao } = window;
 
@@ -63,7 +65,7 @@ function LogInPage() {
 
   return (
     <>
-      <S.LogInScene>
+      <S.NoHiddenScene>
         <BackBtn></BackBtn>
 
         <LogoNameLogin></LogoNameLogin>
@@ -74,7 +76,7 @@ function LogInPage() {
         <S.KakaoBtn onClick={KakaoLoginClickHandler}>
           <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
         </S.KakaoBtn>
-      </S.LogInScene>
+      </S.NoHiddenScene>
     </>
   );
 }

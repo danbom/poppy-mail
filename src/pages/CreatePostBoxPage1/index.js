@@ -1,11 +1,13 @@
 import React, { createContext, useState, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
 import InputName from "../../components/InputName";
 import AlertNickname from "../../components/Alert/AlertNickname";
+
+import Background from "../../image/background.png";
 
 export const CreatepostboxContext = createContext({
   setNickname: () => {},
@@ -132,7 +134,7 @@ function CreatePostBoxPage1() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <CreatepostboxContext.Provider value={value}>
-      <S.CreatePostBoxScene>
+      <S.LongScene>
         <BackBtn></BackBtn>
 
         {/* <Navbar></Navbar> */}
@@ -148,7 +150,7 @@ function CreatePostBoxPage1() {
         <div className="noeditnick">*닉네임은 생성 후 수정이 불가합니다.</div>
 
         {/* {_alert} */}
-      </S.CreatePostBoxScene>
+      </S.LongScene>
     </CreatepostboxContext.Provider>
   );
 }

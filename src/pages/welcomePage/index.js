@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
+
 import LoginBtn from "../../components/Btn/LoginBtn";
 import JoinBtn from "../../components/Btn/JoinBtn";
 import LogoName from "../../components/Txt/LogoName";
 import Poppy from "../../components/Img/Poppy";
 import WelcomeMent from "../../components/Txt/WelcomeMent";
+
+import Background from "../../image/background.png";
 
 function WelcomePage() {
   const is_new = !!localStorage.getItem("is_new");
@@ -53,7 +56,7 @@ function WelcomePage() {
 
   return (
     <>
-      <S.WelcomeScene>
+      <S.NoScrollbarScene>
         <LogoName></LogoName>
         <Poppy></Poppy>
         <WelcomeMent></WelcomeMent>
@@ -84,7 +87,7 @@ function WelcomePage() {
             <JoinBtn></JoinBtn>
           </Link>
         )}
-      </S.WelcomeScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

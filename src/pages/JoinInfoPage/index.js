@@ -3,8 +3,10 @@ import { useHistory } from "react-router-dom";
 import JoinInfoMent from "../../components/Txt/JoinInfoMent";
 import LogoNameJoin from "../../components/Txt/LogoNameJoin";
 
-import * as S from "./styles";
+import * as S from "../../styles/globalstyle";
 import JoinInput from "../../components/JoinInput";
+
+import Background from "../../image/background.png";
 
 export const UserContext = createContext({
   setName: () => {},
@@ -83,7 +85,7 @@ function JoinInfoPage() {
 
   return (
     <UserContext.Provider value={value}>
-      <S.JoinInfoScene>
+      <S.LongScene>
         <LogoNameJoin></LogoNameJoin>
         <JoinInfoMent></JoinInfoMent>
 
@@ -93,7 +95,7 @@ function JoinInfoPage() {
         <div className="join-input-complete-btn" onClick={JoinRequest}>
           완료
         </div>
-      </S.JoinInfoScene>
+      </S.LongScene>
     </UserContext.Provider>
   );
 }
