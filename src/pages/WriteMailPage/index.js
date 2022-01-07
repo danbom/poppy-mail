@@ -58,58 +58,60 @@ function WriteMail(props) {
   return (
     <>
       <LetterContext.Provider value={value}>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          <div className="small-complete-btn" onClick={SendLetterRequest}>
-            완료
-          </div>
-          <LogoNamePoppyMail></LogoNamePoppyMail>
-          <Colorbar></Colorbar>
+        <S.OverYHiddenScene>
+          <div className="fullbox">
+            <BackBtn></BackBtn>
+            <div className="small-complete-btn" onClick={SendLetterRequest}>
+              완료
+            </div>
+            <LogoNamePoppyMail></LogoNamePoppyMail>
+            <Colorbar></Colorbar>
 
-          <div className="letter-box" style={{ backgroundColor: color }}>
-            {color === "#b88dcd" ? (
-              <div className="letter_deco_1">
-                <img
-                  className="letter_deco_1_1"
-                  src={letter_deco_1_1}
-                  alt="deco"
-                />
-                <img
-                  className="letter_deco_1_2"
-                  src={letter_deco_1_2}
-                  alt="deco"
-                />
-              </div>
-            ) : color === "#db7667" ? (
-              <div className="letter_deco_2">
-                <img
-                  className="letter_deco_2_1"
-                  src={letter_deco_2_1}
-                  alt="deco"
-                />
-                <img
-                  className="letter_deco_2_2"
-                  src={letter_deco_2_2}
-                  alt="deco"
-                />
-              </div>
-            ) : color === "#bdbe82" ? (
-              <div className="letter_deco_3">
-                <img
-                  className="letter_deco_3_1"
-                  src={letter_deco_3_1}
-                  alt="deco"
-                />
-                <img
-                  className="letter_deco_3_2"
-                  src={letter_deco_3_2}
-                  alt="deco"
-                />
-              </div>
-            ) : null}
-            <Letter></Letter>
+            <div className="letter-box" style={{ backgroundColor: color }}>
+              {color === "#b88dcd" ? (
+                <div className="letter_deco_1">
+                  <img
+                    className="letter_deco_1_1"
+                    src={letter_deco_1_1}
+                    alt="deco"
+                  />
+                  <img
+                    className="letter_deco_1_2"
+                    src={letter_deco_1_2}
+                    alt="deco"
+                  />
+                </div>
+              ) : color === "#db7667" ? (
+                <div className="letter_deco_2">
+                  <img
+                    className="letter_deco_2_1"
+                    src={letter_deco_2_1}
+                    alt="deco"
+                  />
+                  <img
+                    className="letter_deco_2_2"
+                    src={letter_deco_2_2}
+                    alt="deco"
+                  />
+                </div>
+              ) : color === "#bdbe82" ? (
+                <div className="letter_deco_3">
+                  <img
+                    className="letter_deco_3_1"
+                    src={letter_deco_3_1}
+                    alt="deco"
+                  />
+                  <img
+                    className="letter_deco_3_2"
+                    src={letter_deco_3_2}
+                    alt="deco"
+                  />
+                </div>
+              ) : null}
+              <Letter></Letter>
+            </div>
           </div>
-        </div>
+        </S.OverYHiddenScene>
       </LetterContext.Provider>
     </>
   );

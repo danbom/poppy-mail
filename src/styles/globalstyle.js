@@ -8,6 +8,7 @@ export const SuperDiv = styled.div`
   height: 100vh;
   /* background-image: url("/src/image/background.png"); */
   background-size: cover;
+  overflow-x: hidden;
 `;
 
 export const DarkScene = styled.div`

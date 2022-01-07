@@ -34,7 +34,7 @@ function App() {
       <div className="App">
         <div className="full">
           <S.SuperDiv id="super">
-            <div style={{ overflowY: "hidden" }}>
+            <div style={{ overflowY: "hidden", overflowX: "hidden" }}>
               <img class="background" src={Background} alt="background" />
             </div>
             <Switch>
