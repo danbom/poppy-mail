@@ -1921,7 +1921,7 @@ function CheckArrivedMail() {
 
   return (
     <>
-      <S.DarkScene>
+      <S.DarkNoScrollbarScene>
         <BackBtn></BackBtn>
         <LogoNameMyCheckArrivedMail></LogoNameMyCheckArrivedMail>
 
@@ -3699,7 +3699,7 @@ function CheckArrivedMail() {
             ) : null}
           </Swiper>
         </div>
-      </S.DarkScene>
+      </S.DarkNoScrollbarScene>
     </>
   );
 }

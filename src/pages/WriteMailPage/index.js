@@ -58,16 +58,28 @@ function WriteMail(props) {
   return (
     <>
       <LetterContext.Provider value={value}>
-        <S.OverYHiddenScene>
-          <div className="fullbox">
-            <BackBtn></BackBtn>
-            <div className="small-complete-btn" onClick={SendLetterRequest}>
-              완료
-            </div>
-            <LogoNamePoppyMail></LogoNamePoppyMail>
-            <Colorbar></Colorbar>
+        <S.NoScrollbarScene>
+          <BackBtn></BackBtn>
+          <div className="small-complete-btn" onClick={SendLetterRequest}>
+            완료
+          </div>
+          <LogoNamePoppyMail></LogoNamePoppyMail>
+          <Colorbar></Colorbar>
 
-            <div className="letter-box" style={{ backgroundColor: color }}>
+          <div
+            style={{
+              display: "flex",
+              position: "relative",
+              flexFlow: "column",
+            }}
+          >
+            <div
+              className="letter-box"
+              style={{
+                backgroundColor: color,
+                position: "relative",
+              }}
+            >
               {color === "#b88dcd" ? (
                 <div className="letter_deco_1">
                   <img
@@ -108,10 +120,17 @@ function WriteMail(props) {
                   />
                 </div>
               ) : null}
-              <Letter></Letter>
+              <Letter />
             </div>
+            <div
+              style={{
+                width: "25rem",
+                height: "12.412rem",
+                position: "relative",
+              }}
+            />
           </div>
-        </S.OverYHiddenScene>
+        </S.NoScrollbarScene>
       </LetterContext.Provider>
     </>
   );

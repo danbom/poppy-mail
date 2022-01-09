@@ -547,6 +547,7 @@ html [type="input"] {
   left: 0.95rem;
   top: 1.77rem;
   cursor: pointer;
+  z-index: 5;
 }
 
 .logo-name {
@@ -935,7 +936,7 @@ background: #4243554D;
 .letter-flow {
   position: absolute;
   width: 25rem;
-  height: 90rem;
+  height: 150rem;
   left: 0;
   top: 5.942rem;
 }
@@ -1920,6 +1921,7 @@ button#dropdown-people-button {
   display: flex;
   justify-content: center;
   top: 6.177rem;
+  z-index: 5;
 }
 
 .colorbar-element {
@@ -1990,7 +1992,7 @@ button#dropdown-people-button {
 }
 
 .check-letter-box#check {
-  position: absolute;
+  position: relative;
   width: 21.6rem;
   /* height: 29.48rem; */
   left: calc(50% - 10.8rem);
@@ -2147,6 +2149,7 @@ button#dropdown-people-button {
   height: 21px; */
   left: 20.71rem;
   top: 2.353rem;
+  z-index: 5;
 
   font-family: Roboto;
   font-style: normal;

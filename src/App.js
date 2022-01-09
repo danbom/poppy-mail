@@ -35,7 +35,7 @@ function App() {
         <div className="full">
           <S.SuperDiv id="super">
             <div style={{ overflowY: "hidden", overflowX: "hidden" }}>
-              <img class="background" src={Background} alt="background" />
+              <img className="background" src={Background} alt="background" />
             </div>
             <Switch>
               {/* <Route exact path="/" component={WelcomePage} />

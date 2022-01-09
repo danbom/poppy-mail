@@ -109,6 +109,38 @@ function MyPostboxItem4() {
   })
     .then((res) => res.json())
     .then((res) => {
+      if (res) {
+        console.log(res);
+        if (res.detail === "Token is invalid or expired") {
+          localStorage.clear();
+        } else {
+          localStorage.setItem("access", res.access);
+        }
+      }
+
+      if (res[0]) {
+        localStorage.setItem("1st_link_title", res[0].link_title);
+        localStorage.setItem("1st_mailbox_link", res[0].mailbox_link);
+        localStorage.setItem("1st_number_letter", res[0].number_of_letter);
+        localStorage.setItem("1st_id", res[0].id);
+
+        localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
+      }
+
+      if (res[1]) {
+        localStorage.setItem("2nd_link_title", res[1].link_title);
+        localStorage.setItem("2nd_mailbox_link", res[1].mailbox_link);
+        localStorage.setItem("2nd_number_letter", res[1].number_of_letter);
+        localStorage.setItem("2nd_id", res[1].id);
+      }
+
+      if (res[2]) {
+        localStorage.setItem("3rd_link_title", res[2].link_title);
+        localStorage.setItem("3rd_mailbox_link", res[2].mailbox_link);
+        localStorage.setItem("3rd_number_letter", res[2].number_of_letter);
+        localStorage.setItem("3rd_id", res[2].id);
+      }
+
       if (res[3]) {
         localStorage.setItem("4th_link_title", res[3].link_title);
         localStorage.setItem("4th_mailbox_link", res[3].mailbox_link);
@@ -118,6 +150,17 @@ function MyPostboxItem4() {
         setItemTitle4(localStorage.getItem("4th_link_title"));
         setItemLink4(localStorage.getItem("4th_mailbox_link"));
         setItemLetter4(localStorage.getItem("4th_number_letter"));
+      }
+
+      if (res[4]) {
+        localStorage.setItem("5th_link_title", res[4].link_title);
+        localStorage.setItem("5th_mailbox_link", res[4].mailbox_link);
+        localStorage.setItem("5th_number_letter", res[4].number_of_letter);
+      }
+
+      if (res.detail === "User not found") {
+        alert("다시 로그인해주세요!");
+        localStorage.clear();
       }
     });
 

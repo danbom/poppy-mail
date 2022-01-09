@@ -53,19 +53,33 @@ function CheckWriteMail() {
   return (
     <>
       <S.NoScrollbarScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
-          <div className="small-complete-btn" onClick={SendLetterRequest}>
-            완료
-          </div>
-          <LogoNamePoppyMail></LogoNamePoppyMail>
-          <CheckWriteMailMent></CheckWriteMailMent>
+        <BackBtn></BackBtn>
+        <div className="small-complete-btn" onClick={SendLetterRequest}>
+          완료
+        </div>
+        <LogoNamePoppyMail></LogoNamePoppyMail>
+        <CheckWriteMailMent></CheckWriteMailMent>
 
+        <div
+          style={{
+            display: "flex",
+            position: "relative",
+            flexFlow: "column",
+          }}
+        >
           <CheckLetter></CheckLetter>
-          {/* <Link to="completewritemail">
+          <div
+            style={{
+              width: "25rem",
+              height: "12.412rem",
+              position: "relative",
+            }}
+          />
+        </div>
+
+        {/* <Link to="completewritemail">
             <div className="give-letter-btn">우편함에 편지 넣기</div>
           </Link> */}
-        </div>
       </S.NoScrollbarScene>
     </>
   );

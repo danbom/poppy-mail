@@ -36,6 +36,18 @@ export const DarkPercentHeightScene = styled.div`
   position: absolute;
 `;
 
+export const DarkNoScrollbarScene = styled.div`
+  background-color: #424355;
+  width: 25rem;
+  height: 100%;
+  position: absolute;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  background-color: var(--dark-bg-color);
+`;
+
 export const NoScrollbarScene = styled.div`
   background-color: #fff;
   width: 25rem;
