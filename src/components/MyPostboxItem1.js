@@ -71,7 +71,6 @@ function MyPostboxItem1() {
     )
       .then((res) => res)
       .then((res) => {
-        console.log(res);
         if (res.ok) {
           localStorage.removeItem("1st_link_title");
           localStorage.removeItem("1st_open_date");
@@ -99,8 +98,6 @@ function MyPostboxItem1() {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
-        console.log(id);
         localStorage.removeItem("sender0");
         localStorage.removeItem("sender1");
         localStorage.removeItem("sender2");
@@ -118,7 +115,6 @@ function MyPostboxItem1() {
             .then((res) => res.json())
             .then((res) => {
               if (res) {
-                console.log(res);
                 if (res.detail === "Token is invalid or expired") {
                   localStorage.clear();
                 } else {

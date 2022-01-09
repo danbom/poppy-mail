@@ -36,7 +36,6 @@ function HowToPage() {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
           method: "POST",
@@ -50,7 +49,6 @@ function HowToPage() {
           .then((res) => res.json())
           .then((res) => {
             if (res) {
-              console.log(res);
               if (res.detail === "Token is invalid or expired") {
                 localStorage.clear();
               } else {

@@ -31,7 +31,6 @@ function CreatePostBoxPage1() {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
           method: "POST",
@@ -45,7 +44,6 @@ function CreatePostBoxPage1() {
           .then((res) => res.json())
           .then((res) => {
             if (res) {
-              console.log(res);
               if (res.detail === "Token is invalid or expired") {
                 localStorage.clear();
               } else {
@@ -111,14 +109,12 @@ function CreatePostBoxPage1() {
         .then((res) => res.json())
         .then((res) => {
           if (res) {
-            console.log(res);
             if (res[0] === "우체통 개수 초과하여 생성 불가") {
               alert(
                 "현재 파피메일에서는 5개의 우체통만 만들 수 있어요. 😭 다음 업데이트 때 더 준비해볼게요! 이전 우체통을 삭제하면 새로운 우체통을 생성할 수 있어요! (삭제한 우체통의 편지는 복구가 불가능해요)"
               );
             } else {
               localStorage.setItem("mailbox_link", res.mailbox_link);
-              console.log(res.mailbox_link);
               history.push("/createpostboxsteptwo");
             }
           }

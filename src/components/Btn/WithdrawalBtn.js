@@ -19,7 +19,6 @@ function WithdrawalBtn() {
         // localStorage.setItem("Kakao_token", res.access_token);
         // const kakao_token = localStorage.getItem("Kakao_token");
         if (res.ok) {
-          console.log(res);
           alert("탈퇴완료!");
           localStorage.clear();
           history.push("/");

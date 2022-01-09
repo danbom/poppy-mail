@@ -19,10 +19,7 @@ function CreatePostBoxPage2() {
   const mailbox_link = localStorage.getItem("mailbox_link");
 
   const Copy = () => {
-    console.log(mailbox_link);
     copyToClipboard(mailbox_link);
-
-    console.log("Copied!");
   };
 
   const copyToClipboard = (val) => {

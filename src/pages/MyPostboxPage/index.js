@@ -29,7 +29,11 @@ function MyPostbox() {
 
         <LogoNameMyPostbox></LogoNameMyPostbox>
 
-        {localStorage.getItem("1st_link_title") === null ? (
+        {!localStorage.getItem("1st_link_title") &&
+        !localStorage.getItem("2nd_link_title") &&
+        !localStorage.getItem("3rd_link_title") &&
+        !localStorage.getItem("4th_link_title") &&
+        !localStorage.getItem("5th_link_title") ? (
           <div className="noPostbox">우체통이 없습니다. 만들어보세요!</div>
         ) : null}
 

@@ -25,7 +25,6 @@ function WelcomePage() {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
       if (res.detail === "Given token not valid for any token type") {
         fetch("https://poppymail.shop/api/token/refresh/", {
@@ -39,7 +38,6 @@ function WelcomePage() {
         })
           .then((res) => res.json())
           .then((res) => {
-            console.log(res);
             if (res.detail === "Token is invalid or expired") {
               localStorage.clear();
             }

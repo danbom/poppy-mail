@@ -1874,8 +1874,6 @@ function CheckArrivedMail() {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
-
       var step;
       for (step = 0; step < 30; step++) {
         // Runs 5 times, with values of step 0 through 4.
@@ -1902,7 +1900,6 @@ function CheckArrivedMail() {
           .then((res) => res.json())
           .then((res) => {
             if (res) {
-              console.log(res);
               if (res.detail === "Token is invalid or expired") {
                 localStorage.clear();
               } else {

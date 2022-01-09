@@ -36,7 +36,6 @@ function LogInPage() {
           .then((res) => {
             localStorage.setItem("access", res.user_id);
             if (res.access) {
-              console.log(res);
               alert(res.user_name + "님, poppy mail에 오신 것을 환영합니다!");
               history.push("/howto");
               // window.location.href="/howto";

@@ -12,8 +12,6 @@ function LetterPage(props) {
   const history = useHistory();
   const [linkname, setLinkname] = useState("");
 
-  console.log(mailbox_pk);
-
   // fetch("https://poppymail.shop/letter/1/8y19yk14", {
   fetch(
     "https://poppymail.shop/letter/" + mailbox_pk + "/" + random_strkey + "/",
@@ -25,13 +23,11 @@ function LetterPage(props) {
     .then((res) => res.json())
     .then((res) => {
       if (res) {
-        console.log(res.nickname);
         setLinkname(res.nickname);
         localStorage.setItem("nickname", res.nickname);
       }
     })
     .catch((err) => {
-      console.log(err);
       alert("존재하지 않는 우체통입니다.");
       history.push("/");
     });

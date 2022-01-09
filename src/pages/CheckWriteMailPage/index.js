@@ -8,8 +8,6 @@ import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 import CheckWriteMailMent from "../../components/Txt/CheckWriteMailMent";
 import CheckLetter from "../../components/CheckLetter";
 
-import Background from "../../image/background.png";
-
 function CheckWriteMail() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;
@@ -41,8 +39,6 @@ function CheckWriteMail() {
       // .then((res) => res.json())
       .then((res) => {
         if (res.ok) {
-          console.log("콘솔 " + res);
-          console.log("셋  " + contents + sender + color);
           history.push("/completewritemail");
         } else {
           alert("해당 우체통이 존재하지 않습니다.");
