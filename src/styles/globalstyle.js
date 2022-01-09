@@ -11,6 +11,15 @@ export const SuperDiv = styled.div`
   overflow-x: hidden;
 `;
 
+export const BackgroundImg = styled.div`
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  @media only screen and (max-width: 768px) {
+    width: 0;
+  }
+`;
+
 export const DarkScene = styled.div`
   background-color: #424355;
   width: 25rem;
