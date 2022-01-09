@@ -77,10 +77,6 @@ html [type="input"] {
   --dark-txt-color: #fff;
 }
 
-#super {
-  /* background-image: url(./image/background.png); */
-}
-
 .background {
   animation: background 50s 1s infinite linear;
 }

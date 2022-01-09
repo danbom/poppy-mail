@@ -7,8 +7,6 @@ import LogoName from "../../components/Txt/LogoName";
 // import BackBtn from "../../components/Btn/BackBtn";
 import Poppyimg from "../../image/completewritemailpoppy.png";
 
-import Background from "../../image/background.png";
-
 function CompleteWriteMail() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;

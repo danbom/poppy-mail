@@ -6,8 +6,6 @@ import LogoNameJoin from "../../components/Txt/LogoNameJoin";
 import * as S from "../../styles/globalstyle";
 import JoinInput from "../../components/JoinInput";
 
-import Background from "../../image/background.png";
-
 export const UserContext = createContext({
   setName: () => {},
   setBirthdate: () => {},
@@ -85,7 +83,7 @@ function JoinInfoPage() {
 
   return (
     <UserContext.Provider value={value}>
-      <S.LongScene>
+      <S.NoScrollbarScene>
         <LogoNameJoin></LogoNameJoin>
         <JoinInfoMent></JoinInfoMent>
 
@@ -95,7 +93,7 @@ function JoinInfoPage() {
         <div className="join-input-complete-btn" onClick={JoinRequest}>
           완료
         </div>
-      </S.LongScene>
+      </S.NoScrollbarScene>
     </UserContext.Provider>
   );
 }

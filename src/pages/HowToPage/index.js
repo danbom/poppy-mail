@@ -9,7 +9,6 @@ import "swiper/components/pagination/pagination.scss";
 import * as S from "../../styles/globalstyle";
 import Navbar from "../../components/Navbar";
 import LogoNameHowto from "../../components/Txt/LogoNameHowto";
-import BackBtn from "../../components/Btn/BackBtn";
 import Flow1 from "../../components/ServiceFlow/Flow1";
 import Flow2 from "../../components/ServiceFlow/Flow2";
 import Flow3 from "../../components/ServiceFlow/Flow3";
@@ -19,8 +18,6 @@ import Flow6 from "../../components/ServiceFlow/Flow6";
 import CreatePostboxBtn from "../../components/Btn/CreatePostboxBtn";
 import Footer from "../../components/Footer";
 import union from "../../image/Union.png";
-
-import Background from "../../image/background.png";
 
 SwiperCore.use([Thumbs, Pagination, Autoplay]);
 

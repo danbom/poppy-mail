@@ -17,7 +17,6 @@ import letter_deco_2_2 from "../../image/letter_deco_2_2.png";
 import letter_deco_3_1 from "../../image/letter_deco_3_1.png";
 import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
 
-import Background from "../../image/background.png";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 
 // SwiperCore.use([Pagination]);

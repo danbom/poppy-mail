@@ -7,8 +7,6 @@ import WithdrawalMent from "../../components/Txt/WithdrawalMent";
 import withdrawalimg from "../../image/withdrawal.png";
 import WithdrawalBtn from "../../components/Btn/WithdrawalBtn";
 
-import Background from "../../image/background.png";
-
 function Withdrawal() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
@@ -56,17 +54,15 @@ function Withdrawal() {
 
   return (
     <>
-      <S.NoHiddenScene>
-        <div className="fullbox">
-          <BackBtn></BackBtn>
+      <S.NoScrollbarScene>
+        <BackBtn></BackBtn>
 
-          <img src={withdrawalimg} alt="탈퇴" className="withdrawal-img"></img>
+        <img src={withdrawalimg} alt="탈퇴" className="withdrawal-img"></img>
 
-          <WithdrawalMent></WithdrawalMent>
+        <WithdrawalMent></WithdrawalMent>
 
-          <WithdrawalBtn></WithdrawalBtn>
-        </div>
-      </S.NoHiddenScene>
+        <WithdrawalBtn></WithdrawalBtn>
+      </S.NoScrollbarScene>
     </>
   );
 }

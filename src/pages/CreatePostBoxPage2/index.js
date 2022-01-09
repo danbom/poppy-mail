@@ -10,8 +10,6 @@ import LinkName from "../../components/Txt/LinkName";
 import PostboxBefore from "../../components/Img/PostboxBefore";
 import AlertCretePostbox from "../../components/Alert/AlertCreatePostbox";
 
-import Background from "../../image/background.png";
-
 function CreatePostBoxPage2() {
   const [_alert, setAlert] = useState(<AlertCretePostbox></AlertCretePostbox>);
   setTimeout(() => {
@@ -40,7 +38,7 @@ function CreatePostBoxPage2() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.LongScene>
+      <S.NoScrollbarScene>
         <BackBtn></BackBtn>
         {/* <Navbar></Navbar> */}
 
@@ -64,7 +62,7 @@ function CreatePostBoxPage2() {
         </div>
 
         <LinkName></LinkName>
-      </S.LongScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

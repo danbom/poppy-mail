@@ -9,8 +9,6 @@ import LogoNameKakaoPlus from "../../components/Txt/LogoNameKakaoPlus";
 import KakaoPlusMent from "../../components/Txt/KakaoPlusMent";
 import KakaoPlusImg from "../../components/Img/KakaoPlusImg";
 
-import Background from "../../image/background.png";
-
 function Loading() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;

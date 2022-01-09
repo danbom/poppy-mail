@@ -19,8 +19,6 @@ import Flow6 from "../../components/ServiceFlow/Flow6";
 import CreatePostboxBtn from "../../components/Btn/CreatePostboxBtn";
 import Footer from "../../components/Footer";
 
-import Background from "../../image/background.png";
-
 SwiperCore.use([Thumbs, Pagination, Autoplay]);
 
 function HowToUnlogPage() {

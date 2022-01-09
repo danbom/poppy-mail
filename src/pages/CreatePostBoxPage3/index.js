@@ -9,8 +9,6 @@ import LinkName from "../../components/Txt/LinkName";
 import AlertCopy from "../../components/Alert/AlertCopy";
 import PostboxAfter from "../../components/Img/PostboxAfter";
 import CompleteBtn from "../../components/Btn/CompleteBtn";
-import CreatePostBoxMent from "../../components/Txt/CreatePostBoxMent";
-import Background from "../../image/background.png";
 
 function CreatePostBoxPage3() {
   const [_alert, setAlert] = useState(<AlertCopy></AlertCopy>);
@@ -101,7 +99,7 @@ function CreatePostBoxPage3() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.LongScene>
+      <S.NoScrollbarScene>
         <BackBtn></BackBtn>
         {/* <Navbar></Navbar> */}
 
@@ -123,7 +121,7 @@ function CreatePostBoxPage3() {
         <Link to="/kakaoplus">
           <CompleteBtn></CompleteBtn>
         </Link>
-      </S.LongScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

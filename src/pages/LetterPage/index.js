@@ -6,8 +6,6 @@ import LetsWriteMailMent from "../../components/Txt/LetsWriteMailMent";
 import LetsWriteMailImg from "../../components/Img/LetsWriteMailImg";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 
-import Background from "../../image/background.png";
-
 function LetterPage(props) {
   const mailbox_pk = props.match.params.mailbox_pk;
   const random_strkey = props.match.params.random_strkey;

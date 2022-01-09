@@ -2,7 +2,6 @@ import React, { createContext, useState, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 
 import * as S from "../../styles/globalstyle";
-import Background from "../../image/background.png";
 
 import BackBtn from "../../components/Btn/BackBtn";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
@@ -29,21 +28,22 @@ function WriteMail(props) {
   const random_strkey = props.match.params.random_strkey;
   localStorage.setItem("random_strkey", random_strkey);
   const [color, setColor] = useState("#DAAE40");
-  const [contents, setContents] = useState("");
-  const [sender, setSender] = useState("");
-  const [receiver, setReceiver] = useState("");
+  const [contents, setContents] = useState(localStorage.getItem("contents"));
+  const [sender, setSender] = useState(localStorage.getItem("sender"));
+  const [receiver, setReceiver] = useState(localStorage.getItem("receiver"));
   const value = useMemo(
     () => ({ setColor, setContents, setSender, setReceiver }),
     [setColor, setContents, setSender, setReceiver]
   );
 
   const tenReg = /^.{1,10}$/;
+  const twentyReg = /^.{1,20}$/;
 
   const SendLetterRequest = () => {
     if (contents === "" || sender === "" || receiver === "")
       alert("필수 입력 요소가 작성되지 않았습니다.");
-    else if (!tenReg.test(sender))
-      alert("보내는 이는 10글자까지 입력할 수 있습니다.");
+    else if (!twentyReg.test(sender))
+      alert("보내는 이는 20글자까지 입력할 수 있습니다.");
     else if (!tenReg.test(receiver))
       alert("받는 이는 10글자까지 입력할 수 있습니다.");
     else {

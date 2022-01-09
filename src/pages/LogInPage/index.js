@@ -8,8 +8,6 @@ import LoginMent from "../../components/Txt/LoginMent";
 import KakaobtnImg from "../../image/kakao_login.png";
 import LoginWithKakao from "../../components/Txt/LoginWithKakao";
 
-import Background from "../../image/background.png";
-
 const { Kakao } = window;
 
 function LogInPage() {
@@ -65,7 +63,7 @@ function LogInPage() {
 
   return (
     <>
-      <S.NoHiddenScene>
+      <S.NoScrollbarScene>
         <BackBtn></BackBtn>
 
         <LogoNameLogin></LogoNameLogin>
@@ -76,7 +74,7 @@ function LogInPage() {
         <S.KakaoBtn onClick={KakaoLoginClickHandler}>
           <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
         </S.KakaoBtn>
-      </S.NoHiddenScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

@@ -15,8 +15,6 @@ import MyPostboxItem3 from "../../components/MyPostboxItem3";
 import MyPostboxItem4 from "../../components/MyPostboxItem4";
 import MyPostboxItem5 from "../../components/MyPostboxItem5";
 
-import Background from "../../image/background.png";
-
 SwiperCore.use([Navigation, Thumbs, Pagination, Autoplay]);
 
 function MyPostbox() {

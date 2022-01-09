@@ -8,8 +8,6 @@ import ReceivedLetterMent from "../../components/Txt/ReceivedLetterMent";
 import ReceivedLetterPoppyImg from "../../image/ReceivedLetterPoppy.png";
 import KakaoPlusImg from "../../image/kakao_plus.png";
 
-import Background from "../../image/background.png";
-
 function ReceivedLetterPage() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;

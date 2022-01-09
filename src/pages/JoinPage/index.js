@@ -8,8 +8,6 @@ import JoinMent from "../../components/Txt/JoinMent";
 import KakaobtnImg from "../../image/kakao_login.png";
 import JoinWithKakao from "../../components/Txt/JoinWithKakao";
 
-import Background from "../../image/background.png";
-
 const { Kakao } = window;
 
 function JoinPage() {
@@ -54,7 +52,7 @@ function JoinPage() {
 
   return (
     <>
-      <S.LongScene>
+      <S.NoScrollbarScene>
         <BackBtn></BackBtn>
         <LogoNameJoin></LogoNameJoin>
 
@@ -64,7 +62,7 @@ function JoinPage() {
         <S.KakaoBtn onClick={KakaoLoginClickHandler}>
           <img src={KakaobtnImg} className="KakaobtnImg" alt="kakao" />
         </S.KakaoBtn>
-      </S.LongScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

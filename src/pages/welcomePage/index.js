@@ -8,8 +8,6 @@ import LogoName from "../../components/Txt/LogoName";
 import Poppy from "../../components/Img/Poppy";
 import WelcomeMent from "../../components/Txt/WelcomeMent";
 
-import Background from "../../image/background.png";
-
 function WelcomePage() {
   const is_new = !!localStorage.getItem("is_new");
 
