@@ -28,7 +28,7 @@ function HowToUnlogPage() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
   return (
     <>
-      <S.OverHeightScene>
+      <S.NoScrollbarScene>
         <BackBtn></BackBtn>
         <Navbar></Navbar>
 
@@ -69,7 +69,7 @@ function HowToUnlogPage() {
         </Link>
 
         <Footer></Footer>
-      </S.OverHeightScene>
+      </S.NoScrollbarScene>
     </>
   );
 }

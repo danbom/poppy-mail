@@ -62,17 +62,6 @@ export const NoHiddenScene = styled.div`
   position: absolute;
 `;
 
-export const OverHeightScene = styled.div`
-  background-color: #fff;
-  width: 25rem;
-  height: 120vh;
-  position: absolute;
-  overflow-x: hidden;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
 export const OverYHiddenScene = styled.div`
   background-color: #fff;
   width: 25rem;
