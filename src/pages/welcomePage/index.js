@@ -7,6 +7,7 @@ import JoinBtn from "../../components/Btn/JoinBtn";
 import LogoName from "../../components/Txt/LogoName";
 import Poppy from "../../components/Img/Poppy";
 import WelcomeMent from "../../components/Txt/WelcomeMent";
+import { RefreshRequest } from "../../components/RefreshRequest";
 
 function WelcomePage() {
   const is_new = !!localStorage.getItem("is_new");
@@ -15,40 +16,24 @@ function WelcomePage() {
   const refresh = localStorage.getItem("refresh");
   // const history = useHistory();
 
-  fetch("https://poppymail.shop/mailbox/", {
-    method: "GET",
-    headers: {
-      Authorization: "Bearer " + access,
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
-      if (res.detail === "Given token not valid for any token type") {
-        fetch("https://poppymail.shop/api/token/refresh/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            refresh: refresh,
-          }),
-        })
-          .then((res) => res.json())
-          .then((res) => {
-            if (res.detail === "Token is invalid or expired") {
-              localStorage.clear();
-            }
-          });
-      }
-
-      // if (res.detail === "User not found") {
-      //   alert("다시 로그인해주세요!");
-      //   history.push("/");
-      // }
-    });
+  access &&
+    fetch("https://poppymail.shop/mailbox/", {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
+        RefreshRequest(res, refresh);
+        // if (res.detail === "User not found") {
+        //   alert("다시 로그인해주세요!");
+        //   history.push("/");
+        // }
+      });
 
   return (
     <>

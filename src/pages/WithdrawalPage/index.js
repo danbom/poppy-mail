@@ -6,6 +6,7 @@ import BackBtn from "../../components/Btn/BackBtn";
 import WithdrawalMent from "../../components/Txt/WithdrawalMent";
 import withdrawalimg from "../../image/withdrawal.png";
 import WithdrawalBtn from "../../components/Btn/WithdrawalBtn";
+import { RefreshRequest } from "../../components/RefreshRequest";
 
 function Withdrawal() {
   const access = localStorage.getItem("access");
@@ -22,27 +23,7 @@ function Withdrawal() {
   })
     .then((res) => res.json())
     .then((res) => {
-      if (res.detail === "Given token not valid for any token type") {
-        fetch("https://poppymail.shop/api/token/refresh/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            refresh: refresh,
-          }),
-        })
-          .then((res) => res.json())
-          .then((res) => {
-            if (res) {
-              if (res.detail === "Token is invalid or expired") {
-                localStorage.clear();
-              } else {
-                localStorage.setItem("access", res.access);
-              }
-            }
-          });
-      }
+      RefreshRequest(res, refresh);
 
       if (res.detail === "User not found") {
         alert("다시 로그인해주세요!");

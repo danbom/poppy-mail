@@ -5,6 +5,7 @@ import * as S from "../../styles/globalstyle";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
 import InputName from "../../components/InputName";
+import { RefreshRequest } from "../../components/RefreshRequest";
 
 export const CreatepostboxContext = createContext({
   setNickname: () => {},
@@ -31,27 +32,7 @@ function CreatePostBoxPage1() {
   })
     .then((res) => res.json())
     .then((res) => {
-      if (res.detail === "Given token not valid for any token type") {
-        fetch("https://poppymail.shop/api/token/refresh/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            refresh: refresh,
-          }),
-        })
-          .then((res) => res.json())
-          .then((res) => {
-            if (res) {
-              if (res.detail === "Token is invalid or expired") {
-                localStorage.clear();
-              } else {
-                localStorage.setItem("access", res.access);
-              }
-            }
-          });
-      }
+      RefreshRequest(res, refresh);
 
       if (res[0]) {
         localStorage.setItem("1st_link_title", res[0].link_title);

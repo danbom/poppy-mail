@@ -18,6 +18,7 @@ import letter_deco_3_1 from "../../image/letter_deco_3_1.png";
 import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
 
 import { DropdownButton, Dropdown } from "react-bootstrap";
+import { RefreshRequest } from "../../components/RefreshRequest";
 
 // SwiperCore.use([Pagination]);
 
@@ -1887,27 +1888,7 @@ function CheckArrivedMail() {
         }
       }
 
-      if (res.detail === "Given token not valid for any token type") {
-        fetch("https://poppymail.shop/api/token/refresh/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            refresh: refresh,
-          }),
-        })
-          .then((res) => res.json())
-          .then((res) => {
-            if (res) {
-              if (res.detail === "Token is invalid or expired") {
-                localStorage.clear();
-              } else {
-                localStorage.setItem("access", res.access);
-              }
-            }
-          });
-      }
+      RefreshRequest(res, refresh);
 
       if (res.detail === "User not found") {
         alert("다시 로그인해주세요!");
