@@ -2112,8 +2112,8 @@ button#dropdown-people-button {
   position: absolute;
   top: 2.7rem;
   left: 9.6rem;
-  width: 9.6rem;
-  height: 0.059rem;
+  width: 11rem;
+  height: 0.1rem;
   background: #fff;
 }
 
@@ -2134,7 +2134,7 @@ button#dropdown-people-button {
 }
 
 .from-contents::placeholder {
-  font-size: 0.5rem;
+  font-size: 0.67rem;
   color: #fff;
   opacity: 0.5;
 }
