@@ -37,25 +37,12 @@ function Letter() {
       <div className="letter-element" id="to-box">
         <div className="to-txt">To.</div>
         <div className="to-underline"></div>
-        <input
-          className="to-contents"
-          onChange={processReceiver}
-          value={
-            localStorage.getItem("receiver")
-              ? localStorage.getItem("receiver")
-              : ""
-          }
-        ></input>
+        <input className="to-contents" onChange={processReceiver}></input>
       </div>
       <div className="letter-element" id="contents-box">
         <textarea
           className="contents-contents"
           onChange={processContents}
-          value={
-            localStorage.getItem("contents")
-              ? localStorage.getItem("contents")
-              : ""
-          }
         ></textarea>
       </div>
       <div className="letter-element" id="from-box">
@@ -65,9 +52,6 @@ function Letter() {
           className="from-contents"
           placeholder="*친구가 알아볼 수 있도록 써주세요"
           onChange={processSender}
-          value={
-            localStorage.getItem("sender") ? localStorage.getItem("sender") : ""
-          }
         ></input>
       </div>
     </>
