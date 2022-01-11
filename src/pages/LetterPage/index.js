@@ -22,7 +22,7 @@ function LetterPage(props) {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       if (res) {
         setLinkname(res.nickname);
         localStorage.setItem("nickname", res.nickname);

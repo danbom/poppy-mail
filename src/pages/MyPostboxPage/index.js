@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState, useEffect, useCallback } from "react";
 
 import * as S from "../../styles/globalstyle";
 import Navbar from "../../components/NavbarDark";
@@ -14,12 +14,43 @@ import MyPostboxItem2 from "../../components/MyPostboxItem2";
 import MyPostboxItem3 from "../../components/MyPostboxItem3";
 import MyPostboxItem4 from "../../components/MyPostboxItem4";
 import MyPostboxItem5 from "../../components/MyPostboxItem5";
+import { postBoxFetchRequest } from "../../components/PostboxFetchRequest";
 
 SwiperCore.use([Navigation, Thumbs, Pagination, Autoplay]);
 
 function MyPostbox() {
   //   if (loading) return <LoadingScreen />;
   //   if (error) return <div>에러가 발생했습니다.</div>;
+
+  // res 결과가 달라진 경우..
+  var response = 0;
+
+  const access = localStorage.getItem("access");
+
+  useEffect(
+    (response) => {
+      setInterval(
+        () =>
+          fetch("https://poppymail.shop/mailbox/", {
+            method: "GET",
+            headers: {
+              Authorization: "Bearer " + access,
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              if (response !== res.length) {
+                // window.location.reload();
+                response = res.length;
+              }
+            }),
+        1000
+      );
+    },
+    [access, response]
+  );
 
   return (
     <>
