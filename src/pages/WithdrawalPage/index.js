@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { useHistory } from "react-router";
 
 import * as S from "../../styles/globalstyle";
@@ -13,23 +13,25 @@ function Withdrawal() {
   const refresh = localStorage.getItem("refresh");
   // const history = useHistory();
 
-  fetch("https://poppymail.shop/mailbox/", {
-    method: "GET",
-    headers: {
-      Authorization: "Bearer " + access,
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      RefreshRequest(res, refresh);
+  useEffect(() => {
+    GetAccess();
+  });
 
-      if (res.detail === "User not found") {
-        alert("다시 로그인해주세요!");
-        localStorage.clear();
-      }
-    });
+  const GetAccess = () => {
+    fetch("https://poppymail.shop/mailbox/", {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + access,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        RefreshRequest(res, refresh);
+        if (!res.ok) localStorage.clear();
+      });
+  };
 
   return (
     <>

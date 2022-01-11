@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as S from "../../styles/globalstyle";
 
@@ -16,7 +16,11 @@ function WelcomePage() {
   const refresh = localStorage.getItem("refresh");
   // const history = useHistory();
 
-  access &&
+  useEffect(() => {
+    GetAccess();
+  });
+
+  const GetAccess = () => {
     fetch("https://poppymail.shop/mailbox/", {
       method: "GET",
       headers: {
@@ -27,13 +31,13 @@ function WelcomePage() {
     })
       .then((res) => res.json())
       .then((res) => {
-        localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
-        RefreshRequest(res, refresh);
-        // if (res.detail === "User not found") {
-        //   alert("다시 로그인해주세요!");
-        //   history.push("/");
-        // }
+        if (!res.ok) localStorage.clear();
+        else {
+          localStorage.setItem("check_mailbox_today", res.check_mailbox_today);
+          RefreshRequest(res, refresh);
+        }
       });
+  };
 
   return (
     <>
