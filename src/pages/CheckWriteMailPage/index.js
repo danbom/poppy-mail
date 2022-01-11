@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import * as S from "../../styles/globalstyle";
-import BackBtn from "../../components/Btn/BackBtn";
+// import BackBtn from "../../components/Btn/BackBtn";
 import LogoNamePoppyMail from "../../components/Txt/LogoNamePoppyMail";
 import CheckWriteMailMent from "../../components/Txt/CheckWriteMailMent";
 import CheckLetter from "../../components/CheckLetter";
@@ -41,15 +41,24 @@ function CheckWriteMail() {
         if (res.ok) {
           history.push("/completewritemail");
         } else {
-          alert("해당 우체통이 존재하지 않습니다.");
-          history.goBack();
+          if (res.detail === "No! The requested mailbox not exists in DB") {
+            alert("해당 우체통이 존재하지 않습니다!");
+          } else if (
+            res.detail === "No! User accesses after mailbox has been enclosed"
+          ) {
+            alert("3일이 지나 우체통이 닫혔어요🥺");
+          }
+          history.push("/");
         }
+        localStorage.removeItem("contents");
+        localStorage.removeItem("sender");
+        localStorage.removeItem("receiver");
+        localStorage.removeItem("theme");
       });
   };
   return (
     <>
       <S.NoScrollbarScene>
-        <BackBtn></BackBtn>
         <div className="small-complete-btn" onClick={SendLetterRequest}>
           완료
         </div>
