@@ -22,14 +22,20 @@ function LetterPage(props) {
   )
     .then((res) => res.json())
     .then((res) => {
+      console.log(res);
       if (res) {
         setLinkname(res.nickname);
         localStorage.setItem("nickname", res.nickname);
+      } else {
+        if (res.detail === "No! The requested mailbox not exists in DB") {
+          alert("해당 우체통이 존재하지 않습니다!");
+        } else if (
+          res.detail === "No! User accesses after mailbox has been enclosed"
+        ) {
+          alert("3일이 지나 우체통이 닫혔어요🥺");
+        }
+        history.push("/");
       }
-    })
-    .catch((err) => {
-      alert("존재하지 않는 우체통입니다.");
-      history.push("/");
     });
 
   const GoWriteRequest = () => {
