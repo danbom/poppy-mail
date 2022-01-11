@@ -1,4 +1,4 @@
-import React, { createContext, useState, useMemo } from "react";
+import React, { createContext, useState, useMemo, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import * as S from "../../styles/globalstyle";
@@ -54,6 +54,17 @@ function WriteMail(props) {
       history.push("/checkwritemail");
     }
   };
+
+  useEffect(() => {
+    localStorage.removeItem("sender");
+    localStorage.removeItem("contents");
+    localStorage.removeItem("receiver");
+    localStorage.removeItem("theme");
+    setColor(null);
+    setContents(null);
+    setSender(null);
+    setReceiver(null);
+  }, []);
 
   return (
     <>
