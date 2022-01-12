@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useCallback } from "react";
+import { React, useEffect } from "react";
 
 import * as S from "../../styles/globalstyle";
 import Navbar from "../../components/NavbarDark";
@@ -23,34 +23,40 @@ function MyPostbox() {
   //   if (error) return <div>에러가 발생했습니다.</div>;
 
   // res 결과가 달라진 경우..
-  var response = 0;
+  // var response = 0;
 
-  const access = localStorage.getItem("access");
+  // const access = localStorage.getItem("access");
 
-  useEffect(
-    (response) => {
-      setInterval(
-        () =>
-          fetch("https://poppymail.shop/mailbox/", {
-            method: "GET",
-            headers: {
-              Authorization: "Bearer " + access,
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-          })
-            .then((res) => res.json())
-            .then((res) => {
-              if (response !== res.length) {
-                // window.location.reload();
-                response = res.length;
-              }
-            }),
-        1000
-      );
-    },
-    [access, response]
-  );
+  // useEffect(
+  //   (response) => {
+  //     setInterval(
+  //       () =>
+  //         fetch("https://poppymail.shop/mailbox/", {
+  //           method: "GET",
+  //           headers: {
+  //             Authorization: "Bearer " + access,
+  //             "Content-Type": "application/json",
+  //             Accept: "application/json",
+  //           },
+  //         })
+  //           .then((res) => res.json())
+  //           .then((res) => {
+  //             if (response !== res.length) {
+  //               // window.location.reload();
+  //               response = res.length;
+  //             }
+  //           }),
+  //       1000
+  //     );
+  //   },
+  //   [access, response]
+  // );
+
+  useEffect(() => {
+    setInterval(() => {
+      postBoxFetchRequest();
+    }, 1000);
+  }, []);
 
   return (
     <>

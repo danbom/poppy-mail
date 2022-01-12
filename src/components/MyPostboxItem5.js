@@ -2,38 +2,24 @@ import { React, useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import MyPostboxImg from "../image/mypostboxitemimg.png";
 import PoppyImg from "../image/ReceivedLetterPoppy.png";
-import { postBoxFetchRequest } from "./PostboxFetchRequest";
-// import OpenPostboxBtn from "./Btn/OpenPostboxBtn";
+import { Copy } from "./Copy";
 // import * as S from './styles';
 
 function MyPostboxItem5() {
-  const access = localStorage.getItem("access");
-
-  const [item5_link_title, setItemTitle5] = useState(null);
-  const [item5_mailbox_link, setItemLink5] = useState(null);
-  const [item5_number_letter, setItemLetter5] = useState(null);
-
-  const fifth_open_date = new Date(
-    localStorage.getItem("5th_open_date") + " " + "00:00:00" // eslint-disable-line
-  );
-  const now = new Date();
-
-  const Copy = () => {
-    copyToClipboard(item5_mailbox_link);
-
-    alert("복사되었습니다!");
-  };
-
-  const copyToClipboard = (val) => {
-    const t = document.createElement("textarea");
-    document.body.appendChild(t);
-    t.value = val;
-    t.select();
-    document.execCommand("copy");
-    document.body.removeChild(t);
-  };
+  const [item_link_title, setItemTitle] = useState(null);
+  const [item_mailbox_link, setItemLink] = useState(null);
+  const [item_number_letter, setItemLetter] = useState(null);
 
   const [_article, setArticle] = useState(null);
+
+  const [opendate, setOpenDate] = useState(
+    localStorage.getItem("5th_open_date")
+  );
+  const [now, setNow] = useState(null);
+
+  const access = localStorage.getItem("access");
+
+  const history = useHistory();
 
   const PopupDelete = () => {
     setArticle(
@@ -90,17 +76,29 @@ function MyPostboxItem5() {
       });
   };
 
-  const history = useHistory();
-
   useEffect(() => {
     PostboxRequest();
   }, []);
 
+  useEffect(() => {
+    setInterval(() => {
+      setOpenDate(
+        new Date(
+          localStorage.getItem("5th_open_date") + " " + "00:00:00" // eslint-disable-line
+        )
+      );
+      setNow(new Date());
+    }, 1000);
+    return () => {
+      setOpenDate(new Date(null));
+      setNow(null);
+    };
+  }, []);
+
   const PostboxRequest = () => {
-    postBoxFetchRequest();
-    setItemTitle5(localStorage.getItem("5th_link_title"));
-    setItemLink5(localStorage.getItem("5th_mailbox_link"));
-    setItemLetter5(localStorage.getItem("5th_number_letter"));
+    setItemTitle(localStorage.getItem("5th_link_title"));
+    setItemLink(localStorage.getItem("5th_mailbox_link"));
+    setItemLetter(localStorage.getItem("5th_number_letter"));
   };
 
   const openSpecificPostboxRequest = () => {
@@ -117,7 +115,10 @@ function MyPostboxItem5() {
 
   return (
     <>
-      <div className="copy-my-post-box-link-ment" onClick={Copy}>
+      <div
+        className="copy-my-post-box-link-ment"
+        onClick={(e) => Copy(item_mailbox_link, e)}
+      >
         이 우체통 링크 복사하기
       </div>
 
@@ -125,27 +126,27 @@ function MyPostboxItem5() {
         삭제
       </div>
 
-      {fifth_open_date <= now ? (
+      {opendate <= now ? (
         <img src={MyPostboxImg} alt="postbox" className="MyPostboxImg"></img>
       ) : (
         <img src={PoppyImg} alt="postbox" className="PostboxPoppyImg"></img>
       )}
 
-      <div className="my-post-box-item-ment1">&lt;{item5_link_title}&gt;</div>
-      {fifth_open_date <= now ? (
+      <div className="my-post-box-item-ment1">&lt;{item_link_title}&gt;</div>
+      {opendate <= now ? (
         <div className="my-post-box-item-ment2">
-          편지 {item5_number_letter}개 도착
+          편지 {item_number_letter}개 도착
         </div>
       ) : (
         <div className="my-post-box-item-ment2">
-          편지 {item5_number_letter}개 오는 중
+          편지 {item_number_letter}개 오는 중
         </div>
       )}
 
       <div className="my-post-box-item-ment3">
         편지 열람이 가능할 때 알림이 가요!
       </div>
-      {fifth_open_date <= now ? (
+      {opendate <= now ? (
         <div className="open-post-box-btn" onClick={openSpecificPostboxRequest}>
           우체통 열기
         </div>
