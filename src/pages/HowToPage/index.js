@@ -18,7 +18,6 @@ import Flow6 from "../../components/ServiceFlow/Flow6";
 import CreatePostboxBtn from "../../components/Btn/CreatePostboxBtn";
 import Footer from "../../components/Footer";
 import union from "../../image/Union.png";
-import { RefreshRequest } from "../../components/RefreshRequest";
 import { postBoxFetchRequest } from "../../components/PostboxFetchRequest";
 
 SwiperCore.use([Thumbs, Pagination, Autoplay]);

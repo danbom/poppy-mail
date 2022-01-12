@@ -1,6 +1,5 @@
 import React from "react";
 import { postBoxFetchRequest } from "../PostboxFetchRequest";
-import { RefreshRequest } from "../RefreshRequest";
 // import { useHistory } from "react-router";
 // import * as S from './styles';
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 import * as S from "../../styles/globalstyle";
 // import BackBtn from "../../components/Btn/BackBtn";

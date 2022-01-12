@@ -5,7 +5,6 @@ import * as S from "../../styles/globalstyle";
 import LogoNameCreatePostBox from "../../components/Txt/LogoNameCreatePostBox";
 import BackBtn from "../../components/Btn/BackBtn";
 import InputName from "../../components/InputName";
-import { RefreshRequest } from "../../components/RefreshRequest";
 import { postBoxFetchRequest } from "../../components/PostboxFetchRequest";
 
 export const CreatepostboxContext = createContext({
@@ -14,10 +13,8 @@ export const CreatepostboxContext = createContext({
 
 function CreatePostBoxPage1() {
   const history = useHistory();
-  const [_alert, setAlert] = useState(null);
 
   const access = localStorage.getItem("access");
-  const refresh = localStorage.getItem("refresh");
 
   const [nickname, setNickname] = useState("");
   const value = useMemo(() => ({ setNickname }), [setNickname]);
