@@ -12,7 +12,6 @@ function LetterPage(props) {
   const history = useHistory();
   const [linkname, setLinkname] = useState("");
 
-  // fetch("https://poppymail.shop/letter/1/8y19yk14", {
   fetch(
     "https://poppymail.shop/letter/" + mailbox_pk + "/" + random_strkey + "/",
     {
@@ -20,9 +19,13 @@ function LetterPage(props) {
       headers: {},
     }
   )
-    .then((res) => res.json())
     .then((res) => {
-      // console.log(res);
+      if (!res.ok) {
+        throw Error(res.status);
+      }
+      return res.json();
+    })
+    .then((res) => {
       if (res) {
         setLinkname(res.nickname);
         localStorage.setItem("nickname", res.nickname);
@@ -36,6 +39,10 @@ function LetterPage(props) {
         }
         history.push("/");
       }
+    })
+    .catch((res) => {
+      alert("해당 우체통이 존재하지 않습니다🥺");
+      history.push("/");
     });
 
   const GoWriteRequest = () => {
