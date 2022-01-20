@@ -60,7 +60,7 @@ function WriteMail(props) {
     localStorage.removeItem("contents");
     localStorage.removeItem("receiver");
     localStorage.removeItem("theme");
-    setColor(null);
+    setColor("#DAAE40");
     setContents(null);
     setSender(null);
     setReceiver(null);

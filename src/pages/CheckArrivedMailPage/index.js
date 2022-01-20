@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useEffect, useState } from "react";
 // import { useHistory } from "react-router";
 
 import * as S from "../../styles/globalstyle";
@@ -19,12 +19,16 @@ import letter_deco_3_2 from "../../image/letter_deco_3_2.png";
 
 import { DropdownButton, Dropdown } from "react-bootstrap";
 import { RefreshRequest } from "../../components/RefreshRequest";
+import LogoNameReceivedLetter from "../../components/Txt/LogoNameReceivedLetter";
 
 // SwiperCore.use([Pagination]);
 
 function CheckArrivedMail() {
   const access = localStorage.getItem("access");
   const refresh = localStorage.getItem("refresh");
+
+  const [length, setLength] = useState(null);
+  const [letter, setLetter] = useState([{}]);
 
   // if (
   //   document.getElementsByClassName("swiper-wrapper")[0].style.transform ===
@@ -1860,41 +1864,58 @@ function CheckArrivedMail() {
     }
   };
 
-  fetch(
-    "https://poppymail.shop/mailbox/" +
-      localStorage.getItem("id") +
-      "/letters/",
-    {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + access,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    }
-  )
-    .then((res) => res.json())
-    .then((res) => {
-      var step;
-      for (step = 0; step < 30; step++) {
-        // Runs 5 times, with values of step 0 through 4.
-
-        if (res[step]) {
-          localStorage.setItem("length", res.length);
-          localStorage.setItem("receiver" + step, res[step].receiver);
-          localStorage.setItem("content" + step, res[step].content);
-          localStorage.setItem("sender" + step, res[step].sender);
-          localStorage.setItem("color" + step, res[step].color);
+  useEffect(() => {
+    fetch(
+      "https://poppymail.shop/mailbox/" +
+        localStorage.getItem("id") +
+        "/letters/",
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + access,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    )
+      .then((res) => {
+        if (!res.ok) {
+          if (res.status === 401) throw Error("401");
         }
-      }
+        return res.json();
+      })
+      .then((res) => {
+        var step;
+        var newLetter = [];
+        setLetter([{}]);
 
-      RefreshRequest(res, refresh);
+        for (step = 0; step < res.length; step++) {
+          setLength(res.length);
+          newLetter = newLetter.concat({
+            receiver: res[step].receiver,
+            content: res[step].content,
+            sender: res[step].sender,
+            color: res[step].color,
+          });
+        }
 
-      if (res.detail === "User not found") {
-        alert("다시 로그인해주세요!");
-        localStorage.clear();
-      }
-    });
+        setLetter(newLetter);
+        console.log(letter);
+      })
+
+      .catch((err) => localStorage.clear());
+  }, [access]);
+
+  // const IterationDropdown = () => {
+  //   const dropdown = letter.map((sender, index) => <li key={index}>{name}</li><Dropdown.Item
+  //                 eventKey="item"+index
+  //                 id="dropdown-people-item"
+  //                 onClick={caroselRequest0}
+  //               >
+  //                 {letter[0].sender}
+  //               </Dropdown.Item>);
+  //   return <ul>{nameList}</ul>;
+  // };
 
   return (
     <>
@@ -1902,120 +1923,118 @@ function CheckArrivedMail() {
         <BackBtn></BackBtn>
         <LogoNameMyCheckArrivedMail></LogoNameMyCheckArrivedMail>
 
-        {!!localStorage.getItem("length") ? (
+        {!!length ? (
           <div>
-            <div className="check-arrived-letter-ment">
-              {localStorage.getItem("length")}개의 편지
-            </div>
+            <div className="check-arrived-letter-ment">{length}개의 편지</div>
             <img className="people-img" src={PeopleImg} alt="people" />
             <DropdownButton id="dropdown-people-button" title="">
-              {!!localStorage.getItem("sender0") ? (
+              {!!letter[0] ? (
                 <Dropdown.Item
                   eventKey="item1"
                   id="dropdown-people-item"
                   onClick={caroselRequest0}
                 >
-                  {localStorage.getItem("sender0")}
+                  {letter[0].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender1") ? (
+              {!!letter[1] ? (
                 <Dropdown.Item eventKey="item2" onClick={caroselRequest1}>
-                  {localStorage.getItem("sender1")}
+                  {letter[1].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender2") ? (
+              {!!letter[2] ? (
                 <Dropdown.Item eventKey="item3" onClick={caroselRequest2}>
-                  {localStorage.getItem("sender2")}
+                  {letter[2].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender3") ? (
+              {!!letter[3] ? (
                 <Dropdown.Item eventKey="item4" onClick={caroselRequest3}>
-                  {localStorage.getItem("sender3")}
+                  {letter[3].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender4") ? (
+              {!!letter[4] ? (
                 <Dropdown.Item eventKey="item5" onClick={caroselRequest4}>
-                  {localStorage.getItem("sender4")}
+                  {letter[4].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender5") ? (
+              {!!letter[5] ? (
                 <Dropdown.Item eventKey="item6" onClick={caroselRequest5}>
-                  {localStorage.getItem("sender5")}
+                  {letter[5].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender6") ? (
+              {!!letter[6] ? (
                 <Dropdown.Item eventKey="item7" onClick={caroselRequest6}>
-                  {localStorage.getItem("sender6")}
+                  {letter[6].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender7") ? (
+              {!!letter[7] ? (
                 <Dropdown.Item eventKey="item8" onClick={caroselRequest7}>
-                  {localStorage.getItem("sender7")}
+                  {letter[7].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender8") ? (
+              {!!letter[8] ? (
                 <Dropdown.Item eventKey="item9" onClick={caroselRequest8}>
-                  {localStorage.getItem("sender8")}
+                  {letter[8].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender9") ? (
+              {!!letter[9] ? (
                 <Dropdown.Item eventKey="item10" onClick={caroselRequest9}>
-                  {localStorage.getItem("sender9")}
+                  {letter[9].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender10") ? (
+              {!!letter[10] ? (
                 <Dropdown.Item eventKey="item11" onClick={caroselRequest10}>
-                  {localStorage.getItem("sender10")}
+                  {letter[10].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender11") ? (
+              {!!letter[11] ? (
                 <Dropdown.Item eventKey="item12" onClick={caroselRequest11}>
-                  {localStorage.getItem("sender11")}
+                  {letter[11].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender12") ? (
+              {!!letter[12] ? (
                 <Dropdown.Item eventKey="item13" onClick={caroselRequest12}>
-                  {localStorage.getItem("sender12")}
+                  {letter[12].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender13") ? (
+              {!!letter[13] ? (
                 <Dropdown.Item eventKey="item14" onClick={caroselRequest13}>
-                  {localStorage.getItem("sender13")}
+                  {letter[13].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender14") ? (
+              {!!letter[14] ? (
                 <Dropdown.Item eventKey="item15" onClick={caroselRequest14}>
-                  {localStorage.getItem("sender14")}
+                  {letter[14].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender15") ? (
+              {!!letter[15] ? (
                 <Dropdown.Item eventKey="item16" onClick={caroselRequest15}>
-                  {localStorage.getItem("sender15")}
+                  {letter[15].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender16") ? (
+              {!!letter[16] ? (
                 <Dropdown.Item eventKey="item17" onClick={caroselRequest16}>
-                  {localStorage.getItem("sender16")}
+                  {letter[16].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender17") ? (
+              {!!letter[17] ? (
                 <Dropdown.Item eventKey="item18" onClick={caroselRequest17}>
-                  {localStorage.getItem("sender17")}
+                  {letter[17].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender18") ? (
+              {!!letter[18] ? (
                 <Dropdown.Item eventKey="item19" onClick={caroselRequest18}>
-                  {localStorage.getItem("sender18")}
+                  {letter[18].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender19") ? (
+              {!!letter[19] ? (
                 <Dropdown.Item eventKey="item20" onClick={caroselRequest19}>
-                  {localStorage.getItem("sender19")}
+                  {letter[19].sender}
                 </Dropdown.Item>
               ) : null}
-              {!!localStorage.getItem("sender20") ? (
+              {!!letter[20] ? (
                 <Dropdown.Item eventKey="item19" onClick={caroselRequest20}>
-                  {localStorage.getItem("sender20")}
+                  {letter[20].sender}
                 </Dropdown.Item>
               ) : null}
             </DropdownButton>
@@ -2025,172 +2044,130 @@ function CheckArrivedMail() {
         )}
 
         <span className="carosel-box">
-          {!!localStorage.getItem("sender0") && (
+          {!!letter[0] && (
             <div className="carosel-text0" onClick={caroselRequest0}>
-              {localStorage.getItem("sender0").substring(0, 3)}
-              {localStorage.getItem("sender0").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[0].sender?.substring(0, 3)}
+              {letter[0].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender1") && (
+          {!!letter[1] && (
             <div className="carosel-text1" onClick={caroselRequest1}>
-              {localStorage.getItem("sender1").substring(0, 3)}
-              {localStorage.getItem("sender1").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[1].sender?.substring(0, 3)}
+              {letter[1].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender2") && (
+          {!!letter[2] && (
             <div className="carosel-text2" onClick={caroselRequest2}>
-              {localStorage.getItem("sender2").substring(0, 3)}
-              {localStorage.getItem("sender2").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[2].sender?.substring(0, 3)}
+              {letter[2].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender3") && (
+          {!!letter[3] && (
             <div className="carosel-text3" onClick={caroselRequest3}>
-              {localStorage.getItem("sender3").substring(0, 3)}
-              {localStorage.getItem("sender3").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[3].sender?.substring(0, 3)}
+              {letter[3].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender4") && (
+          {!!letter[4] && (
             <div className="carosel-text4" onClick={caroselRequest4}>
-              {localStorage.getItem("sender4").substring(0, 3)}
-              {localStorage.getItem("sender4").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[4].sender?.substring(0, 3)}
+              {letter[4].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender5") && (
+          {!!letter[5] && (
             <div className="carosel-text5" onClick={caroselRequest5}>
-              {localStorage.getItem("sender5").substring(0, 3)}
-              {localStorage.getItem("sender5").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[5].sender?.substring(0, 3)}
+              {letter[5].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender6") && (
+          {!!letter[6] && (
             <div className="carosel-text6" onClick={caroselRequest6}>
-              {localStorage.getItem("sender6").substring(0, 3)}
-              {localStorage.getItem("sender6").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[6].sender?.substring(0, 3)}
+              {letter[6].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender7") && (
+          {!!letter[7] && (
             <div className="carosel-text7" onClick={caroselRequest7}>
-              {localStorage.getItem("sender7").substring(0, 3)}
-              {localStorage.getItem("sender7").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[7].sender?.substring(0, 3)}
+              {letter[7].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender8") && (
+          {!!letter[8] && (
             <div className="carosel-text8" onClick={caroselRequest8}>
-              {localStorage.getItem("sender8").substring(0, 3)}
-              {localStorage.getItem("sender8").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[8].sender?.substring(0, 3)}
+              {letter[8].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender9") && (
+          {!!letter[9] && (
             <div className="carosel-text9" onClick={caroselRequest9}>
-              {localStorage.getItem("sender9").substring(0, 3)}
-              {localStorage.getItem("sender9").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[9].sender?.substring(0, 3)}
+              {letter[9].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender10") && (
+          {!!letter[10] && (
             <div className="carosel-text10" onClick={caroselRequest10}>
-              {localStorage.getItem("sender10").substring(0, 3)}
-              {localStorage.getItem("sender10").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[10].sender?.substring(0, 3)}
+              {letter[10].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender11") && (
+          {!!letter[11] && (
             <div className="carosel-text11" onClick={caroselRequest11}>
-              {localStorage.getItem("sender11").substring(0, 3)}
-              {localStorage.getItem("sender11").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[11].sender?.substring(0, 3)}
+              {letter[11].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender12") && (
+          {!!letter[12] && (
             <div className="carosel-text12" onClick={caroselRequest12}>
-              {localStorage.getItem("sender12").substring(0, 3)}
-              {localStorage.getItem("sender12").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[12].sender?.substring(0, 3)}
+              {letter[12].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender13") && (
+          {!!letter[13] && (
             <div className="carosel-text13" onClick={caroselRequest13}>
-              {localStorage.getItem("sender13").substring(0, 3)}
-              {localStorage.getItem("sender13").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[13].sender?.substring(0, 3)}
+              {letter[13].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender14") && (
+          {!!letter[14] && (
             <div className="carosel-text14" onClick={caroselRequest14}>
-              {localStorage.getItem("sender14").substring(0, 3)}
-              {localStorage.getItem("sender14").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[14].sender?.substring(0, 3)}
+              {letter[14].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender15") && (
+          {!!letter[15] && (
             <div className="carosel-text15" onClick={caroselRequest15}>
-              {localStorage.getItem("sender15").substring(0, 3)}
-              {localStorage.getItem("sender15").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[15].sender?.substring(0, 3)}
+              {letter[15].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender16") && (
+          {!!letter[16] && (
             <div className="carosel-text16" onClick={caroselRequest16}>
-              {localStorage.getItem("sender16").substring(0, 3)}
-              {localStorage.getItem("sender16").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[16].sender?.substring(0, 3)}
+              {letter[16].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender17") && (
+          {!!letter[17] && (
             <div className="carosel-text17" onClick={caroselRequest17}>
-              {localStorage.getItem("sender17").substring(0, 3)}
-              {localStorage.getItem("sender17").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[17].sender?.substring(0, 3)}
+              {letter[17].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender18") && (
+          {!!letter[18] && (
             <div className="carosel-text18" onClick={caroselRequest18}>
-              {localStorage.getItem("sender18").substring(0, 3)}
-              {localStorage.getItem("sender18").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[18].sender?.substring(0, 3)}
+              {letter[18].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender19") && (
+          {!!letter[19] && (
             <div className="carosel-text19" onClick={caroselRequest19}>
-              {localStorage.getItem("sender19").substring(0, 3)}
-              {localStorage.getItem("sender19").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[19].sender?.substring(0, 3)}
+              {letter[19].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
-          {!!localStorage.getItem("sender20") && (
+          {!!letter[20] && (
             <div className="carosel-text20" onClick={caroselRequest20}>
-              {localStorage.getItem("sender20").substring(0, 3)}
-              {localStorage.getItem("sender20").length >= 4 ? (
-                <span>...</span>
-              ) : null}
+              {letter[20].sender?.substring(0, 3)}
+              {letter[20].sender?.length >= 4 ? <span>...</span> : null}
             </div>
           )}
         </span>
@@ -2204,15 +2181,15 @@ function CheckArrivedMail() {
             allowTouchMove={false}
             id="checkarrivedmailswiper"
           >
-            {!!localStorage.getItem("sender0") ? (
+            {!!letter[0] ? (
               <SwiperSlide id="slide1">
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color0"),
+                    backgroundColor: letter[0].color,
                   }}
                 >
-                  {localStorage.getItem("color0") === "#b88dcd" ? (
+                  {letter[0].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2225,7 +2202,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color0") === "#db7667" ? (
+                  ) : letter[0].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2238,7 +2215,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color0") === "#bdbe82" ? (
+                  ) : letter[0].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2256,33 +2233,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver0")}
+                      {letter[0].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content0")}
-                    </div>
+                    <div className="contents-contents">{letter[0].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender0")}
+                      {letter[0].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender1") ? (
+            {!!letter[1] ? (
               <SwiperSlide id="slide2">
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color1"),
+                    backgroundColor: letter[1].color,
                   }}
                 >
-                  {localStorage.getItem("color1") === "#b88dcd" ? (
+                  {letter[1].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2295,7 +2270,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color1") === "#db7667" ? (
+                  ) : letter[1].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2308,7 +2283,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color1") === "#bdbe82" ? (
+                  ) : letter[1].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2326,33 +2301,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver1")}
+                      {letter[1].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content1")}
-                    </div>
+                    <div className="contents-contents">{letter[1].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender1")}
+                      {letter[1].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender2") ? (
+            {!!letter[2] ? (
               <SwiperSlide id="slide3">
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color2"),
+                    backgroundColor: letter[2].color,
                   }}
                 >
-                  {localStorage.getItem("color2") === "#b88dcd" ? (
+                  {letter[2].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2365,7 +2338,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color2") === "#db7667" ? (
+                  ) : letter[2].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2378,7 +2351,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color2") === "#bdbe82" ? (
+                  ) : letter[2].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2396,33 +2369,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver2")}
+                      {letter[2].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content2")}
-                    </div>
+                    <div className="contents-contents">{letter[2].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender2")}
+                      {letter[2].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender3") ? (
+            {!!letter[3] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color3"),
+                    backgroundColor: letter[3].color,
                   }}
                 >
-                  {localStorage.getItem("color3") === "#b88dcd" ? (
+                  {letter[3].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2435,7 +2406,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color3") === "#db7667" ? (
+                  ) : letter[3].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2448,7 +2419,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color3") === "#bdbe82" ? (
+                  ) : letter[3].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2466,33 +2437,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver3")}
+                      {letter[3].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content3")}
-                    </div>
+                    <div className="contents-contents">{letter[3].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender3")}
+                      {letter[3].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender4") ? (
+            {!!letter[4] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color4"),
+                    backgroundColor: letter[4].color,
                   }}
                 >
-                  {localStorage.getItem("color4") === "#b88dcd" ? (
+                  {letter[4].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2505,7 +2474,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color4") === "#db7667" ? (
+                  ) : letter[4].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2518,7 +2487,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color4") === "#bdbe82" ? (
+                  ) : letter[4].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2536,33 +2505,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver4")}
+                      {letter[4].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content4")}
-                    </div>
+                    <div className="contents-contents">{letter[4].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender4")}
+                      {letter[4].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender5") ? (
+            {!!letter[5] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color5"),
+                    backgroundColor: letter[5].color,
                   }}
                 >
-                  {localStorage.getItem("color5") === "#b88dcd" ? (
+                  {letter[5].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2575,7 +2542,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color5") === "#db7667" ? (
+                  ) : letter[5].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2588,7 +2555,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color5") === "#bdbe82" ? (
+                  ) : letter[5].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2606,33 +2573,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver5")}
+                      {letter[5].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content5")}
-                    </div>
+                    <div className="contents-contents">{letter[5].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender5")}
+                      {letter[5].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender6") ? (
+            {!!letter[6] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color6"),
+                    backgroundColor: letter[6].color,
                   }}
                 >
-                  {localStorage.getItem("color6") === "#b88dcd" ? (
+                  {letter[6].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2645,7 +2610,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color6") === "#db7667" ? (
+                  ) : letter[6].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2658,7 +2623,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color6") === "#bdbe82" ? (
+                  ) : letter[6].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2676,33 +2641,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver6")}
+                      {letter[6].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content6")}
-                    </div>
+                    <div className="contents-contents">{letter[6].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender6")}
+                      {letter[6].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender7") ? (
+            {!!letter[7] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color7"),
+                    backgroundColor: letter[7].color,
                   }}
                 >
-                  {localStorage.getItem("color7") === "#b88dcd" ? (
+                  {letter[7].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2715,7 +2678,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color7") === "#db7667" ? (
+                  ) : letter[7].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2728,7 +2691,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color7") === "#bdbe82" ? (
+                  ) : letter[7].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2746,33 +2709,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver7")}
+                      {letter[7].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content7")}
-                    </div>
+                    <div className="contents-contents">{letter[7].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender7")}
+                      {letter[7].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender8") ? (
+            {!!letter[8] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color8"),
+                    backgroundColor: letter[8].color,
                   }}
                 >
-                  {localStorage.getItem("color8") === "#b88dcd" ? (
+                  {letter[8].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2785,7 +2746,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color8") === "#db7667" ? (
+                  ) : letter[8].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2798,7 +2759,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color8") === "#bdbe82" ? (
+                  ) : letter[8].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2816,33 +2777,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver8")}
+                      {letter[8].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content8")}
-                    </div>
+                    <div className="contents-contents">{letter[8].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender8")}
+                      {letter[8].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender9") ? (
+            {!!letter[9] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color9"),
+                    backgroundColor: letter[9].color,
                   }}
                 >
-                  {localStorage.getItem("color9") === "#b88dcd" ? (
+                  {letter[9].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2855,7 +2814,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color9") === "#db7667" ? (
+                  ) : letter[9].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2868,7 +2827,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color9") === "#bdbe82" ? (
+                  ) : letter[9].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2886,33 +2845,31 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver9")}
+                      {letter[9].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
-                    <div className="contents-contents">
-                      {localStorage.getItem("content9")}
-                    </div>
+                    <div className="contents-contents">{letter[9].content}</div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender9")}
+                      {letter[9].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender10") ? (
+            {!!letter[10] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color10"),
+                    backgroundColor: letter[10].color,
                   }}
                 >
-                  {localStorage.getItem("color10") === "#b88dcd" ? (
+                  {letter[10].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2925,7 +2882,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color10") === "#db7667" ? (
+                  ) : letter[10].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -2938,7 +2895,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color10") === "#bdbe82" ? (
+                  ) : letter[10].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -2956,33 +2913,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver10")}
+                      {letter[10].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content10")}
+                      {letter[10].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender10")}
+                      {letter[10].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender11") ? (
+            {!!letter[11] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color11"),
+                    backgroundColor: letter[11].color,
                   }}
                 >
-                  {localStorage.getItem("color11") === "#b88dcd" ? (
+                  {letter[11].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -2995,7 +2952,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color11") === "#db7667" ? (
+                  ) : letter[11].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3008,7 +2965,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color11") === "#bdbe82" ? (
+                  ) : letter[11].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3026,33 +2983,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver11")}
+                      {letter[11].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content11")}
+                      {letter[11].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender11")}
+                      {letter[11].content}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender12") ? (
+            {!!letter[12] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color12"),
+                    backgroundColor: letter[12].color,
                   }}
                 >
-                  {localStorage.getItem("color12") === "#b88dcd" ? (
+                  {letter[12].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3065,7 +3022,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color12") === "#db7667" ? (
+                  ) : letter[12].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3078,7 +3035,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color12") === "#bdbe82" ? (
+                  ) : letter[12].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3096,33 +3053,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver12")}
+                      {letter[12].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content12")}
+                      {letter[12].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender12")}
+                      {letter[12].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender13") ? (
+            {!!letter[13] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color13"),
+                    backgroundColor: letter[13].color,
                   }}
                 >
-                  {localStorage.getItem("color13") === "#b88dcd" ? (
+                  {letter[13].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3135,7 +3092,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color13") === "#db7667" ? (
+                  ) : letter[13].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3148,7 +3105,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color13") === "#bdbe82" ? (
+                  ) : letter[13].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3166,33 +3123,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver13")}
+                      {letter[13].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content13")}
+                      {letter[13].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender13")}
+                      {letter[13].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender14") ? (
+            {!!letter[14] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color14"),
+                    backgroundColor: letter[14].color,
                   }}
                 >
-                  {localStorage.getItem("color14") === "#b88dcd" ? (
+                  {letter[14].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3205,7 +3162,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color14") === "#db7667" ? (
+                  ) : letter[14].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3218,7 +3175,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color14") === "#bdbe82" ? (
+                  ) : letter[14].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3236,33 +3193,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver14")}
+                      {letter[14].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content14")}
+                      {letter[14].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender14")}
+                      {letter[14].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender15") ? (
+            {!!letter[15] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color15"),
+                    backgroundColor: letter[15].color,
                   }}
                 >
-                  {localStorage.getItem("color15") === "#b88dcd" ? (
+                  {letter[15].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3275,7 +3232,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color15") === "#db7667" ? (
+                  ) : letter[15].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3288,7 +3245,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color15") === "#bdbe82" ? (
+                  ) : letter[15].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3306,33 +3263,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver15")}
+                      {letter[15].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content15")}
+                      {letter[15].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender15")}
+                      {letter[15].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender16") ? (
+            {!!letter[16] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color16"),
+                    backgroundColor: letter[16].color,
                   }}
                 >
-                  {localStorage.getItem("color16") === "#b88dcd" ? (
+                  {letter[16].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3345,7 +3302,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color16") === "#db7667" ? (
+                  ) : letter[16].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3358,7 +3315,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color16") === "#bdbe82" ? (
+                  ) : letter[16].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3376,33 +3333,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver16")}
+                      {letter[16].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content16")}
+                      {letter[16].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender16")}
+                      {letter[16].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender17") ? (
+            {!!letter[17] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color17"),
+                    backgroundColor: letter[17].color,
                   }}
                 >
-                  {localStorage.getItem("color17") === "#b88dcd" ? (
+                  {letter[17].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3415,7 +3372,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color17") === "#db7667" ? (
+                  ) : letter[17].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3428,7 +3385,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color17") === "#bdbe82" ? (
+                  ) : letter[17].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3446,33 +3403,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver17")}
+                      {letter[17].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content17")}
+                      {letter[17].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender17")}
+                      {letter[17].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender18") ? (
+            {!!letter[18] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color18"),
+                    backgroundColor: letter[18].color,
                   }}
                 >
-                  {localStorage.getItem("color18") === "#b88dcd" ? (
+                  {letter[18].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3485,7 +3442,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color18") === "#db7667" ? (
+                  ) : letter[18].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3498,7 +3455,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color18") === "#bdbe82" ? (
+                  ) : letter[18].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3516,33 +3473,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver18")}
+                      {letter[18].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content18")}
+                      {letter[18].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender18")}
+                      {letter[18].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender19") ? (
+            {!!letter[19] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color19"),
+                    backgroundColor: letter[19].color,
                   }}
                 >
-                  {localStorage.getItem("color19") === "#b88dcd" ? (
+                  {letter[19].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3555,7 +3512,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color19") === "#db7667" ? (
+                  ) : letter[19].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3568,7 +3525,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color19") === "#bdbe82" ? (
+                  ) : letter[19].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3586,33 +3543,33 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver19")}
+                      {letter[19].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content19")}
+                      {letter[19].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender19")}
+                      {letter[19].sender}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ) : null}
-            {!!localStorage.getItem("sender20") ? (
+            {!!letter[20] ? (
               <SwiperSlide>
                 <div
                   className="check-letter-box"
                   style={{
-                    backgroundColor: localStorage.getItem("color20"),
+                    backgroundColor: letter[20].color,
                   }}
                 >
-                  {localStorage.getItem("color20") === "#b88dcd" ? (
+                  {letter[20].color === "#b88dcd" ? (
                     <div className="letter_deco_1">
                       <img
                         className="letter_deco_1_1"
@@ -3625,7 +3582,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color20") === "#db7667" ? (
+                  ) : letter[20].color === "#db7667" ? (
                     <div className="letter_deco_2">
                       <img
                         className="letter_deco_2_1"
@@ -3638,7 +3595,7 @@ function CheckArrivedMail() {
                         alt="deco"
                       />
                     </div>
-                  ) : localStorage.getItem("color20") === "#bdbe82" ? (
+                  ) : letter[20].color === "#bdbe82" ? (
                     <div className="letter_deco_3">
                       <img
                         className="letter_deco_3_1"
@@ -3656,19 +3613,19 @@ function CheckArrivedMail() {
                     <div className="to-txt">To.</div>
                     <div className="to-underline"></div>
                     <div className="to-contents" id="div">
-                      {localStorage.getItem("receiver20")}
+                      {letter[20].receiver}
                     </div>
                   </div>
                   <div className="letter-element" id="contents-box">
                     <div className="contents-contents">
-                      {localStorage.getItem("content20")}
+                      {letter[20].content}
                     </div>
                   </div>
                   <div className="letter-element" id="from-box">
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {localStorage.getItem("sender20")}
+                      {letter[20].sender}
                     </div>
                   </div>
                 </div>
