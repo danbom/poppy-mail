@@ -9,7 +9,12 @@ export const postBoxFetchRequest = () => {
       Accept: "application/json",
     },
   })
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        if (res.status === 401) throw Error(res);
+      }
+      return res.json();
+    })
     .then((res) => {
       // console.log(res);
       if (res.detail === "Given token not valid for any token type")
@@ -99,5 +104,6 @@ export const postBoxFetchRequest = () => {
           localStorage.setItem("5th_id", res[4].id);
         }
       }
-    });
+    })
+    .catch((err) => localStorage.clear());
 };

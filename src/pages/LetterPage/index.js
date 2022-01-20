@@ -21,7 +21,9 @@ function LetterPage(props) {
   )
     .then((res) => {
       if (!res.ok) {
-        throw Error(res.status);
+        if (res.status === 403) throw Error("3일이 지나 우체통이 닫혔어요🥺");
+        else if (res.status === 404)
+          throw Error("해당 우체통이 존재하지 않습니다!");
       }
       return res.json();
     })
@@ -40,8 +42,8 @@ function LetterPage(props) {
         history.push("/");
       }
     })
-    .catch((res) => {
-      alert("해당 우체통이 존재하지 않습니다🥺");
+    .catch((err) => {
+      alert(err);
       history.push("/");
     });
 
