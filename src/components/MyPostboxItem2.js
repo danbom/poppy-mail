@@ -14,7 +14,9 @@ function MyPostboxItem2() {
 
   const [opendate, setOpenDate] = useState(
     new Date(
-      localStorage.getItem("2nd_open_date") + " " + "00:00:00" // eslint-disable-line
+      localStorage.getItem("2nd_open_date").replace(/-/g, "/") +
+        " " +
+        "00:00:00" // eslint-disable-line
     )
   );
   const [now, setNow] = useState(new Date());
@@ -85,7 +87,9 @@ function MyPostboxItem2() {
     setInterval(() => {
       setOpenDate(
         new Date(
-          localStorage.getItem("2nd_open_date") + " " + "00:00:00" // eslint-disable-line
+          localStorage.getItem("2nd_open_date").replace(/-/g, "/") +
+            " " +
+            "00:00:00" // eslint-disable-line
         )
       );
       setNow(new Date());
