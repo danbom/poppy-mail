@@ -14,9 +14,11 @@ function MyPostboxItem3() {
   const [_article, setArticle] = useState(null);
 
   const [opendate, setOpenDate] = useState(
-    localStorage.getItem("3rd_open_date")
+    new Date(
+      localStorage.getItem("3rd_open_date") + " " + "00:00:00" // eslint-disable-line
+    )
   );
-  const [now, setNow] = useState(null);
+  const [now, setNow] = useState(new Date());
 
   const access = localStorage.getItem("access");
 
