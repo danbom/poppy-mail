@@ -80,6 +80,7 @@ function MyPostboxItem1() {
   };
 
   useEffect(() => {
+    console.log(opendate, now);
     PostboxRequest();
   }, []);
 
