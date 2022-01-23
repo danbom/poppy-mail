@@ -2995,7 +2995,7 @@ function CheckArrivedMail() {
                     <div className="from-txt">From.</div>
                     <div className="from-underline"></div>
                     <div className="from-contents" id="div">
-                      {letter[11].content}
+                      {letter[11].sender}
                     </div>
                   </div>
                 </div>
