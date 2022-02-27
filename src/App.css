@@ -326,9 +326,10 @@ html [type="input"] {
 
 .post-here {
   color: #979797;
-  /* font-family: "Cafe24 Ssurround"; */
+  font-family: "Cafe24 Ssurround";
   font-size: 0.85rem;
   font-weight: 700;
+  letter-spacing: -0.01rem;
 
   position: relative;
   top: 3.5rem;
