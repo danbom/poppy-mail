@@ -324,6 +324,29 @@ html [type="input"] {
   height: 100%;
 }
 
+.post-here {
+  color: #979797;
+  font-family: "Cafe24 Ssurround";
+  font-size: 18px;
+  font-weight: 700;
+
+  position: relative;
+  top: 3.5rem;
+  right: 1.9rem;
+}
+
+.out-red-circle {
+  width: 0.64rem;
+  height: 0.64rem;
+  border-radius: 50%;
+
+  background: #e58d7f;
+
+  position: relative;
+  top: 0.59rem;
+  left: 20.58rem;
+}
+
 .nav-menu {
   background: #7357c6;
   /* opacity: 0; */
