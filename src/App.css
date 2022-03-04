@@ -140,26 +140,7 @@ html [type="input"] {
   margin: 0 0.5rem !important;
 }
 
-.carosel-text1,
-.carosel-text2,
-.carosel-text3,
-.carosel-text4,
-.carosel-text5,
-.carosel-text6,
-.carosel-text7,
-.carosel-text8,
-.carosel-text9,
-.carosel-text10,
-.carosel-text11,
-.carosel-text12,
-.carosel-text13,
-.carosel-text14,
-.carosel-text15,
-.carosel-text16,
-.carosel-text17,
-.carosel-text18,
-.carosel-text19,
-.carosel-text20 {
+.carosel-text {
   background: #c4c4c4 !important;
   width: max-content !important;
   min-width: 5.5rem;
@@ -175,27 +156,7 @@ html [type="input"] {
   cursor: pointer;
 }
 
-.carosel-text0 span,
-.carosel-text1 span,
-.carosel-text2 span,
-.carosel-text3 span,
-.carosel-text4 span,
-.carosel-text5 span,
-.carosel-text6 span,
-.carosel-text7 span,
-.carosel-text8 span,
-.carosel-text9 span,
-.carosel-text10 span,
-.carosel-text11 span,
-.carosel-text12 span,
-.carosel-text13 span,
-.carosel-text14 span,
-.carosel-text15 span,
-.carosel-text16 span,
-.carosel-text17 span,
-.carosel-text18 span,
-.carosel-text19 span,
-.carosel-text20 span {
+.carosel-text span {
   font-size: 0.5rem;
 }
 
@@ -1999,6 +1960,38 @@ button#dropdown-people-button {
   border-radius: 8px;
 }
 
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 5.6rem;
+  right: 2.4rem;
+
+  z-index: 1;
+
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #f1f1f13d;
+  transition: all ease-in-out 0.25s;
+}
+
+.download-icon {
+  width: 45%;
+  height: 45%;
+
+  opacity: 0.7;
+}
+
 .check-letter-box {
   position: absolute;
   width: 21.6rem;
@@ -2007,6 +2000,13 @@ button#dropdown-people-button {
   top: 5rem;
   padding-left: 0.5rem;
 
+  background: #daae40;
+  border-radius: 8px;
+}
+
+.check-letter-box-inner {
+  width: 100%;
+  left: 100%;
   background: #daae40;
   border-radius: 8px;
 }
